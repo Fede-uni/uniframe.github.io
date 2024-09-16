@@ -1,0 +1,12 @@
+image: node:16.20.2
+
+pages:
+  script:
+    - npm install
+    - npm run build-storybook
+    - mv storybook-static public  # Mover la carpeta generada a 'public' que es requerida por GitLab Pages
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # Solo despliega en la rama 'main'
