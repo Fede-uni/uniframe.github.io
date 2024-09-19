@@ -1,0 +1,99 @@
+.header{
+    background-color: var(--header-border-color);
+    box-shadow: 0 1px 5px var(--brand-color-neutro-600);
+    border-bottom: 2px solid var(--header-background-color);
+    padding: 0.2rem 1rem!important;
+}
+
+.header-logo {
+    width: 180px;
+}
+
+.header-buttons-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* Aplicadas a todos los botones */
+.header-button{
+    background: var(--btn-mod-header-background-color);
+    color:var(--brand-color-neutro-blanco);
+    display: flex;
+    flex-direction: row;
+    --bs-btn-padding-x: 0.60rem;
+    align-items: center;
+}
+.header-button:active, .header-button:hover, .header-button:first-child:active{
+    background-color: var(--btn-mod-header-background-color-hover)!important;
+    color:var(--brand-color-neutro-blanco)!important;
+}
+
+.button-icon{
+    height: 32px;
+    line-height: 34px;
+    font-size: 1.5rem;
+}
+
+/* Boton menu mobile */
+.button-menu{
+    border: 1px solid var(--btn-mod-header-border-color);
+}
+
+
+/* Boton apps */
+.button-apps, .button-apps:active, .button-apps:hover{
+    border: 1px solid var(--btn-mod-header-border-color);
+}
+
+.button-apps .button-icon{
+    height: 32px;
+    width: 32px;
+    background-color: var(--btn-mod-header-indicador-modulo-color);
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--btn-mod-header-icon-color);
+    text-align-last: center;
+    line-height: 34px;
+    margin-right: 5px;
+}
+.button-apps:hover .button-icon, .button-apps:active .button-icon{
+    color: var(--btn-mod-header-icon-color-hover);
+}
+
+.button-apps-menu {
+    display: flex;
+    align-content: center;
+    gap: 1em;
+    align-items: center;
+    width: 100%;
+}
+.button-apps-menu .button-icon{
+    background-color: var(--menu-header-indicador-color);
+}
+
+
+/* Boton novedades */
+#novedades{
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.btn .badge-novedades{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+
+/* Boton usuario */
+
+.user-text{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .8rem;
+}
+

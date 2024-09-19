@@ -1,0 +1,27 @@
+:root {
+    --brand-color-neutro-transparent: rgba(255, 255, 255, 0);
+    --brand-color-neutro-blanco: #ffffff;
+    --brand-color-neutro-negro: #000000;
+    --brand-color-neutro-900: #3d3d3d;
+    --brand-color-neutro-800: #454545;
+    --brand-color-neutro-700: #4f4f4f;
+    --brand-color-neutro-600: #5d5d5d;
+    --brand-color-neutro-500: #6d6d6d;
+    --brand-color-neutro-400: #888888;
+    --brand-color-neutro-300: #b0b0b0;
+    --brand-color-neutro-200: #d1d1d1;
+    --brand-color-neutro-100: #e7e7e7;
+    --brand-color-neutro-50: #f4f2f2;
+    --brand-color-primary-950: #083049;
+    --brand-color-primary-900: #0c4b6e;
+    --brand-color-primary-800: #065a86;
+    --brand-color-primary-700: #026aa2;
+    --brand-color-primary-600: #0186c8;
+    --brand-color-primary-500: #0c99d6; /* color de marca */
+    --brand-color-primary-400: #37bff9;
+    --brand-color-primary-300: #7cd4fd;
+    --brand-color-primary-200: #bae7fd;
+    --brand-color-primary-100: #e0f2fe;
+    --brand-color-primary-50: #f0f9ff;
+  }
+  

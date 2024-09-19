@@ -1,0 +1,6 @@
+:root {
+    --encabezado-indicador-mod-background-color: var(--color-background-primary-default);
+    --encabezado-icon-color-mobile: var(--color-background-primary-default);
+    --encabezado-border-color: var(--color-border-primary-default);
+    --encabezado-text-contrast: var(--color-action-primary-default);
+  }
