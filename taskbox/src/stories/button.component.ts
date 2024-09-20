@@ -1,11 +1,9 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+
 
 @Component({
-  selector: 'storybook-button',
-  standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  selector: 'uni-button',
   template: `
     <button
       *ngIf="primary; else secondaryButton"
@@ -13,8 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
       type="button"
       (click)="onClick.emit($event)"
       [ngClass]="classes"
-      [ngStyle]="{ 'background-color': backgroundColor }"
-    >
+    ><span *ngIf="showIcon && icon" class="material-symbols-outlined button-icon">{{icon}}</span>
       {{ label }}
     </button>
 
@@ -24,9 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
         type="button"
         (click)="onClick.emit($event)"
         [ngClass]="classes"
-        [ngStyle]="{ 'background-color': backgroundColor }"
-      >
-        {{ label }}
+      ><span *ngIf="showIcon && icon" class="material-symbols-outlined button-icon">{{icon}}</span>
+      {{ label }}
       </button>
     </ng-template>
   `,
@@ -36,20 +32,20 @@ export default class ButtonComponent {
   /**
    * Is this the principal call to action on the page?
    */
-  @Input()
+/*   @Input()
   primary = false;
-
+ */
   /**
    * What background color to use
    */
-  @Input()
-  backgroundColor?: string;
+/*   @Input()
+  backgroundColor?: string; */
 
   /**
    * How large should the button be?
    */
-  @Input()
-  size: 'small' | 'medium' | 'large' = 'medium';
+  /* @Input()
+  size: 'small' | 'medium' | 'large' = 'medium'; */
 
   /**
    * Button contents
@@ -59,15 +55,42 @@ export default class ButtonComponent {
   @Input()
   label = 'Button';
 
+  @Input() icon: string | null = '';  // Ícono recibido por el componente
+  @Input() showIcon = true;               // Controla si se muestra el ícono
+
   /**
    * Optional click handler
    */
   @Output()
   onClick = new EventEmitter<Event>();
 
-  public get classes(): string[] {
-    const mode = this.primary ? 'btn-primary' : 'btn-secondary';
+  /* public get classes(): string[] {
+    const mode = this.primary ? 'button-primary' : 'button-primary-outline';
 
     return ['storybook-button', 'storybook-button--${this.size}', mode];
+  } */
+
+    @Input()
+    buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' = 'primary';
+  
+
+  public get classes(): string[] {
+    // Determinamos las clases CSS basadas en el tipo de botón
+    let mode = '';
+    switch (this.buttonType) {
+      case 'primary':
+        mode = 'button-primary';
+        break;
+      case 'primary-outline':
+        mode = 'button-primary-outline';
+        break;
+      case 'negative':
+        mode = 'button-negative';
+        break;
+      case 'negative-outline':
+        mode = 'button-negative-outline';
+        break;
+    }
+    return [ mode];
   }
 }

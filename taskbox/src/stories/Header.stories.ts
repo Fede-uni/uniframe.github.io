@@ -1,6 +1,8 @@
 import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
+
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 import Button from './button.component';
 import Header from './header.component';
@@ -14,7 +16,7 @@ const meta: Meta<Header> = {
   decorators: [
     moduleMetadata({
       declarations: [Button],
-      imports: [CommonModule],
+      imports: [CommonModule,MatButtonModule],
     }),
   ],
   parameters: {

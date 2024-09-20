@@ -1,52 +1,64 @@
-.btn-primary, .btn-primary:not(:disabled){
+.button-primary, .button-primary:not(:disabled){
     background: var(--button-primary-background-color);
     color:var(--button-primary-text-color) ;
     border-color: var(--button-primary-border-color) ;
 }
 
-.btn-primary:hover{
+.button-primary:hover{
     background: var(--button-primary-background-color-hover);
     color:var( --button-primary-outline-text-color-hover) ;
     border-color: var(--button-primary-outline-border-color-hover) ;
 }
 
-.btn-primary-outline, .btn-primary-outline:not(:disabled), .btn-secondary:not(:disabled){
+.button-primary-outline, .button-primary-outline:not(:disabled){
     background: var(--button-primary-outline-background-color);
     color:var(--button-primary-outline-text-color) ;
     border-color: var(--button-primary-outline-border-color) ;
     border: 1px solid;
 }
 
-.btn-primary-outline:hover{
+.button-primary-outline:hover{
     background: var(--button-primary-outline-background-color-hover);
     color:var( --button-primary-outline-text-color-hover) ;
     border-color: var( --button-primary-outline-border-color-hover) ;
 }
 
-.btn-negative{
+.button-negative, .button-negative:not(:disabled){
     background: var(--button-negative-background-color);
     color:var(--button-negative-text-color) ;
     border-color: var(--button-negative-border-color) ;
 }
 
-.btn-negative:hover{
+.button-negative:hover{
     background: var(--button-negative-background-color-hover);
     color:var( --button-negative-text-color) ;
     border-color: var( --button-negative-border-color) ;
 }
 
-.btn-negative-outline{
+.button-negative-outline,.button-negative-outline:not(:disabled){
     background: var(--button-negative-outline-background-color);
     color:var(--button-negative-outline-text-color) ;
     border-color: var(--button-negative-outline-border-color) ;
     border: 1px solid;
 }
 
-.btn-negative-outline:hover{
+.button-negative-outline:hover{
     background: var(--button-negative-outline-background-color-hover);
     color:var(--button-negative-outline-text-color-hover) ;
     border-color: var( --button-negative-border-color) ;
 }
 
+
+/* Fix Mat-Button */
+
+.mdc-button .mdc-button__label{
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.button-icon{
+    margin-right: 8px;
+}
 
 

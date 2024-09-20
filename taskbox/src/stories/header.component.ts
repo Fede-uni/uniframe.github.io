@@ -23,6 +23,7 @@ import type { User } from './User';
           </g>
         </svg>
         <h1>Acme</h1>
+        
       </div>
       <div>
         <div *ngIf="user">
@@ -30,22 +31,22 @@ import type { User } from './User';
             Welcome, <b>{{ user.name }}</b
             >!
           </span>
-          <storybook-button
+          <uni-button
             *ngIf="user"
             size="small"
             (onClick)="onLogout.emit($event)"
             label="Log out"
-          ></storybook-button>
+          ></uni-button>
         </div>
         <div *ngIf="!user">
-          <storybook-button
+          <uni-button
             *ngIf="!user"
             size="small"
             class="margin-left"
             (onClick)="onLogin.emit($event)"
             label="Log in"
-          ></storybook-button>
-          <storybook-button
+          ></uni-button>
+          <uni-button
             *ngIf="!user"
             primary
             size="small"
@@ -53,7 +54,7 @@ import type { User } from './User';
             class="margin-left"
             (onClick)="onCreateAccount.emit($event)"
             label="Sign up"
-          ></storybook-button>
+          ></uni-button>
         </div>
       </div>
     </div>
