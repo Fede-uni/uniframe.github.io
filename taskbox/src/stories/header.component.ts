@@ -62,7 +62,7 @@ import type { User } from './User';
   </header> -->
   <nav  class="navbar navbar-expand-lg header" role="main">
     <a class="navbar-brand"  aria-label="Ir al inicio" title="Ir al inicio">
-      <img class="header-logo " src="assets/img/tramix-CN-hor-blanco.png" aria-label="Logo del sistema" alt="Logo del sistema">
+      <img class="header-logo " src="./assets/tramix CN hor-blanco.png" aria-label="Logo del sistema" alt="Logo del sistema">
     </a>
     <!-- Boton hamburguesa/mobile -->
     <button class="navbar-toggler header-button button-menu " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -75,7 +75,7 @@ import type { User } from './User';
     <!-- fIN BUSCADOR -->
       <span class="ms-auto header-buttons-group">
          <!--Aplicaciones-->
-        <button [matMenuTriggerFor]="menu" class="button-primary " aria-label="Módulos" title="Módulos"> 
+        <button [matMenuTriggerFor]="menu" class="btn header-button button-menu " aria-label="Módulos" title="Módulos"> 
           <span class="material-symbols-outlined button-icon " id="icono-apps">apps</span>
           <span aria-label="Ver más opciones"  class="material-symbols-outlined ">expand_more</span>
         </button>
@@ -122,12 +122,5 @@ export default class HeaderComponent {
   @Input()
   user: User | null = null;
 
-  @Output()
-  onLogin = new EventEmitter<Event>();
 
-  @Output()
-  onLogout = new EventEmitter<Event>();
-
-  @Output()
-  onCreateAccount = new EventEmitter<Event>();
 }

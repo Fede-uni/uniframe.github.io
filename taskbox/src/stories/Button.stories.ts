@@ -35,6 +35,7 @@ const meta: Meta<Button> = {
       description: 'El tipo de botón a mostrar',
     },
   },
+  
 };
 
 export default meta;
@@ -54,7 +55,7 @@ export const Primary: Story = {
 Primary.parameters = { 
   docs: { 
     source: { 
-      code: `<button mat-flat-button class="button-primary"><span class="material-symbols-outlined button-icon">check_circle</span>Primary Button</button>`,
+      code: `<button  class="btn button-primary"><span class="material-symbols-outlined button-icon">check_circle</span>Primary Button</button>`,
     }, 
   }, 
 };
@@ -73,7 +74,7 @@ export const PrimaryOutline: Story = {
 PrimaryOutline.parameters = { 
   docs: { 
     source: { 
-      code: `<button mat-stroked-button class="button-primary-outline"><span class="material-symbols-outlined  button-icon">check_circle</span>Primary outline Button</button>`,
+      code: `<button  class="btn button-primary-outline"><span class="material-symbols-outlined  button-icon">check_circle</span>Primary outline Button</button>`,
     }, 
   }, 
 };
@@ -91,7 +92,7 @@ export const Negative: Story = {
 Negative.parameters = { 
   docs: { 
     source: { 
-      code: `<button mat-flat-button class="button-negative"><span class="material-symbols-outlined button-icon">check_circle</span>Negative Button</button>`,
+      code: `<button  class="btn button-negative"><span class="material-symbols-outlined button-icon">check_circle</span>Negative Button</button>`,
     }, 
   }, 
 };
@@ -109,7 +110,7 @@ export const NegativeOutline: Story = {
 NegativeOutline.parameters = { 
   docs: { 
     source: { 
-      code: `<button mat-stroked-button class="button-negative-outline"><span class="material-symbols-outlined button-icon">check_circle</span>Negative Outline Button</button>`,
+      code: `<button  class="btn button-negative-outline"><span class="material-symbols-outlined button-icon">check_circle</span>Negative Outline Button</button>`,
     }, 
   }, 
 };

@@ -25,9 +25,9 @@
     --bs-btn-padding-x: 0.60rem;
     align-items: center;
 }
-.header-button:active, .header-button:hover, .header-button:first-child:active{
-    background-color: var(--btn-mod-header-background-color-hover)!important;
-    color:var(--brand-color-neutro-blanco)!important;
+.header-button:active, .header-button:hover, .header-button:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: var(--btn-mod-header-background-color-hover);
+    color:var(--brand-color-neutro-blanco);
 }
 
 .button-icon{
@@ -37,7 +37,7 @@
 }
 
 /* Boton menu mobile */
-.button-menu{
+.button-menu, .button-menu:active, .button-menu:hover{
     border: 1px solid var(--btn-mod-header-border-color);
 }
 
@@ -88,12 +88,16 @@
     right: 0px;
 }
 
+.mat-drawer-container{
+    background-color: transparent !important;
+}
+
 
 /* Boton usuario */
 
 .user-text{
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     font-size: .8rem;
 }
 
