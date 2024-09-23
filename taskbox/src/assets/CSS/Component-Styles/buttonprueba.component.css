@@ -4,7 +4,7 @@
     border-color: var(--button-primary-border-color) ;
 }
 
-.button-primary:hover{
+.button-primary:hover, .button-primary:first-child:active{
     background: var(--button-primary-background-color-hover);
     color:var( --button-primary-outline-text-color-hover) ;
     border-color: var(--button-primary-outline-border-color-hover) ;
@@ -17,7 +17,7 @@
     border: 1px solid;
 }
 
-.button-primary-outline:hover{
+.button-primary-outline:hover , .button-primary-outline:first-child:active{
     background: var(--button-primary-outline-background-color-hover);
     color:var( --button-primary-outline-text-color-hover) ;
     border-color: var( --button-primary-outline-border-color-hover) ;
@@ -29,7 +29,7 @@
     border-color: var(--button-negative-border-color) ;
 }
 
-.button-negative:hover{
+.button-negative:hover , .button-negative:first-child:active{
     background: var(--button-negative-background-color-hover);
     color:var( --button-negative-text-color) ;
     border-color: var( --button-negative-border-color) ;
@@ -42,7 +42,7 @@
     border: 1px solid;
 }
 
-.button-negative-outline:hover{
+.button-negative-outline:hover , .button-negative-outline:first-child:active{
     background: var(--button-negative-outline-background-color-hover);
     color:var(--button-negative-outline-text-color-hover) ;
     border-color: var( --button-negative-border-color) ;
