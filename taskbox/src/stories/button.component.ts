@@ -7,7 +7,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   template: `
     <button
       *ngIf="primary; else secondaryButton"
-      mat-flat-button
       type="button"
       (click)="onClick.emit($event)"
       [ngClass]="classes"
@@ -17,7 +16,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
     <ng-template #secondaryButton>
       <button
-        mat-stroked-button
         type="button"
         (click)="onClick.emit($event)"
         [ngClass]="classes"
@@ -32,20 +30,9 @@ export default class ButtonComponent {
   /**
    * Is this the principal call to action on the page?
    */
-/*   @Input()
-  primary = false;
- */
-  /**
-   * What background color to use
-   */
-/*   @Input()
-  backgroundColor?: string; */
 
-  /**
-   * How large should the button be?
-   */
-  /* @Input()
-  size: 'small' | 'medium' | 'large' = 'medium'; */
+  @Input()
+  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' = 'primary';
 
   /**
    * Button contents
@@ -64,31 +51,23 @@ export default class ButtonComponent {
   @Output()
   onClick = new EventEmitter<Event>();
 
-  /* public get classes(): string[] {
-    const mode = this.primary ? 'button-primary' : 'button-primary-outline';
-
-    return ['storybook-button', 'storybook-button--${this.size}', mode];
-  } */
-
-    @Input()
-    buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' = 'primary';
-  
+ 
 
   public get classes(): string[] {
     // Determinamos las clases CSS basadas en el tipo de botón
     let mode = '';
     switch (this.buttonType) {
       case 'primary':
-        mode = 'button-primary';
+        mode = 'btn button-primary';
         break;
       case 'primary-outline':
-        mode = 'button-primary-outline';
+        mode = 'btn button-primary-outline';
         break;
       case 'negative':
-        mode = 'button-negative';
+        mode = 'btn button-negative';
         break;
       case 'negative-outline':
-        mode = 'button-negative-outline';
+        mode = 'btn button-negative-outline';
         break;
     }
     return [ mode];

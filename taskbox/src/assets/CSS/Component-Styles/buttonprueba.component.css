@@ -51,14 +51,22 @@
 
 /* Fix Mat-Button */
 
-.mdc-button .mdc-button__label{
+/* .mdc-button .mdc-button__label{
     align-items: center;
     flex-wrap: wrap;
     display: flex;
-}
+} */
 
 .button-icon{
     margin-right: 8px;
+    height: auto;
+    line-height: inherit;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    padding:0.1rem 0.75rem;
 }
 
 
