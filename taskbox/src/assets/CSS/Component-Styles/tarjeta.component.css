@@ -37,3 +37,16 @@
     border-radius: 20px;
     font-size: 0.75rem;
 }
+
+.tarjeta__col-der--titulo {
+    font-size: .8rem;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+.secContainer-etiquetas{
+    margin-top: 10px;
+    gap: 8px;
+    display: inline-flex;
+    align-items: flex-start;
+}

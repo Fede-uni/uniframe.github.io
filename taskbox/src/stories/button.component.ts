@@ -4,9 +4,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'uni-button',
+  styleUrls: ['../assets/CSS/Component-Styles/buttonprueba.component.css'],
   template: `
+    <!-- *ngIf="primary; else secondaryButton" -->
     <button
-      *ngIf="primary; else secondaryButton"
       type="button"
       (click)="onClick.emit($event)"
       [ngClass]="classes"
@@ -24,7 +25,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       </button>
     </ng-template>
   `,
-  styleUrls: ['../assets/CSS/Component-Styles/buttonprueba.component.css'],
+  
 })
 export default class ButtonComponent {
   /**
@@ -32,7 +33,7 @@ export default class ButtonComponent {
    */
 
   @Input()
-  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' = 'primary';
+  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' | 'icon' = 'primary';
 
   /**
    * Button contents
@@ -68,6 +69,9 @@ export default class ButtonComponent {
         break;
       case 'negative-outline':
         mode = 'btn button-negative-outline';
+        break;
+        case 'icon':
+        mode = 'btn icon-button';
         break;
     }
     return [ mode];

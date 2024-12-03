@@ -5,17 +5,18 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 
-import EncabezadoComponent from './encabezado.component';
 
-const meta: Meta<EncabezadoComponent> = {
-  title: 'Example/Encabezado',
-  component:EncabezadoComponent,
+import { EtiquetasComponent } from './etiqueta.component';
+
+const meta: Meta<EtiquetasComponent> = {
+  title: 'Example/etiqueta',
+  component:EtiquetasComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      
+      declarations: [EtiquetasComponent],
       imports: [CommonModule,MatButtonModule,MatDividerModule],
     }),
   ],
@@ -23,14 +24,14 @@ const meta: Meta<EncabezadoComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<EncabezadoComponent>;
+type Story = StoryObj<EtiquetasComponent>;
 
-export const Encabezado: Story = {
+export const Etiqueta: Story = {
   args: {
   },
 };
 
-Encabezado.parameters = { 
+Etiqueta.parameters = { 
   docs: { 
     source: { 
       code: `<div class="row encabezado-container">
@@ -75,5 +76,7 @@ Encabezado.parameters = {
     }, 
   }, 
 };
+
+
 
 

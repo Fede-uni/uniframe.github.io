@@ -1,0 +1,17 @@
+#content-lista-tarjetas{
+    /* padding-left: 5%; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 104px);
+  }
+  .tabla-lista-tarjetas{
+    /* max-height: calc(100vh - 150px); */
+    height: 100%;
+ }
+
+ .sec-encabezado-lista-tarjeta{
+   padding: 0.2rem 0.75rem ;
+   display: flex;
+   align-items: center;
+   width: 100%;
+ }

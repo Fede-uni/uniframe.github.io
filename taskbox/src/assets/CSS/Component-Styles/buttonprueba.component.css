@@ -49,6 +49,24 @@
 }
 
 
+
+.icon-button {
+    padding: 0.5rem !important;
+    border-radius: 25px;
+}
+
+.icon-button .material-icons{
+    font-size: 18px;
+}
+
+.icon-button:hover, .icon-button:active, :not(.btn-check)+.btn:active {
+    background-color: #e8eff3;
+    transition: 0.3s;
+    opacity: 1;
+    color: var(--bs-btn-color);
+}
+
+
 /* Fix Mat-Button */
 
 /* .mdc-button .mdc-button__label{
@@ -61,6 +79,11 @@
     margin-right: 8px;
     height: auto;
     line-height: inherit;
+}
+
+.btn-sm .button-icon{
+    font-size: 17px ;
+    margin-right: 4px;
 }
 
 .btn{

@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 
       <div class="tarjeta" >
         <div  style="width: 60px; display: flex; flex-direction: column; align-items: center;">
-          <span class="dot dot_expedientes">Exp</span>
+          <span class="dot dot_expedientes">EXP</span>
           <span title="Privado" *>
             <span class="material-icons candado-ficha">
               lock_outline
@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
         </div>
 
         <div  style="width: 100%; display: flex; flex-direction: column; padding-left: 10px;"> 
-          <div  style="display: flex; flex-direction: column; flex-grow: 1;" >
+          <div  style="display: flex; flex-direction: column; " >
               <div class="secContenedor__botonesListExp--left secContenedor__botonesListExp--nowrap" >
                 <span tabindex="0"><strong class="tarjeta__col-der--titulo">Carátula de Expediente</strong></span>
               </div>
@@ -29,15 +29,25 @@ import { Component } from '@angular/core';
             </div>
           </div>
   
-          <div style="margin-top: 10px;" >
+          <div class="secContainer-etiquetas" >
             <!-- AQUI VAN LAS ETIQUETAS -->
+            <span 
+                class="etiqueta-estado" 
+                mat-raised-button placement="right">
+                etiqueta
+            </span>
+            <span 
+                class="etiqueta-estado" 
+                mat-raised-button placement="right">
+                etiqueta
+            </span>
           </div>
         </div>
 
          <!-- open new_tab -->
          <div style="padding: 3px 10px;">
-          <a id="la-nuevaPestania" title="Abrir en nueva pestaña" tabindex="0">
-            <em class="material-icons" style="font-size: 18px; cursor: pointer;" aria-hidden="true">open_in_new</em>
+          <a id="la-nuevaPestania" class="btn icon-button" title="Abrir en nueva pestaña" tabindex="0">
+            <span class="material-icons" aria-hidden="true">open_in_new</span>
           </a>
         </div>
       </div>
@@ -46,7 +56,8 @@ import { Component } from '@angular/core';
 
   </div>
 </div>`,
-  styleUrl: '../../../assets/CSS/Component-Styles/tarjeta.component.css'
+  styleUrl: '../../../assets/CSS/Component-Styles/tarjeta.component.css',
+  standalone: true,
 })
 export class TarjetaComponent {
 

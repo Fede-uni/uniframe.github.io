@@ -1,7 +1,6 @@
 import type { Meta, StoryObj, } from '@storybook/angular';
 import Button from './button.component';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<Button> = {
   title: 'Example/Button',
@@ -14,7 +13,7 @@ const meta: Meta<Button> = {
     },
     moduleMetadata: { // Aquí se agregan los módulos necesarios
       declarations: [Button], // Declarar el componente si no es standalone
-      imports: [CommonModule, MatButtonModule], // Importar módulos necesarios
+      imports: [CommonModule], // Importar módulos necesarios
     },
   }),
   argTypes: {
@@ -31,7 +30,7 @@ const meta: Meta<Button> = {
     },
     buttonType: {
       control: 'radio',
-      options: ['primary', 'primary-outline', 'negative', 'negative-outline'],
+      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon'],
       description: 'El tipo de botón a mostrar',
     },
   },
@@ -111,6 +110,24 @@ NegativeOutline.parameters = {
   docs: { 
     source: { 
       code: `<button  class="btn button-negative-outline"><span class="material-symbols-outlined button-icon">check_circle</span>Negative Outline Button</button>`,
+    }, 
+  }, 
+};
+
+export const Icon: Story = {
+  args: {
+   /*  primary: false, */  // El botón se renderiza como mat-stroked-button
+    label: '',
+    icon: 'check_circle',
+    showIcon: true,
+    buttonType: 'icon',
+  },
+};
+
+Icon.parameters = { 
+  docs: { 
+    source: { 
+      code: `<button  class="btn icon-button"><span class="material-symbols-outlined button-icon">check_circle</span></button>`,
     }, 
   }, 
 };
