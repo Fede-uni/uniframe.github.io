@@ -3,7 +3,7 @@ import type { User } from './User';
 
 
 @Component({
-  selector: 'storybook-header',
+  selector: 'app-header',
   template: `
   <nav  class="navbar navbar-expand-lg header" role="main">
     <a class="navbar-brand"  aria-label="Ir al inicio" title="Ir al inicio">

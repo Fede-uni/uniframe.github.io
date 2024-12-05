@@ -1,0 +1,54 @@
+<!-- Filtros rápidos -->
+<div class="d-flex gap-3 py-3" >
+      <div class="col-auto" >
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select placeholder="Bandeja" >
+            <mat-option >
+              Bandeja
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div  class="col-auto">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select id="al-nivelesacceso"
+            multiple aria-label="Nivel de acceso">
+            <mat-select-trigger>
+              <span>Acceso: Todos</span>
+            </mat-select-trigger>
+            <mat-option >nivel de acceso</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-auto">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select  multiple
+            aria-label="Tipos Expedientes">
+            <mat-select-trigger >
+              <span>Tipo: Todos</span>
+            </mat-select-trigger>
+            <mat-option >Tipo de expediente</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div  class="col-auto">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select id="al-marcadores" multiple
+            aria-label="Marcadores" placeholder="Marcadores">
+            <mat-select-trigger >
+              <span>Marcadores: Todos</span>
+            </mat-select-trigger>
+            <mat-option >marcadores</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div  class="col-auto">
+        <button type="button" class="btn icon-button icon-button-color" title="Buscar">
+            <span class="material-symbols-outlined button-icon ">search</span>
+        </button>
+      </div>
+  </div>

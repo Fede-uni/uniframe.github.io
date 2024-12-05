@@ -67,19 +67,19 @@ Tarjeta.parameters = {
                 class="etiqueta-estado" 
                 mat-raised-button placement="right">
                 etiqueta
-            </span>
+            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
             <span 
                 class="etiqueta-estado" 
                 mat-raised-button placement="right">
                 etiqueta
-            </span>
+            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
           </div>
         </div>
 
          <!-- open new_tab -->
          <div style="padding: 3px 10px;">
-          <a id="la-nuevaPestania" title="Abrir en nueva pestaña" tabindex="0">
-            <em class="material-icons" style="font-size: 18px; cursor: pointer;" aria-hidden="true">open_in_new</em>
+          <a id="la-nuevaPestania" class="btn icon-button" title="Abrir en nueva pestaña" tabindex="0">
+            <span class="material-icons" aria-hidden="true">open_in_new</span><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
           </a>
         </div>
       </div>

@@ -17,6 +17,10 @@ import {MatDividerModule} from '@angular/material/divider';
 import { FiltrosRapidosComponent } from 'src/stories/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';
 import ButtonComponent from 'src/stories/button.component';
 import { ListaTarjetaComponent } from 'src/stories/tarjetas/lista-tarjetas/lista-tarjetas.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,11 @@ import { ListaTarjetaComponent } from 'src/stories/tarjetas/lista-tarjetas/lista
     MatMenuModule,
     MatSidenavModule,
     MatDividerModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatIconModule,
+
     TarjetaComponent,
     ListaTarjetaComponent,
   ],

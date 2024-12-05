@@ -19,7 +19,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         <div class="d-flex align-items-center w-100 gap-3">
           <!-- Botón acciones -->
           <button id="al-crear"  class="btn button-primary-outline btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Acciones a realizar con la selección actual">
-          <span class="material-symbols-outlined  button-icon">task_alt</span>Acciones</button>
+          <span class="material-symbols-outlined  button-icon">task_alt</span>Acciones</button><!-- esto se reemplazaría por un <uni-button> -->
           <!-- Lista acciones -->
           <ul id="al-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu" style="cursor: pointer">
               <li mat-menu-item  class="dropdown-item-size">
@@ -34,9 +34,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
           </span>
         </div> 
         <!-- Botón aactualizar -->
-        <button id="lis-actualizarBoton"  class="btn icon-button " title="Actualizar">
-          <span id="lis-actualizar" class="material-icons" aria-hidden="true">autorenew</span>
-        </button>
+        <button id="lis-actualizarBoton"  class="btn icon-button btn-sm" title="Actualizar">
+          <span id="lis-actualizar" class="material-symbols-outlined button-icon" aria-hidden="true">autorenew</span>
+        </button><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
       </div>
       <mat-divider style="border-top-color: var(--color-neutro-200);"></mat-divider>
       <div id="content-lista-tarjetas">

@@ -1,0 +1,7 @@
+:root{
+
+    /* mat-form-field */
+    --mat-form-field-container-vertical-padding:8px;
+    --mat-form-field-container-height:30px;
+    --mat-select-trigger-text-size: .8rem;
+}

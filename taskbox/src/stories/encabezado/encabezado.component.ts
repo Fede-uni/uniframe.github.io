@@ -2,12 +2,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
-  selector: 'storybook-header',
+  selector: 'app-encabezado',
   template: `<div class="row encabezado-container">
   <div class="text-container">
-      <div class="contenedor-navegacion-vistas">
-          <div class="row subHeader_espacio-iconos margin-header">
-              <div class="secContenedor__titulo_exp secContenedor__titulo_exp--nowrap float-left">
                   <div class="text-breadcrum">
                       <a>
                           <span class="contraste"> Organismo</span>
@@ -22,25 +19,22 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
                       </label>
                   </div>
 
-                  <div class="row">
+                  <div class="row mt-1">
                       <div class="text-título">
                       Actuaciones de SECRETARÍA GENERAL CAYT 
                       </div>
                   </div>
-              </div>
-          </div>
-      </div>
   </div>
 
   <!-- crear expediente -->
 
   <div class="btn-container">
-      <button class="btn button-primary">
+      <button class="btn button-primary"><!-- esto se reemplazaría por un <uni-button> -->
         <span class="material-symbols-outlined button-icon">add_circle</span>
         Crear
       </button>
   </div>
-  <mat-divider class="encabezado-border mt-2"></mat-divider>
+  <mat-divider class="encabezado-border mt-3"></mat-divider>
 </div>
 `,
   styleUrls: ['../../assets/CSS/Component-Styles/encabezado.component.css'],

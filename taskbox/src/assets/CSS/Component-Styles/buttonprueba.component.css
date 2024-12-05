@@ -1,3 +1,7 @@
+uni-button{
+    width: auto !important;
+}
+
 .button-primary, .button-primary:not(:disabled){
     background: var(--button-primary-background-color);
     color:var(--button-primary-text-color) ;
@@ -55,8 +59,8 @@
     border-radius: 25px;
 }
 
-.icon-button .material-icons{
-    font-size: 18px;
+.icon-button .button-icon{
+    margin-right: 0 !important;
 }
 
 .icon-button:hover, .icon-button:active, :not(.btn-check)+.btn:active {
@@ -82,7 +86,7 @@
 }
 
 .btn-sm .button-icon{
-    font-size: 17px ;
+    font-size: 18px ;
     margin-right: 4px;
 }
 

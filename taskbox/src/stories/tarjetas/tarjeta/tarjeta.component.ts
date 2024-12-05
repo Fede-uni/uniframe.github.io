@@ -35,19 +35,19 @@ import { Component } from '@angular/core';
                 class="etiqueta-estado" 
                 mat-raised-button placement="right">
                 etiqueta
-            </span>
+            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
             <span 
                 class="etiqueta-estado" 
                 mat-raised-button placement="right">
                 etiqueta
-            </span>
+            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
           </div>
         </div>
 
          <!-- open new_tab -->
          <div style="padding: 3px 10px;">
-          <a id="la-nuevaPestania" class="btn icon-button" title="Abrir en nueva pestaña" tabindex="0">
-            <span class="material-icons" aria-hidden="true">open_in_new</span>
+          <a id="la-nuevaPestania" class="btn icon-button btn-sm" title="Abrir en nueva pestaña" tabindex="0">
+            <span class="material-symbols-outlined button-icon" aria-hidden="true">open_in_new</span><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
           </a>
         </div>
       </div>

@@ -65,13 +65,14 @@ Encabezado.parameters = {
   <!-- crear expediente -->
 
   <div class="btn-container">
-      <button class="btn button-primary">
+      <button class="btn button-primary"><!-- esto se reemplazaría por un <uni-button> -->
         <span class="material-symbols-outlined button-icon">add_circle</span>
         Crear
       </button>
   </div>
   <mat-divider class="encabezado-border mt-2"></mat-divider>
-</div>`,
+</div>
+`,
     }, 
   }, 
 };

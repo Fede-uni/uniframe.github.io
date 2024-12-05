@@ -1,157 +1,8 @@
-<nav class="navbar navbar-expand-lg header" role="main">
-  <a class="navbar-brand" aria-label="Ir al inicio" title="Ir al inicio">
-    <img
-      class="header-logo"
-      src="./assets/tramix CN hor-blanco.png"
-      aria-label="Logo del sistema"
-      alt="Logo del sistema"
-    />
-  </a>
-  <!-- Boton hamburguesa/mobile -->
-  <button
-    class="navbar-toggler header-button button-menu"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Menú de navegación"
-  >
-    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-  </button>
-  <!-- Fin Boton de menu -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <!-- AQUÍ COLOCAR EL BUSCADOR -->
-    <!-- fIN BUSCADOR -->
-    <span class="ms-auto header-buttons-group">
-      <!--Aplicaciones-->
-      <button
-        [matMenuTriggerFor]="menu"
-        class="btn header-button button-menu"
-        aria-label="Módulos"
-        title="Módulos"
-      >
-        <span class="material-symbols-outlined button-icon" id="icono-apps">
-          apps
-        </span>
-        <span aria-label="Ver más opciones" class="material-symbols-outlined">
-          expand_more
-        </span>
-      </button>
-      <mat-menu #menu="matMenu">
-        <div class="header--apps-dropdown">
-          <div class="col-12 header--apps--align">
-            <button class="btn button-apps-menu">
-              <span
-                class="material-symbols-outlined button-icon"
-                id="icono-apps"
-              >
-                library_books
-              </span>
-              <span class="btn-app-txt ml-2">Liquidaciones</span>
-            </button>
-          </div>
-        </div>
-      </mat-menu>
-      <!--Novedades-->
-      <mat-drawer-container autosize class="header--drawer">
-        <mat-drawer
-          #sidenav
-          mode="over"
-          position="end"
-          class="header--drawer--sidenav"
-        ></mat-drawer>
-        <div class="">
-          <button
-            id="novedades"
-            aria-label="Novedades"
-            class="btn header-button"
-            aria-label="Novedades"
-            title="Novedades"
-          >
-            <span
-              aria-label="Novedades"
-              class="material-symbols-outlined button-icon"
-              id="icono-usuario_mobile"
-            >
-              notifications
-            </span>
-            <span class="badge rounded-pill badge-novedades bg-danger">10</span>
-          </button>
-        </div>
-      </mat-drawer-container>
-      <!--Helper-->
-      <button class="btn header-button" aria-label="Ayuda" title="Ayuda">
-        <span
-          aria-label="Ayuda"
-          class="material-symbols-outlined button-icon"
-          id="icono-apps"
-        >
-          help_outline
-        </span>
-        <span aria-label="Ver más opciones" class="material-symbols-outlined">
-          expand_more
-        </span>
-      </button>
-      <!--Datos de usuario-->
-      <button class="btn header-button" style="align-items: center;">
-        <div class="me-2">
-          <span class="user-text">Usuario: nombre usuario</span>
-        </div>
-        <span
-          aria-label="Datos del usuario"
-          class="material-symbols-outlined button-icon"
-          id="icono-usuario_mobile"
-        >
-          account_circle
-        </span>
-        <span aria-label="Ver más opciones" class="material-symbols-outlined">
-          expand_more
-        </span>
-      </button>
-    </span>
-  </div>
-</nav>
+<app-header></app-header>
+<div class="mx-5">
+<app-encabezado></app-encabezado>
 
-<div class="row encabezado-container">
-  <div class="text-container">
-    <div class="contenedor-navegacion-vistas">
-      <div class="row subHeader_espacio-iconos margin-header">
-        <div
-          class="secContenedor__titulo_exp secContenedor__titulo_exp--nowrap float-left"
-        >
-          <div class="text-breadcrum">
-            <a>
-              <span class="contraste">Organismo</span>
-            </a>
-            <span class="mx-1">/</span>
-            <a>
-              <span class="contraste">Dependencia</span>
-            </a>
-            <span class="mx-1">/</span>
-            <label attr.aria-label="Expediente ">Expediente</label>
-          </div>
-
-          <div class="row">
-            <div class="text-título">
-              Actuaciones de SECRETARÍA GENERAL CAYT
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- crear expediente -->
-
-  <div class="btn-container">
-    <button class="btn button-primary">
-      <span class="material-symbols-outlined button-icon">add_circle</span>
-      Crear
-    </button>
-  </div>
-  <mat-divider class="encabezado-border mt-2"></mat-divider>
-</div>
+<app-filtros-rapidos></app-filtros-rapidos>
 
 <div class="row gap-2 m-2">
   <button class="btn button-primary">
@@ -170,82 +21,38 @@
     <span class="material-symbols-outlined button-icon">check_circle</span>
     Negative Outline Button
   </button>
+  <uni-button 
+  [label]="'Acciones'" 
+  [buttonType]="'primary'" 
+  [icon]="'task_alt'" 
+  [showIcon]="true">
+</uni-button>
 </div>
 
-<span 
-class="etiqueta-estado" 
-mat-raised-button placement="right">
-etiqueta
-</span>
-
-<div id="content-listaExp">
-  <div aria-label="lista de documentos formato tarjeta" class="tabla-ListaExp">
-    <div
-      style="border-bottom: 1px solid var(--color-neutro-200); display: flex; height: 126px;"
-    >
-      <div style="padding: 10px;">
-        <input
-          type="checkbox"
-          value="option1"
-          aria-label="seleccionar tarjeta"
-        />
-      </div>
-
-      <div class="tarjeta">
-        <div
-          style="width: 60px; display: flex; flex-direction: column; align-items: center;"
-        >
-          <span class="dot dot_expedientes">EXP</span>
-          <span title="Privado" *>
-            <span class="material-icons candado-ficha">lock_outline</span>
-          </span>
-        </div>
-
-        <div
-          style="width: 100%; display: flex; flex-direction: column; padding-left: 10px;"
-        >
-          <div style="display: flex; flex-direction: column; ">
-            <div
-              class="secContenedor__botonesListExp--left secContenedor__botonesListExp--nowrap"
-            >
-              <span tabindex="0">
-                <strong class="tarjeta__col-der--titulo">
-                  Carátula de Expediente
-                </strong>
-              </span>
-            </div>
-            <div style="font-size: 0.7rem;" id="la-divExpedienteNumero">
-              numero/año tipo cuij
-            </div>
-          </div>
-
-          <div class="secContainer-etiquetas">
-            <!-- AQUI VAN LAS ETIQUETAS -->
-            <span class="etiqueta-estado" mat-raised-button placement="right">
-              etiqueta
-            </span>
-            <span class="etiqueta-estado" mat-raised-button placement="right">
-              etiqueta
-            </span>
-          </div>
-        </div>
-
-        <!-- open new_tab -->
-        <div style="padding: 3px 10px;">
-          <a id="la-nuevaPestania" title="Abrir en nueva pestaña" tabindex="0">
-            <em
-              class="material-icons"
-              style="font-size: 18px; cursor: pointer;"
-              aria-hidden="true"
-            >
-              open_in_new
-            </em>
-          </a>
-        </div>
-      </div>
-      <!-- <mat-divider class="col-12 mt-2" style="border-top-color: var(--color-neutro-200);"></mat-divider> -->
-    </div>
-  </div>
-</div>
+<app-etiquetas>Etiqueta</app-etiquetas>
 
 <app-lista-tarjeta></app-lista-tarjeta>
+<app-filtros-rapidos></app-filtros-rapidos>
+</div>
+<div class="row encabezado-container">
+  <div class="text-container">
+                  <div class="text-breadcrum">
+                      <a>
+                          <span class="contraste"> Organismo</span>
+                      </a>
+                      <span class="mx-1">/</span>
+                      <a >
+                          <span class="contraste"> Dependencia </span>
+                      </a>
+                      <span  class="mx-1">/</span>
+                      <label  attr.aria-label="Expediente ">
+                      Expediente  
+                      </label>
+                  </div>
+
+                  <div class="row mt-1">
+                      <div class="text-título">
+                      Actuaciones de SECRETARÍA GENERAL CAYT 
+                      </div>
+                  </div>
+  </div>
