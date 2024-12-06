@@ -4,13 +4,13 @@ import { TarjetaComponent } from '../tarjeta/tarjeta.component';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { SharedModule } from 'src/stories/shared.module';
+
 
 @Component({
   selector: 'app-lista-tarjeta',
   styleUrl: '../../../../assets/CSS/Component-Styles/lista-tarjeta-component.css',
-  /* standalone: true,
-  imports: [TarjetaComponent,MatDividerModule,MatPaginatorModule,MatCheckboxModule,CommonModule], */
+  standalone: true,
+  imports: [TarjetaComponent,MatDividerModule,MatPaginatorModule,MatCheckboxModule,CommonModule],
   template: `
   <!-- <div class="collapsible-panel" [ngClass]="{ 'collapsed': collapsedPanel }"> -->
     <fieldset class="h-100 overflow-hidden"  aria-label="lista de expedientes formato tarjeta" >

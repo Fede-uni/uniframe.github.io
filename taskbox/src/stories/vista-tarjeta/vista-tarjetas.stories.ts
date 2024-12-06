@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import { VistaTarjetaComponent } from './vista-tarjeta.component';
+import { CustomComponentModule } from 'src/app/custom.module';
 
 const meta: Meta<VistaTarjetaComponent> = {
   title: 'Example/vista tarjeta/vista tarjeta',
@@ -15,7 +16,7 @@ const meta: Meta<VistaTarjetaComponent> = {
   decorators: [
     moduleMetadata({
       declarations: [],
-      imports: [CommonModule,MatButtonModule,MatDividerModule],
+      imports: [CommonModule,MatButtonModule,MatDividerModule, CustomComponentModule],
     }),
   ],
 

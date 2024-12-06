@@ -6,7 +6,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import HeaderComponent from '../stories/header.component';
 import EncabezadoComponent from 'src/stories/encabezado/encabezado.component';
-import { TarjetaComponent } from 'src/stories/tarjetas/tarjeta/tarjeta.component';
+
 import { EtiquetasComponent } from 'src/stories/etiquetas/etiqueta.component';
 
 
@@ -16,41 +16,29 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import { FiltrosRapidosComponent } from 'src/stories/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';
 import ButtonComponent from 'src/stories/button.component';
-import { ListaTarjetaComponent } from 'src/stories/tarjetas/lista-tarjetas/lista-tarjetas.component';
+
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
+import { TarjetaComponent } from '../stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.component';
+import { ListaTarjetaComponent } from '../stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjetas.component';
+import { CustomComponentModule } from './custom.module';
+import { VistaTarjetaComponent } from '../stories/vista-tarjeta/vista-tarjeta.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    EncabezadoComponent,
-    FiltrosRapidosComponent,
-    EtiquetasComponent,
-    ButtonComponent,
   ],
   imports: [
     BrowserModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatIconModule,
-
-    TarjetaComponent,
-    ListaTarjetaComponent,
+    CustomComponentModule,
+    VistaTarjetaComponent
+    
   ],
   exports:[
-    MatButtonModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatDividerModule,
-    ButtonComponent,
+    
   ],
   providers: [
     provideAnimationsAsync()
