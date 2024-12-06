@@ -1,8 +1,40 @@
-import { Component } from '@angular/core';
+import { moduleMetadata } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 
-@Component({
-  selector: 'app-tarjeta',
-  template: ` <div id="content-listaExp">
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+
+import { TarjetaComponent } from './tarjeta.component';
+import { EtiquetasComponent } from '../../../etiquetas/etiqueta.component';
+
+const meta: Meta<TarjetaComponent> = {
+  title: 'Example/vista tarjeta/Tarjetas',
+  component:TarjetaComponent,
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
+  tags: ['autodocs'],
+  render: (args) => ({ props: args }),
+  decorators: [
+    moduleMetadata({
+      declarations: [EtiquetasComponent],
+      imports: [CommonModule,MatButtonModule,MatDividerModule],
+    }),
+  ],
+
+};
+
+export default meta;
+type Story = StoryObj<TarjetaComponent>;
+
+export const Tarjeta: Story = {
+  args: {
+  },
+};
+
+Tarjeta.parameters = { 
+  docs: { 
+    source: { 
+      code: `<div id="content-listaExp">
   <div aria-label="lista de documentos formato tarjeta" class="tabla-ListaExp">
     <div  style="border-bottom: 1px solid var(--color-neutro-200); display: flex; height: 126px;">
       <div  style="padding: 10px;">
@@ -46,8 +78,8 @@ import { Component } from '@angular/core';
 
          <!-- open new_tab -->
          <div style="padding: 3px 10px;">
-          <a id="la-nuevaPestania" class="btn icon-button btn-sm" title="Abrir en nueva pestaña" tabindex="0">
-            <span class="material-symbols-outlined button-icon" aria-hidden="true">open_in_new</span><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
+          <a id="la-nuevaPestania" class="btn icon-button" title="Abrir en nueva pestaña" tabindex="0">
+            <span class="material-icons" aria-hidden="true">open_in_new</span><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
           </a>
         </div>
       </div>
@@ -56,9 +88,9 @@ import { Component } from '@angular/core';
 
   </div>
 </div>`,
-  styleUrl: '../../../assets/CSS/Component-Styles/tarjeta.component.css',
-  standalone: true,
-})
-export class TarjetaComponent {
+    }, 
+  }, 
+};
 
-}
+
+

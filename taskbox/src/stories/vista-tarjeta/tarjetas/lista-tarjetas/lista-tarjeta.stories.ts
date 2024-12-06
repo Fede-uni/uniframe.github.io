@@ -8,7 +8,7 @@ import {MatDividerModule} from '@angular/material/divider';
 
 
 const meta: Meta<ListaTarjetaComponent> = {
-  title: 'Example/Lista Tarjetas',
+  title: 'Example/vista tarjeta/Lista Tarjetas',
   component:ListaTarjetaComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],

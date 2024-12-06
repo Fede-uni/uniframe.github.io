@@ -1,0 +1,8 @@
+:root {
+    --tarjetas-background-color: var(--brand-color-neutro-blanco);
+    --tarjetas-border-color: var(--color-border-neutro);
+    --tarjetas-indicador-color: var(--color-primary-500-default);
+    --tarjetas-subtitle-color: var(--color-text-subtle);
+    --tarjetas-titulo-color: var(--color-text-body);
+  }
+  

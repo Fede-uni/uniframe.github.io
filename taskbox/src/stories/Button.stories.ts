@@ -30,7 +30,7 @@ const meta: Meta<Button> = {
     },
     buttonType: {
       control: 'radio',
-      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon'],
+      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],
       description: 'El tipo de botón a mostrar',
     },
   },
@@ -128,6 +128,24 @@ Icon.parameters = {
   docs: { 
     source: { 
       code: `<button  class="btn icon-button"><span class="material-symbols-outlined button-icon">check_circle</span></button>`,
+    }, 
+  }, 
+};
+
+export const Link: Story = {
+  args: {
+   /*  primary: false, */  // El botón se renderiza como mat-stroked-button
+    label: 'Link',
+    icon: 'check_circle',
+    showIcon: true,
+    buttonType: 'icon',
+  },
+};
+
+Link.parameters = { 
+  docs: { 
+    source: { 
+      code: `<button  class="btn button-link"><span class="material-symbols-outlined button-icon">check_circle</span>Link</button>`,
     }, 
   }, 
 };

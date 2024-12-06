@@ -1,3 +1,46 @@
+
+.Sec-filtros-rapidos{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.Sec-filtros-aplicados{
+   justify-content: space-between;
+   display: flex;
+   padding-top: 8px;
+   padding-bottom: 8px
+}
+.contenedor-filtros-aplicados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.filtroAplicado {
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 0;
+    line-height: 30px;
+}
+
+.item-aplicado {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.filtroAplicadoDesc {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+
 .icon-button-color{
     color: var(--button-primary-outline-text-color);
 }
+

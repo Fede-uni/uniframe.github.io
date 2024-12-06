@@ -1,5 +1,47 @@
+<div class="header-filtros-rapidos">
+    <!-- Filtros aplicados -->
+    <div >
+      <fieldset class=" Sec-filtros-aplicados"  aria-label="Filtros aplicados">
+        <div class="contenedor-filtros-aplicados">
+            <div class="col-auto">
+              <p class="filtroAplicado">Filtros Aplicados ></p>
+            </div>
+            <div class="col-auto item-aplicado">
+              <p class="filtroAplicado" tabindex="0">Bandeja: <span class="filtroAplicadoDesc">Bandeja seleccionada</span></p>
+            </div>
+            <div class="col-auto item-aplicado">
+              <p class="filtroAplicado">Incluir asignados: <span class="filtroAplicadoDesc">Sí</span></p>
+            </div>
+            <div class="col-auto item-aplicado" >
+              <p class="filtroAplicado" tabindex="0">Tipos: <span class="filtroAplicadoDesc">Todos</span></p>
+            </div>
+            <div class="col-auto item-aplicado" >
+              <p class="filtroAplicado" tabindex="0">Estados: <span class="filtroAplicadoDesc">Todos</span>
+              </p>
+            </div>
+            <div class="col-auto item-aplicado">
+              <p class="filtroAplicado" tabindex="0">Acceso: <span class="filtroAplicadoDesc">Todos</span></p>
+            </div>
+            <div class="col-auto filtroAplicado ">
+              <button type="button" class="btn button-link ml-2 btn-sm" aria-label="Limpiar filtros">Limpiar</button>
+            </div>
+        </div>
+        <!-- Botón Reiniciar Filtros -->
+        
+        <!--btn desplegable-->
+          <button 
+            class="btn button-primary-outline btn-sm" 
+            aria-label="mostrar filtros"
+            [attr.aria-expanded]="!collapsedFiltros"
+            (click)="collapseFilter()">
+            <span class="material-symbols-outlined button-icon" >filter_alt</span>
+            Filtros
+          </button> 
+      </fieldset>
+    </div>
+
 <!-- Filtros rápidos -->
-<div class="d-flex gap-3 py-3" >
+<div class="d-flex gap-3 pb-3" *ngIf="!collapsedFiltros">
       <div class="col-auto" >
         <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
           <mat-select placeholder="Bandeja" >
@@ -51,4 +93,4 @@
             <span class="material-symbols-outlined button-icon ">search</span>
         </button>
       </div>
-  </div>
+</div>

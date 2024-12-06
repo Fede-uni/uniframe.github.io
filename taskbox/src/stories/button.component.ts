@@ -33,7 +33,7 @@ export default class ButtonComponent {
    */
 
   @Input()
-  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' | 'icon' = 'primary';
+  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' | 'icon' | 'link' = 'primary';
 
   /**
    * Button contents
@@ -70,8 +70,11 @@ export default class ButtonComponent {
       case 'negative-outline':
         mode = 'btn button-negative-outline';
         break;
-        case 'icon':
+      case 'icon':
         mode = 'btn icon-button';
+        break;
+      case 'link':
+        mode = 'btn button-link';
         break;
     }
     return [ mode];

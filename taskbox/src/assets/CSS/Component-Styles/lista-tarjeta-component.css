@@ -2,7 +2,6 @@
     /* padding-left: 5%; */
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100% - 104px);
   }
 
   .tabla-lista-tarjetas{
@@ -16,3 +15,45 @@
    align-items: center;
    width: 100%;
  }
+
+ /* Boton colapsable tarjetas */
+
+.collapse-button {
+  position: absolute;
+  top: 33px;
+  right: -13px;
+  z-index: 10;
+  background-color: var(--color-background-neutro-lighter);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--brand-color-primary-700);
+  color: var(--brand-color-primary-700); 
+  user-select: none;
+}
+
+.collapse-button:hover {
+  color: var(--brand-color-neutro-50);
+  background-color: var(--brand-color-primary-600); 
+  border: 1px solid var(--brand-color-primary-600);
+}
+
+.collapse-button span.material-icons {
+  font-size: 18px;
+}
+
+/* Fin Boton colapsable tarjetas */
+
+.collapsible-panel {
+  border-right: 1px solid var(--brand-color-primary-700);
+  width: 30%;
+  position: relative;
+}
+
+.collapsible-panel.collapsed {
+  padding-right: 12px;
+  width: 0;
+}

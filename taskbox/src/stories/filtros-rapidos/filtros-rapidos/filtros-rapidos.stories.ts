@@ -4,7 +4,9 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
-
+import { MatFormField } from '@angular/material/form-field';
+import { MatCheckbox } from '@angular/material/checkbox';
+import { MatSelect } from '@angular/material/select';
 
 import { FiltrosRapidosComponent } from './filtros-rapidos.component';
 
@@ -16,7 +18,7 @@ const meta: Meta<FiltrosRapidosComponent> = {
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      imports: [CommonModule,MatButtonModule,MatDividerModule],
+      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect],
     }),
   ],
 

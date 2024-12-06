@@ -1,32 +1,36 @@
-.tarjeta.active {
-    border-left: solid 2px var(--brand-color-primary-700);
-    background-color: var(--color-neutro-50);
+.tarjeta{
+    border-bottom: 1px solid var(--tarjetas-border-color); 
+    display: flex; 
+    height: auto;
 }
-.tarjeta {
-    padding: 10px 0;
+
+.tarjeta-check{
+    padding: 10px;
+}
+
+.tarjeta-cuerpo {
+    padding: 10px 0 15px 0;
     display: flex;
     width: 100%;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: var(--tarjetas-background-color);
     border-left: solid 2px transparent;
 }
 
-.secContenedor__botonesListExp--nowrap[_ngcontent-ibb-c401] {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    width: 100%;
-    margin-top: 5px;
-    line-height: 1.3;
-    margin-bottom: 5px;
-}
-.secContenedor__botonesListExp--left[_ngcontent-ibb-c401] {
-    float: left;
+.tarjeta-cuerpo.active {
+    border-left: solid 2px var(--tarjetas-indicador-color);
+    background-color: var(--tarjetas-background-color);
 }
 
-.dot_expedientes {
+.tarjeta-secdot{
+    width: 60px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+
+.dot_color {
     color: #ffffff;
     background-color: rgb(45, 156, 255);
 }
@@ -38,15 +42,38 @@
     font-size: 0.75rem;
 }
 
-.tarjeta__col-der--titulo {
+.icon-candado{
+    font-size: 21px ;
+    color: var(--brand-color-primary-700) ;
+}
+
+.tarjeta-contenido--texto{
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+
+.tarjeta-texto--titulo {
     font-size: .8rem;
     text-transform: uppercase;
     vertical-align: top;
+    font-weight: 500;
 }
 
-.secContainer-etiquetas{
+.tarjeta-texto--subtitulo{
+    font-size: 0.7rem;
+}
+
+.tarjeta-contenido-etiquetas{
     margin-top: 10px;
     gap: 8px;
     display: inline-flex;
     align-items: flex-start;
 }
+
+.tarjeta-secdesacoplar{
+    padding: 3px 10px;
+}
+
