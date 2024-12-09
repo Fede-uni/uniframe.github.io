@@ -4,9 +4,10 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import Button from './button.component';
 import HeaderComponent from './header.component';
+
 
 const meta: Meta<HeaderComponent> = {
   title: 'Example/Header',
@@ -16,8 +17,8 @@ const meta: Meta<HeaderComponent> = {
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      declarations: [Button],
-      imports: [CommonModule,MatButtonModule,MatMenuModule],
+      declarations: [],
+      imports: [CommonModule,MatButtonModule,MatMenuModule, BrowserAnimationsModule ],
     }),
   ],
   parameters: {

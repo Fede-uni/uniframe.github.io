@@ -1,9 +1,14 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import type { User } from './User';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [MatMenuModule, MatSidenavModule,CommonModule],
   template: `
   <nav  class="navbar navbar-expand-lg header" role="main">
     <a class="navbar-brand"  aria-label="Ir al inicio" title="Ir al inicio">

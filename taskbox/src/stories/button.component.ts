@@ -1,9 +1,12 @@
 
+import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
   selector: 'uni-button',
+  standalone: true, // Si este componente es standalone
+  imports: [CommonModule],
   styleUrls: ['../assets/CSS/Component-Styles/buttonprueba.component.css'],
   template: `
     <!-- *ngIf="primary; else secondaryButton" -->

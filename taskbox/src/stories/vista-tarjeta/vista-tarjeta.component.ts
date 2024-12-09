@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListaTarjetaComponent } from './tarjetas/lista-tarjetas/lista-tarjetas.component';
 import { FichaComponent } from './ficha/ficha.component';
-import { CustomComponentModule } from 'src/app/custom.module';
+import { FiltrosRapidosComponent } from '../filtros-rapidos/filtros-rapidos/filtros-rapidos.component';
+import HeaderComponent from '../header.component';
+import EncabezadoComponent from '../encabezado/encabezado.component';
 
 
 
@@ -11,7 +13,7 @@ import { CustomComponentModule } from 'src/app/custom.module';
   styleUrl: '../../assets/CSS/Component-Styles/vista-tarjeta.css',
   templateUrl:'./vista-tarjetas.component.html' ,
   standalone: true, // Si este componente es standalone
-  imports: [ListaTarjetaComponent,FichaComponent, CommonModule,CustomComponentModule], // Importa ambos componentes
+  imports: [ListaTarjetaComponent,FichaComponent, CommonModule,FiltrosRapidosComponent, HeaderComponent, EncabezadoComponent,], // Importa ambos componentes
   
   
 })

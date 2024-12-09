@@ -1,8 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatDivider } from '@angular/material/divider';
 
 
 @Component({
   selector: 'app-encabezado',
+  standalone: true,
+  imports: [MatDivider],
   template: `<div class="row encabezado-container">
   <div class="text-container">
                   <div class="text-breadcrum">

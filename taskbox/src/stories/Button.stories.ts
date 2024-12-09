@@ -12,8 +12,8 @@ const meta: Meta<Button> = {
       ...args,
     },
     moduleMetadata: { // Aquí se agregan los módulos necesarios
-      declarations: [Button], // Declarar el componente si no es standalone
-      imports: [CommonModule], // Importar módulos necesarios
+      declarations: [], // Declarar el componente si no es standalone
+      imports: [CommonModule,Button], // Importar módulos necesarios
     },
   }),
   argTypes: {

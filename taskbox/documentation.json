@@ -68,17 +68,17 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".container-view{\r\n    height: 100vh;\r\n    overflow: hidden;\r\n    \r\n}",
                     "styleUrl": "./app.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-header></app-header>\n<div class=\"mx-5\">\n<app-encabezado></app-encabezado>\n\n<app-filtros-rapidos></app-filtros-rapidos>\n\n\n"
+            "templateData": "<!-- <app-header></app-header>\n<div class=\"mx-5\">\n<app-encabezado></app-encabezado>\n\n<app-filtros-rapidos></app-filtros-rapidos>\n -->\n<div class=\"container-view\">\n    <app-contenedor-vista-tarjeta></app-contenedor-vista-tarjeta>\n</div>\n\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-e9ca90a82c47c30a3d3935e6576c10ac23df0ee0f27de988acb7547a7437c5d245c2a5ea3b75dcd27bec54e9fcf42300ae22f37a171c2a58c2e5665c352c298a",
+            "id": "component-ButtonComponent-2a4e91ec726cf49fec442410f1295c333ff97b99bbdab956ae0530c4370f7d7b9193aa41c0fcc7481f2499d3ba1d3d953e33baa14fd702b47deacc8a0f68f408",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -102,7 +102,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nIs this the principal call to action on the page?\n",
                     "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 36,
+                    "line": 38,
                     "type": "\"primary\" | \"primary-outline\" | \"negative\" | \"negative-outline\" | \"icon\" | \"link\"",
                     "decorators": []
                 },
@@ -111,7 +111,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 46,
+                    "line": 48,
                     "type": "string | null",
                     "decorators": []
                 },
@@ -122,15 +122,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 1088,
-                            "end": 1102,
+                            "pos": 1161,
+                            "end": 1175,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 1089,
-                                "end": 1097,
+                                "pos": 1162,
+                                "end": 1170,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -142,7 +142,7 @@
                     ],
                     "rawdescription": "\n\nButton contents\n\n",
                     "description": "<p>Button contents</p>\n",
-                    "line": 44,
+                    "line": 46,
                     "type": "string",
                     "decorators": []
                 },
@@ -151,7 +151,7 @@
                     "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 47,
+                    "line": 49,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -164,7 +164,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nOptional click handler\n",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 53,
+                    "line": 55,
                     "type": "EventEmitter"
                 }
             ],
@@ -174,12 +174,12 @@
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
-            "standalone": false,
+            "standalone": true,
             "imports": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'uni-button',\r\n  styleUrls: ['../assets/CSS/Component-Styles/buttonprueba.component.css'],\r\n  template: `\r\n    <!-- *ngIf=\"primary; else secondaryButton\" -->\r\n    <button\r\n      type=\"button\"\r\n      (click)=\"onClick.emit($event)\"\r\n      [ngClass]=\"classes\"\r\n    ><span *ngIf=\"showIcon && icon\" class=\"material-symbols-outlined button-icon\">{{icon}}</span>\r\n      {{ label }}\r\n    </button>\r\n\r\n    <ng-template #secondaryButton>\r\n      <button\r\n        type=\"button\"\r\n        (click)=\"onClick.emit($event)\"\r\n        [ngClass]=\"classes\"\r\n      ><span *ngIf=\"showIcon && icon\" class=\"material-symbols-outlined button-icon\">{{icon}}</span>\r\n      {{ label }}\r\n      </button>\r\n    </ng-template>\r\n  `,\r\n  \r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n\r\n  @Input()\r\n  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' | 'icon' | 'link' = 'primary';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\r\n  @Input() showIcon = true;               // Controla si se muestra el ícono\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n \r\n\r\n  public get classes(): string[] {\r\n    // Determinamos las clases CSS basadas en el tipo de botón\r\n    let mode = '';\r\n    switch (this.buttonType) {\r\n      case 'primary':\r\n        mode = 'btn button-primary';\r\n        break;\r\n      case 'primary-outline':\r\n        mode = 'btn button-primary-outline';\r\n        break;\r\n      case 'negative':\r\n        mode = 'btn button-negative';\r\n        break;\r\n      case 'negative-outline':\r\n        mode = 'btn button-negative-outline';\r\n        break;\r\n      case 'icon':\r\n        mode = 'btn icon-button';\r\n        break;\r\n      case 'link':\r\n        mode = 'btn button-link';\r\n        break;\r\n    }\r\n    return [ mode];\r\n  }\r\n}",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'uni-button',\r\n  standalone: true, // Si este componente es standalone\r\n  imports: [],\r\n  styleUrls: ['../assets/CSS/Component-Styles/buttonprueba.component.css'],\r\n  template: `\r\n    <!-- *ngIf=\"primary; else secondaryButton\" -->\r\n    <button\r\n      type=\"button\"\r\n      (click)=\"onClick.emit($event)\"\r\n      [ngClass]=\"classes\"\r\n    ><span *ngIf=\"showIcon && icon\" class=\"material-symbols-outlined button-icon\">{{icon}}</span>\r\n      {{ label }}\r\n    </button>\r\n\r\n    <ng-template #secondaryButton>\r\n      <button\r\n        type=\"button\"\r\n        (click)=\"onClick.emit($event)\"\r\n        [ngClass]=\"classes\"\r\n      ><span *ngIf=\"showIcon && icon\" class=\"material-symbols-outlined button-icon\">{{icon}}</span>\r\n      {{ label }}\r\n      </button>\r\n    </ng-template>\r\n  `,\r\n  \r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n\r\n  @Input()\r\n  buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' | 'icon' | 'link' = 'primary';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\r\n  @Input() showIcon = true;               // Controla si se muestra el ícono\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n \r\n\r\n  public get classes(): string[] {\r\n    // Determinamos las clases CSS basadas en el tipo de botón\r\n    let mode = '';\r\n    switch (this.buttonType) {\r\n      case 'primary':\r\n        mode = 'btn button-primary';\r\n        break;\r\n      case 'primary-outline':\r\n        mode = 'btn button-primary-outline';\r\n        break;\r\n      case 'negative':\r\n        mode = 'btn button-negative';\r\n        break;\r\n      case 'negative-outline':\r\n        mode = 'btn button-negative-outline';\r\n        break;\r\n      case 'icon':\r\n        mode = 'btn icon-button';\r\n        break;\r\n      case 'link':\r\n        mode = 'btn button-link';\r\n        break;\r\n    }\r\n    return [ mode];\r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -196,14 +196,14 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 57
+                        "line": 59
                     }
                 }
             }
         },
         {
             "name": "EncabezadoComponent",
-            "id": "component-EncabezadoComponent-820fe62e88b19265e957c123ee8a4a9b5e82ea7cf327340d1e5e26f2d230f72d9942e8f3e41c553fa9bbdb8937b032451ca585c2310476e682743119cf2beea9",
+            "id": "component-EncabezadoComponent-cf88081a21431c52331e4aa3a44160aea1824c481086af1fd3f23a3186e73d29160777d357ece3fd4cf90b51b58d1b156071541575bf3fb0deab9888a0d0bff9",
             "file": "src/stories/encabezado/encabezado.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -227,12 +227,16 @@
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
-            "standalone": false,
-            "imports": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatDivider"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'app-encabezado',\r\n  template: `<div class=\"row encabezado-container\">\r\n  <div class=\"text-container\">\r\n                  <div class=\"text-breadcrum\">\r\n                      <a>\r\n                          <span class=\"contraste\"> Organismo</span>\r\n                      </a>\r\n                      <span class=\"mx-1\">/</span>\r\n                      <a >\r\n                          <span class=\"contraste\"> Dependencia </span>\r\n                      </a>\r\n                      <span  class=\"mx-1\">/</span>\r\n                      <label  attr.aria-label=\"Expediente \">\r\n                      Expediente  \r\n                      </label>\r\n                  </div>\r\n\r\n                  <div class=\"row mt-1\">\r\n                      <div class=\"text-título\">\r\n                      Actuaciones de SECRETARÍA GENERAL CAYT \r\n                      </div>\r\n                  </div>\r\n  </div>\r\n\r\n  <!-- crear expediente -->\r\n\r\n  <div class=\"btn-container\">\r\n      <button class=\"btn button-primary\"><!-- esto se reemplazaría por un <uni-button> -->\r\n        <span class=\"material-symbols-outlined button-icon\">add_circle</span>\r\n        Crear\r\n      </button>\r\n  </div>\r\n  <mat-divider class=\"encabezado-border mt-3\"></mat-divider>\r\n</div>\r\n`,\r\n  styleUrls: ['../../assets/CSS/Component-Styles/encabezado.component.css'],\r\n})\r\nexport default class EncabezadoComponent {\r\n \r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { MatDivider } from '@angular/material/divider';\r\n\r\n\r\n@Component({\r\n  selector: 'app-encabezado',\r\n  standalone: true,\r\n  imports: [MatDivider],\r\n  template: `<div class=\"row encabezado-container\">\r\n  <div class=\"text-container\">\r\n                  <div class=\"text-breadcrum\">\r\n                      <a>\r\n                          <span class=\"contraste\"> Organismo</span>\r\n                      </a>\r\n                      <span class=\"mx-1\">/</span>\r\n                      <a >\r\n                          <span class=\"contraste\"> Dependencia </span>\r\n                      </a>\r\n                      <span  class=\"mx-1\">/</span>\r\n                      <label  attr.aria-label=\"Expediente \">\r\n                      Expediente  \r\n                      </label>\r\n                  </div>\r\n\r\n                  <div class=\"row mt-1\">\r\n                      <div class=\"text-título\">\r\n                      Actuaciones de SECRETARÍA GENERAL CAYT \r\n                      </div>\r\n                  </div>\r\n  </div>\r\n\r\n  <!-- crear expediente -->\r\n\r\n  <div class=\"btn-container\">\r\n      <button class=\"btn button-primary\"><!-- esto se reemplazaría por un <uni-button> -->\r\n        <span class=\"material-symbols-outlined button-icon\">add_circle</span>\r\n        Crear\r\n      </button>\r\n  </div>\r\n  <mat-divider class=\"encabezado-border mt-3\"></mat-divider>\r\n</div>\r\n`,\r\n  styleUrls: ['../../assets/CSS/Component-Styles/encabezado.component.css'],\r\n})\r\nexport default class EncabezadoComponent {\r\n \r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -353,7 +357,7 @@
         },
         {
             "name": "FiltrosRapidosComponent",
-            "id": "component-FiltrosRapidosComponent-9c53cc8ac282129793d64b3a5b246ffb6e68d5317c413c22b17e66f3cfc4b8860a67d3cd6c2d2538b3a50b4db0960aa6a51ad39598e804e5e9e1e1b9102a7fa2",
+            "id": "component-FiltrosRapidosComponent-ae502edfc4f9d0ec9c0d7900b8b64612c8469112de5ac83b9c35336fc9a0342071de58b7563cd968f43dce736b780a8d809e79f00c87cd33b39b78d969f17c02",
             "file": "src/stories/filtros-rapidos/filtros-rapidos/filtros-rapidos.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -381,7 +385,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 10,
+                    "line": 12,
                     "modifierKind": [
                         125
                     ]
@@ -394,7 +398,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 14,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -406,12 +410,12 @@
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
-            "standalone": false,
+            "standalone": true,
             "imports": [],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n\n@Component({\n  selector: 'app-filtros-rapidos',\n  templateUrl: './filtros-rapidos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/filtros-rapidos.component.css']\n})\nexport class FiltrosRapidosComponent {\n  public collapsedFiltros: boolean = false;\n\n  public collapseFilter(): void {\n    this.collapsedFiltros = !this.collapsedFiltros;\n  }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n\n@Component({\n  selector: 'app-filtros-rapidos',\n  standalone: true, // Si este componente es standalone\n  imports: [],\n  templateUrl: './filtros-rapidos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/filtros-rapidos.component.css']\n})\nexport class FiltrosRapidosComponent {\n  public collapsedFiltros: boolean = false;\n\n  public collapseFilter(): void {\n    this.collapsedFiltros = !this.collapsedFiltros;\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -425,7 +429,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-8d57015b1629d158e936d8ad032c2b12c9c918c9ab9f915a663882420aed08f3cac41298eda15ba4b524570caaf7e8e37c1cd3ab0a60c4010fd8bdf8900ee0cf",
+            "id": "component-HeaderComponent-d1460dc2891cf2d5ea0faf46cda7379557a50dabbe782fffeca7472dce149c78ff6e2475e851f73bda45c473a46d776806001370839622aea6ebacbc8fb4cc5b",
             "file": "src/stories/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -447,7 +451,7 @@
                     "defaultValue": "null",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 68,
+                    "line": 72,
                     "type": "User | null",
                     "decorators": []
                 }
@@ -459,12 +463,21 @@
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
-            "standalone": false,
-            "imports": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatMenuModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatSidenavModule",
+                    "type": "module"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  template: `\r\n  <nav  class=\"navbar navbar-expand-lg header\" role=\"main\">\r\n    <a class=\"navbar-brand\"  aria-label=\"Ir al inicio\" title=\"Ir al inicio\">\r\n      <img class=\"header-logo \" src=\"./assets/tramix CN hor-blanco.png\" aria-label=\"Logo del sistema\" alt=\"Logo del sistema\">\r\n    </a>\r\n    <!-- Boton hamburguesa/mobile -->\r\n    <button class=\"navbar-toggler header-button button-menu \" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\r\n      aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Menú de navegación\">\r\n      <span class=\"material-symbols-outlined \" aria-hidden=\"true\">menu</span>\r\n    </button>\r\n    <!-- Fin Boton de menu -->\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <!-- AQUÍ COLOCAR EL BUSCADOR -->\r\n    <!-- fIN BUSCADOR -->\r\n      <span class=\"ms-auto header-buttons-group\">\r\n         <!--Aplicaciones-->\r\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn header-button button-menu \" aria-label=\"Módulos\" title=\"Módulos\"> \r\n          <span class=\"material-symbols-outlined button-icon \" id=\"icono-apps\">apps</span>\r\n          <span aria-label=\"Ver más opciones\"  class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <mat-menu #menu=\"matMenu\">\r\n          <div class=\"header--apps-dropdown\">            \r\n            <div class=\"col-12 header--apps--align\">\r\n              <button class=\"btn button-apps-menu\">\r\n                <span class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">library_books</span>\r\n                <span class=\"btn-app-txt ml-2\">Liquidaciones</span>\r\n              </button>\r\n            </div>            \r\n          </div>\r\n        </mat-menu>\r\n        <!--Novedades-->\r\n        <mat-drawer-container autosize class=\"header--drawer\">\r\n          <mat-drawer #sidenav mode=\"over\" position=\"end\" class=\"header--drawer--sidenav\"> \r\n          </mat-drawer>              \r\n          <div class=\"\">\r\n            <button id=\"novedades\" aria-label=\"Novedades\"  class=\"btn header-button \" aria-label=\"Novedades\" title=\"Novedades\">                        \r\n              <span aria-label=\"Novedades\"  class=\"material-symbols-outlined button-icon \" id=\"icono-usuario_mobile\">notifications</span>\r\n              <span class=\"badge rounded-pill badge-novedades bg-danger\">10</span>\r\n            </button>\r\n          </div>              \r\n        </mat-drawer-container>     \r\n        <!--Helper-->\r\n        <button  class=\"btn header-button\" aria-label=\"Ayuda\" title=\"Ayuda\">\r\n          <span aria-label=\"Ayuda\" class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">help_outline</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <!--Datos de usuario-->\r\n        <button  class=\"btn header-button\" style=\"align-items: center;\">\r\n          <div class=\"me-2\">\r\n              <span class=\"user-text\">Usuario: nombre usuario</span> \r\n          </div>\r\n          <span aria-label=\"Datos del usuario\" class=\"material-symbols-outlined button-icon\" id=\"icono-usuario_mobile\">account_circle</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n      </span>\r\n    </div>\r\n  </nav>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from './User';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSidenavModule } from '@angular/material/sidenav';\r\n\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [MatMenuModule, MatSidenavModule],\r\n  template: `\r\n  <nav  class=\"navbar navbar-expand-lg header\" role=\"main\">\r\n    <a class=\"navbar-brand\"  aria-label=\"Ir al inicio\" title=\"Ir al inicio\">\r\n      <img class=\"header-logo \" src=\"./assets/tramix CN hor-blanco.png\" aria-label=\"Logo del sistema\" alt=\"Logo del sistema\">\r\n    </a>\r\n    <!-- Boton hamburguesa/mobile -->\r\n    <button class=\"navbar-toggler header-button button-menu \" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\r\n      aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Menú de navegación\">\r\n      <span class=\"material-symbols-outlined \" aria-hidden=\"true\">menu</span>\r\n    </button>\r\n    <!-- Fin Boton de menu -->\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <!-- AQUÍ COLOCAR EL BUSCADOR -->\r\n    <!-- fIN BUSCADOR -->\r\n      <span class=\"ms-auto header-buttons-group\">\r\n         <!--Aplicaciones-->\r\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn header-button button-menu \" aria-label=\"Módulos\" title=\"Módulos\"> \r\n          <span class=\"material-symbols-outlined button-icon \" id=\"icono-apps\">apps</span>\r\n          <span aria-label=\"Ver más opciones\"  class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <mat-menu #menu=\"matMenu\">\r\n          <div class=\"header--apps-dropdown\">            \r\n            <div class=\"col-12 header--apps--align\">\r\n              <button class=\"btn button-apps-menu\">\r\n                <span class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">library_books</span>\r\n                <span class=\"btn-app-txt ml-2\">Liquidaciones</span>\r\n              </button>\r\n            </div>            \r\n          </div>\r\n        </mat-menu>\r\n        <!--Novedades-->\r\n        <mat-drawer-container autosize class=\"header--drawer\">\r\n          <mat-drawer #sidenav mode=\"over\" position=\"end\" class=\"header--drawer--sidenav\"> \r\n          </mat-drawer>              \r\n          <div class=\"\">\r\n            <button id=\"novedades\" aria-label=\"Novedades\"  class=\"btn header-button \" aria-label=\"Novedades\" title=\"Novedades\">                        \r\n              <span aria-label=\"Novedades\"  class=\"material-symbols-outlined button-icon \" id=\"icono-usuario_mobile\">notifications</span>\r\n              <span class=\"badge rounded-pill badge-novedades bg-danger\">10</span>\r\n            </button>\r\n          </div>              \r\n        </mat-drawer-container>     \r\n        <!--Helper-->\r\n        <button  class=\"btn header-button\" aria-label=\"Ayuda\" title=\"Ayuda\">\r\n          <span aria-label=\"Ayuda\" class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">help_outline</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <!--Datos de usuario-->\r\n        <button  class=\"btn header-button\" style=\"align-items: center;\">\r\n          <div class=\"me-2\">\r\n              <span class=\"user-text\">Usuario: nombre usuario</span> \r\n          </div>\r\n          <span aria-label=\"Datos del usuario\" class=\"material-symbols-outlined button-icon\" id=\"icono-usuario_mobile\">account_circle</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n      </span>\r\n    </div>\r\n  </nav>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -682,7 +695,7 @@
         },
         {
             "name": "VistaTarjetaComponent",
-            "id": "component-VistaTarjetaComponent-1af5b74d169c5704e1519997ab843287ae8ebbff15a0baf8f152b1677bb7e711f9f30ae0ef4a62c9a1b5a2aca6c1ef3de76cab243c81b6125b1553dedd0d63a2",
+            "id": "component-VistaTarjetaComponent-f7d136193b7843a29ee62f6ac1a8c5300a0d7a7a6aad2e617351155d1f658e4b0d805ed22467d8ee84b502f1fcec9c713254c692a1817f259a47987104422314",
             "file": "src/stories/vista-tarjeta/vista-tarjeta.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -708,7 +721,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 19,
+                    "line": 20,
                     "modifierKind": [
                         125
                     ]
@@ -721,7 +734,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 22,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -748,32 +761,40 @@
                     "type": "module"
                 },
                 {
-                    "name": "CustomComponentModule",
+                    "name": "FiltrosRapidosComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "EncabezadoComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ListaTarjetaComponent } from './tarjetas/lista-tarjetas/lista-tarjetas.component';\r\nimport { FichaComponent } from './ficha/ficha.component';\r\nimport { CustomComponentModule } from 'src/app/custom.module';\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'app-contenedor-vista-tarjeta',\r\n  styleUrl: '../../assets/CSS/Component-Styles/vista-tarjeta.css',\r\n  templateUrl:'./vista-tarjetas.component.html' ,\r\n  standalone: true, // Si este componente es standalone\r\n  imports: [ListaTarjetaComponent,FichaComponent, CommonModule,CustomComponentModule], // Importa ambos componentes\r\n  \r\n  \r\n})\r\nexport class VistaTarjetaComponent {\r\n    public collapsedPanel: boolean = false;\r\n\r\n    public collapsePanel(): void {\r\n      this.collapsedPanel = !this.collapsedPanel;\r\n    }\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ListaTarjetaComponent } from './tarjetas/lista-tarjetas/lista-tarjetas.component';\r\nimport { FichaComponent } from './ficha/ficha.component';\r\nimport { FiltrosRapidosComponent } from '../filtros-rapidos/filtros-rapidos/filtros-rapidos.component';\r\nimport HeaderComponent from '../header.component';\r\nimport EncabezadoComponent from '../encabezado/encabezado.component';\r\n\r\n\r\n@Component({\r\n  selector: 'app-contenedor-vista-tarjeta',\r\n  styleUrl: '../../assets/CSS/Component-Styles/vista-tarjeta.css',\r\n  templateUrl:'./vista-tarjetas.component.html' ,\r\n  standalone: true, // Si este componente es standalone\r\n  imports: [ListaTarjetaComponent,FichaComponent, CommonModule,FiltrosRapidosComponent, HeaderComponent, EncabezadoComponent], // Importa ambos componentes\r\n  \r\n  \r\n})\r\nexport class VistaTarjetaComponent {\r\n    public collapsedPanel: boolean = false;\r\n\r\n    public collapsePanel(): void {\r\n      this.collapsedPanel = !this.collapsedPanel;\r\n    }\r\n}\r\n",
             "styleUrl": "../../assets/CSS/Component-Styles/vista-tarjeta.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-header></app-header>\r\n<div class=\"mx-5\">\r\n<app-encabezado></app-encabezado>\r\n\r\n<app-filtros-rapidos></app-filtros-rapidos>\r\n\r\n<div class=\"d-flex\">\r\n    <div class=\" sec-tarjetas collapsible-panel\" [ngClass]=\"{ 'collapsed': collapsedPanel }\">\r\n        <app-lista-tarjeta></app-lista-tarjeta>\r\n        <button \r\n            class=\"collapse-button\" \r\n            (click)=\"collapsePanel()\">\r\n\r\n            <ng-container *ngIf=\"collapsedPanel\">\r\n              <span \r\n                class=\"material-icons\" \r\n                aria-hidden=\"true\"\r\n                aria-label=\"Contraer lista de expedientes\" \r\n                title=\"Contraer lista de expedientes\">\r\n                chevron_right\r\n              </span> \r\n            </ng-container>\r\n\r\n            <ng-container *ngIf=\"!collapsedPanel\">\r\n              <span class=\"material-icons\" aria-hidden=\"true\">chevron_left</span> \r\n            </ng-container>\r\n\r\n          </button>\r\n    </div>\r\n    <div class=\"sec-Ficha\">\r\n    <app-ficha></app-ficha>\r\n    </div>\r\n</div>"
+            "templateData": "<app-header></app-header>\r\n<div class=\"mx-5 h-100\">\r\n  <app-encabezado></app-encabezado>\r\n  \r\n  <app-filtros-rapidos></app-filtros-rapidos>\r\n  \r\n  <div class=\"d-flex\">\r\n      <div class=\" sec-tarjetas collapsible-panel\" [ngClass]=\"{ 'collapsed': collapsedPanel }\">\r\n          <app-lista-tarjeta></app-lista-tarjeta>\r\n          <button \r\n              class=\"collapse-button\" \r\n              (click)=\"collapsePanel()\">\r\n  \r\n              <ng-container *ngIf=\"collapsedPanel\">\r\n                <span \r\n                  class=\"material-icons\" \r\n                  aria-hidden=\"true\"\r\n                  aria-label=\"Contraer lista de expedientes\" \r\n                  title=\"Contraer lista de expedientes\">\r\n                  chevron_right\r\n                </span> \r\n              </ng-container>\r\n  \r\n              <ng-container *ngIf=\"!collapsedPanel\">\r\n                <span class=\"material-icons\" aria-hidden=\"true\">chevron_left</span> \r\n              </ng-container>\r\n  \r\n            </button>\r\n      </div>\r\n      <div class=\"sec-Ficha\">\r\n      <app-ficha></app-ficha>\r\n      </div>\r\n  </div>\r\n</div>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-b026a6284672d17efbe3f7a285b290ee574a1e678e982c704b10cf2ba1ce93d98ffedbecc96cb12b0c9465f2ab6f133a26fef53af94fed142b1f85f42d00447a",
+            "id": "module-AppModule-d3a3fcc49a5b725ed32985e0f09c54ba32d482db1e7978c8f3c4f3fe9e7f13e42809bb41e5ca799af0b8817b64aa5cabc9c51790a4232852d7e3b16161a1b9c0",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { provideAnimationsAsync } from '@angular/platform-browser/animations/async';\r\n\r\nimport HeaderComponent from '../stories/header.component';\r\nimport EncabezadoComponent from 'src/stories/encabezado/encabezado.component';\r\n\r\nimport { EtiquetasComponent } from 'src/stories/etiquetas/etiqueta.component';\r\n\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport {MatMenuModule} from '@angular/material/menu';\r\nimport {MatSidenavModule} from '@angular/material/sidenav';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\nimport { FiltrosRapidosComponent } from 'src/stories/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';\r\nimport ButtonComponent from 'src/stories/button.component';\r\n\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport {MatIconModule} from '@angular/material/icon';\r\nimport { TarjetaComponent } from '../stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.component';\r\nimport { ListaTarjetaComponent } from '../stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjetas.component';\r\nimport { CustomComponentModule } from './custom.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    CustomComponentModule\r\n    \r\n  ],\r\n  exports:[\r\n    \r\n  ],\r\n  providers: [\r\n    provideAnimationsAsync()\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { provideAnimationsAsync } from '@angular/platform-browser/animations/async';\r\n\r\n\r\n\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport {MatMenuModule} from '@angular/material/menu';\r\nimport {MatSidenavModule} from '@angular/material/sidenav';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\n\r\n\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport {MatIconModule} from '@angular/material/icon';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    CommonModule,\r\n    MatButtonModule,\r\n    MatMenuModule,\r\n    MatSidenavModule,\r\n    MatDividerModule,\r\n    MatCheckboxModule,\r\n    MatFormFieldModule,\r\n    MatSelectModule,\r\n    MatIconModule,\r\n    \r\n  ],\r\n  exports:[\r\n    \r\n  ],\r\n  providers: [\r\n    provideAnimationsAsync()\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -802,84 +823,6 @@
                             "name": "AppComponent"
                         }
                     ]
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "CustomComponentModule",
-            "id": "module-CustomComponentModule-c46dfd02eac64adce3b5cfaecfb9717afa7d0db753fee969d537208db5a3043359417fc0c0d1e52ffe322b9c41bd6bf23e89d939afb7e03da1f071a7a97c4941",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "src/app/custom.module.ts",
-            "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\n\r\n\r\nimport HeaderComponent from '../stories/header.component';\r\nimport EncabezadoComponent from 'src/stories/encabezado/encabezado.component';\r\nimport { EtiquetasComponent } from 'src/stories/etiquetas/etiqueta.component';\r\nimport { FiltrosRapidosComponent } from 'src/stories/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';\r\nimport ButtonComponent from 'src/stories/button.component';\r\nimport { TarjetaComponent } from '../stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.component';\r\nimport { ListaTarjetaComponent } from '../stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjetas.component';\r\nimport { VistaTarjetaComponent } from '../stories/vista-tarjeta/vista-tarjeta.component';\r\n\r\n\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport {MatMenuModule} from '@angular/material/menu';\r\nimport {MatSidenavModule} from '@angular/material/sidenav';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport {MatIconModule} from '@angular/material/icon';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    HeaderComponent,\r\n    EncabezadoComponent,\r\n    FiltrosRapidosComponent,\r\n    EtiquetasComponent,\r\n    ButtonComponent,\r\n    \r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    MatButtonModule,\r\n    MatMenuModule,\r\n    MatSidenavModule,\r\n    MatDividerModule,\r\n    MatCheckboxModule,\r\n    MatFormFieldModule,\r\n    MatSelectModule,\r\n    MatIconModule,\r\n\r\n    TarjetaComponent,\r\n    ListaTarjetaComponent,\r\n    VistaTarjetaComponent\r\n    \r\n  ],\r\n  exports:[\r\n    MatButtonModule,\r\n    MatMenuModule,\r\n    MatSidenavModule,\r\n    MatDividerModule,\r\n    HeaderComponent,\r\n    EncabezadoComponent,\r\n    FiltrosRapidosComponent,\r\n    EtiquetasComponent,\r\n    ButtonComponent,\r\n  ],\r\n})\r\nexport class CustomComponentModule { }",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "ButtonComponent"
-                        },
-                        {
-                            "name": "EncabezadoComponent"
-                        },
-                        {
-                            "name": "EtiquetasComponent"
-                        },
-                        {
-                            "name": "FiltrosRapidosComponent"
-                        },
-                        {
-                            "name": "HeaderComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "ListaTarjetaComponent"
-                        },
-                        {
-                            "name": "TarjetaComponent"
-                        },
-                        {
-                            "name": "VistaTarjetaComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": [
-                        {
-                            "name": "ButtonComponent"
-                        },
-                        {
-                            "name": "EncabezadoComponent"
-                        },
-                        {
-                            "name": "EtiquetasComponent"
-                        },
-                        {
-                            "name": "FiltrosRapidosComponent"
-                        },
-                        {
-                            "name": "HeaderComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
                 },
                 {
                     "type": "classes",
@@ -1008,7 +951,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<Button>",
-                "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({ \r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    moduleMetadata: { // Aquí se agregan los módulos necesarios\r\n      declarations: [Button], // Declarar el componente si no es standalone\r\n      imports: [CommonModule], // Importar módulos necesarios\r\n    },\r\n  }),\r\n  argTypes: {\r\n    label: { control: 'text', defaultValue: 'Button' },\r\n    icon: { \r\n      control: 'text',\r\n      description: 'El nombre del icono de Material Symbols a mostrar',\r\n      defaultValue: 'check_circle',  // Ícono predeterminado\r\n    },\r\n    showIcon: { \r\n      control: 'boolean',\r\n      description: 'Mostrar o no el icono',\r\n      defaultValue: true,  // Muestra el ícono por defecto\r\n    },\r\n    buttonType: {\r\n      control: 'radio',\r\n      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],\r\n      description: 'El tipo de botón a mostrar',\r\n    },\r\n  },\r\n  \r\n}"
+                "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({ \r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    moduleMetadata: { // Aquí se agregan los módulos necesarios\r\n      declarations: [], // Declarar el componente si no es standalone\r\n      imports: [CommonModule,Button], // Importar módulos necesarios\r\n    },\r\n  }),\r\n  argTypes: {\r\n    label: { control: 'text', defaultValue: 'Button' },\r\n    icon: { \r\n      control: 'text',\r\n      description: 'El nombre del icono de Material Symbols a mostrar',\r\n      defaultValue: 'check_circle',  // Ícono predeterminado\r\n    },\r\n    showIcon: { \r\n      control: 'boolean',\r\n      description: 'Mostrar o no el icono',\r\n      defaultValue: true,  // Muestra el ícono por defecto\r\n    },\r\n    buttonType: {\r\n      control: 'radio',\r\n      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],\r\n      description: 'El tipo de botón a mostrar',\r\n    },\r\n  },\r\n  \r\n}"
             },
             {
                 "name": "meta",
@@ -1018,7 +961,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component:HeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button],\r\n      imports: [CommonModule,MatButtonModule,MatMenuModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component:HeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatMenuModule,BrowserModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1058,7 +1001,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<VistaTarjetaComponent>",
-                "defaultValue": "{\r\n  title: 'Example/vista tarjeta/vista tarjeta',\r\n  component:VistaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n}"
+                "defaultValue": "{\r\n  title: 'Example/vista tarjeta/vista tarjeta',\r\n  component:VistaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule,],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1084,21 +1027,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ListaTarjetaComponent>",
-                "defaultValue": "{\r\n  title: 'Example/vista tarjeta/Lista Tarjetas',\r\n  component:ListaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      \r\n      imports: [CommonModule,MatButtonModule,MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TarjetaComponent>",
                 "defaultValue": "{\n  title: 'Example/vista tarjeta/Tarjetas',\n  component:TarjetaComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [EtiquetasComponent],\n      imports: [CommonModule,MatButtonModule,MatDividerModule],\n    }),\n  ],\n\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ListaTarjetaComponent>",
+                "defaultValue": "{\r\n  title: 'Example/vista tarjeta/Lista Tarjetas',\r\n  component:ListaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      \r\n      imports: [CommonModule,MatButtonModule,MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "Negative",
@@ -1275,8 +1218,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ListaTarjetaComponent>",
-                "file": "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts",
+                "rawtype": "StoryObj<TarjetaComponent>",
+                "file": "src/stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1286,8 +1229,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TarjetaComponent>",
-                "file": "src/stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.stories.ts",
+                "rawtype": "StoryObj<ListaTarjetaComponent>",
+                "file": "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1405,7 +1348,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component:HeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button],\r\n      imports: [CommonModule,MatButtonModule,MatMenuModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component:HeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatMenuModule,BrowserModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -1437,7 +1380,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<Button>",
-                    "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({ \r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    moduleMetadata: { // Aquí se agregan los módulos necesarios\r\n      declarations: [Button], // Declarar el componente si no es standalone\r\n      imports: [CommonModule], // Importar módulos necesarios\r\n    },\r\n  }),\r\n  argTypes: {\r\n    label: { control: 'text', defaultValue: 'Button' },\r\n    icon: { \r\n      control: 'text',\r\n      description: 'El nombre del icono de Material Symbols a mostrar',\r\n      defaultValue: 'check_circle',  // Ícono predeterminado\r\n    },\r\n    showIcon: { \r\n      control: 'boolean',\r\n      description: 'Mostrar o no el icono',\r\n      defaultValue: true,  // Muestra el ícono por defecto\r\n    },\r\n    buttonType: {\r\n      control: 'radio',\r\n      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],\r\n      description: 'El tipo de botón a mostrar',\r\n    },\r\n  },\r\n  \r\n}"
+                    "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({ \r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    moduleMetadata: { // Aquí se agregan los módulos necesarios\r\n      declarations: [], // Declarar el componente si no es standalone\r\n      imports: [CommonModule,Button], // Importar módulos necesarios\r\n    },\r\n  }),\r\n  argTypes: {\r\n    label: { control: 'text', defaultValue: 'Button' },\r\n    icon: { \r\n      control: 'text',\r\n      description: 'El nombre del icono de Material Symbols a mostrar',\r\n      defaultValue: 'check_circle',  // Ícono predeterminado\r\n    },\r\n    showIcon: { \r\n      control: 'boolean',\r\n      description: 'Mostrar o no el icono',\r\n      defaultValue: true,  // Muestra el ícono por defecto\r\n    },\r\n    buttonType: {\r\n      control: 'radio',\r\n      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],\r\n      description: 'El tipo de botón a mostrar',\r\n    },\r\n  },\r\n  \r\n}"
                 },
                 {
                     "name": "Negative",
@@ -1543,7 +1486,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<VistaTarjetaComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/vista tarjeta/vista tarjeta',\r\n  component:VistaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n}"
+                    "defaultValue": "{\r\n  title: 'Example/vista tarjeta/vista tarjeta',\r\n  component:VistaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule,],\r\n    }),\r\n  ],\r\n\r\n}"
                 },
                 {
                     "name": "VistaTarjeta",
@@ -1720,19 +1663,6 @@
                     "kind": 183
                 }
             ],
-            "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ListaTarjetaComponent>",
-                    "file": "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "src/stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.stories.ts": [
                 {
                     "name": "Story",
@@ -1740,6 +1670,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TarjetaComponent>",
                     "file": "src/stories/vista-tarjeta/tarjetas/tarjeta/tarjeta.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ListaTarjetaComponent>",
+                    "file": "src/stories/vista-tarjeta/tarjetas/lista-tarjetas/lista-tarjeta.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
