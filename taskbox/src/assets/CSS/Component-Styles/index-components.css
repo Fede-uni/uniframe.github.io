@@ -5,4 +5,7 @@
 @import "./filtros-rapidos.component.css";
 @import "./tarjeta.component.css";
 @import "./etiquetas.component.css";
-@import "./index-components.css"
+@import "./ficha.component.css";
+@import "./lista-tarjeta-component.css";
+@import "./tarjeta.component.css";
+@import "./vista-tarjeta.css";

@@ -4,33 +4,35 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import { MatFormField } from '@angular/material/form-field';
+import { MatCheckbox } from '@angular/material/checkbox';
+import { MatSelect } from '@angular/material/select';
 
-import EncabezadoComponent from './encabezado.component';
+import { FiltrosRapidosComponent } from './filtros-rapidos.component';
 
-const meta: Meta<EncabezadoComponent> = {
-  title: 'Example/Encabezado',
-  component:EncabezadoComponent,
+const meta: Meta<FiltrosRapidosComponent> = {
+  title: 'Uniframe/Sections/Filtros Rapidos',
+  component:FiltrosRapidosComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      
-      imports: [CommonModule,MatButtonModule,MatDividerModule],
+      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect],
     }),
   ],
 
 };
 
 export default meta;
-type Story = StoryObj<EncabezadoComponent>;
+type Story = StoryObj<FiltrosRapidosComponent>;
 
-export const Encabezado: Story = {
+export const Tarjeta: Story = {
   args: {
   },
 };
 
-Encabezado.parameters = { 
+Tarjeta.parameters = { 
   docs: { 
     source: { 
       code: `<div class="row encabezado-container">
@@ -65,16 +67,17 @@ Encabezado.parameters = {
   <!-- crear expediente -->
 
   <div class="btn-container">
-      <button class="btn button-primary"><!-- esto se reemplazaría por un <uni-button> -->
+      <button class="btn button-primary">
         <span class="material-symbols-outlined button-icon">add_circle</span>
         Crear
       </button>
   </div>
   <mat-divider class="encabezado-border mt-2"></mat-divider>
-</div>
-`,
+</div>`,
     }, 
   }, 
 };
+
+
 
 

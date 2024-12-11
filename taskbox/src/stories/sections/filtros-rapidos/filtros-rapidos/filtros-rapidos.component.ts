@@ -9,7 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
   standalone: true, // Si este componente es standalone
   imports: [CommonModule,MatFormFieldModule, MatSelectModule,],
   templateUrl: './filtros-rapidos.component.html',
-  styleUrls: ['../../../assets/CSS/Component-Styles/filtros-rapidos.component.css']
+  styleUrls: ['../../../../assets/CSS/Component-Styles/filtros-rapidos.component.css']
 })
 export class FiltrosRapidosComponent {
   public collapsedFiltros: boolean = false;

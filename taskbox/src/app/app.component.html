@@ -1,10 +1,37 @@
-<!-- <app-header></app-header>
-<div class="mx-5">
-<app-encabezado></app-encabezado>
 
-<app-filtros-rapidos></app-filtros-rapidos>
- -->
-<div class="container-view">
-    <app-contenedor-vista-tarjeta></app-contenedor-vista-tarjeta>
+<div class="container-page">
+<app-header></app-header>
+<div class="mx-5 h-100">
+  <app-encabezado></app-encabezado>
+  
+  <app-filtros-rapidos></app-filtros-rapidos>
+  
+  <div class="d-flex">
+      <div class=" sec-tarjetas collapsible-panel" [ngClass]="{ 'collapsed': collapsedPanel }">
+          <app-lista-tarjeta></app-lista-tarjeta>
+          <button 
+              class="collapse-button" 
+              (click)="collapsePanel()">
+  
+              <ng-container *ngIf="collapsedPanel">
+                <span 
+                  class="material-icons" 
+                  aria-hidden="true"
+                  aria-label="Contraer lista de expedientes" 
+                  title="Contraer lista de expedientes">
+                  chevron_right
+                </span> 
+              </ng-container>
+  
+              <ng-container *ngIf="!collapsedPanel">
+                <span class="material-icons" aria-hidden="true">chevron_left</span> 
+              </ng-container>
+  
+            </button>
+      </div>
+      <div class="sec-Ficha">
+      <app-ficha></app-ficha>
+      </div>
+  </div>
 </div>
-
+</div>

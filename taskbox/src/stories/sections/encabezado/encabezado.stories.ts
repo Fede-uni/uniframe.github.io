@@ -5,18 +5,17 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 
+import EncabezadoComponent from './encabezado.component';
 
-import { EtiquetasComponent } from './etiqueta.component';
-
-const meta: Meta<EtiquetasComponent> = {
-  title: 'Example/etiqueta',
-  component:EtiquetasComponent,
+const meta: Meta<EncabezadoComponent> = {
+  title: 'Uniframe/Sections/Encabezado',
+  component:EncabezadoComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      declarations: [EtiquetasComponent],
+      
       imports: [CommonModule,MatButtonModule,MatDividerModule],
     }),
   ],
@@ -24,14 +23,14 @@ const meta: Meta<EtiquetasComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<EtiquetasComponent>;
+type Story = StoryObj<EncabezadoComponent>;
 
-export const Etiqueta: Story = {
+export const Encabezado: Story = {
   args: {
   },
 };
 
-Etiqueta.parameters = { 
+Encabezado.parameters = { 
   docs: { 
     source: { 
       code: `<div class="row encabezado-container">
@@ -66,17 +65,16 @@ Etiqueta.parameters = {
   <!-- crear expediente -->
 
   <div class="btn-container">
-      <button class="btn button-primary">
+      <button class="btn button-primary"><!-- esto se reemplazaría por un <uni-button> -->
         <span class="material-symbols-outlined button-icon">add_circle</span>
         Crear
       </button>
   </div>
   <mat-divider class="encabezado-border mt-2"></mat-divider>
-</div>`,
+</div>
+`,
     }, 
   }, 
 };
-
-
 
 

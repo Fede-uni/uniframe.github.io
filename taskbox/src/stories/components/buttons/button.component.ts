@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   selector: 'uni-button',
   standalone: true, // Si este componente es standalone
   imports: [CommonModule],
-  styleUrls: ['../assets/CSS/Component-Styles/buttonprueba.component.css'],
+  styleUrls: ['../../../assets/CSS/Component-Styles/buttonprueba.component.css'],
   template: `
     <!-- *ngIf="primary; else secondaryButton" -->
     <button

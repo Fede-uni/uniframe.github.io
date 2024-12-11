@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import type { User } from './User';
+import type { User } from 'src/stories/User';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CommonModule } from '@angular/common';
@@ -66,7 +66,7 @@ import { CommonModule } from '@angular/common';
       </span>
     </div>
   </nav>`,
-  styleUrls: ['./header.css'],
+  styleUrls: ['../../../assets/CSS/Component-Styles/headerprueba.component.css'],
 })
 export default class HeaderComponent {
   @Input()

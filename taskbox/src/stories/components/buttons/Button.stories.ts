@@ -1,9 +1,9 @@
 import type { Meta, StoryObj, } from '@storybook/angular';
-import Button from './button.component';
+import Button from '../buttons/button.component';
 import { CommonModule } from '@angular/common';
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<Button> = {
-  title: 'Example/Button',
+  title: 'Uniframe/Components/Button',
   component: Button,
   tags: ['autodocs'],
   render: (args: Button) => ({ 

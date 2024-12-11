@@ -18,6 +18,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 
+import HeaderComponent from 'src/stories/components/header/header.component';
+import EncabezadoComponent from 'src/stories/sections/encabezado/encabezado.component';
+import { FiltrosRapidosComponent } from 'src/stories/sections/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';
+import { ListaTarjetaComponent } from 'src/stories/sections/lista-tarjetas/lista-tarjetas.component';
+import { FichaComponent } from 'src/stories/sections/ficha/ficha.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +40,12 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     MatSelectModule,
     MatIconModule,
+
+    HeaderComponent,
+    EncabezadoComponent,
+    FiltrosRapidosComponent,
+    ListaTarjetaComponent,
+    FichaComponent
   ],
   exports:[
     

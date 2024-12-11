@@ -4,34 +4,32 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
-import { VistaTarjetaComponent } from './vista-tarjeta.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FichaComponent } from './ficha.component';
 
-
-const meta: Meta<VistaTarjetaComponent> = {
-  title: 'Example/vista tarjeta/vista tarjeta',
-  component:VistaTarjetaComponent,
+const meta: Meta<FichaComponent> = {
+  title: 'Uniframe/Sections/Ficha',
+  component:FichaComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
       declarations: [],
-      imports: [CommonModule,MatButtonModule,MatDividerModule,BrowserAnimationsModule],
+      imports: [CommonModule,MatButtonModule,MatDividerModule],
     }),
   ],
 
 };
 
 export default meta;
-type Story = StoryObj<VistaTarjetaComponent>;
+type Story = StoryObj<FichaComponent>;
 
-export const VistaTarjeta: Story = {
+export const Ficha: Story = {
   args: {
   },
 };
 
-VistaTarjeta.parameters = { 
+Ficha.parameters = { 
   docs: { 
     source: { 
       code: `<div class="view-module-container" >

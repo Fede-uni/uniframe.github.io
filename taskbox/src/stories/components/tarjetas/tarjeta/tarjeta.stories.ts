@@ -6,10 +6,10 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 
 import { TarjetaComponent } from './tarjeta.component';
-import { EtiquetasComponent } from '../../../etiquetas/etiqueta.component';
+import { EtiquetasComponent } from '../../../components/etiquetas/etiqueta.component';
 
 const meta: Meta<TarjetaComponent> = {
-  title: 'Example/vista tarjeta/Tarjetas',
+  title: 'Uniframe/Components/Tarjetas',
   component:TarjetaComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],

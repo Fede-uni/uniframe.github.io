@@ -40,7 +40,7 @@ import { MatDivider } from '@angular/material/divider';
   <mat-divider class="encabezado-border mt-3"></mat-divider>
 </div>
 `,
-  styleUrls: ['../../assets/CSS/Component-Styles/encabezado.component.css'],
+  styleUrls: ['../../../assets/CSS/Component-Styles/encabezado.component.css'],
 })
 export default class EncabezadoComponent {
  

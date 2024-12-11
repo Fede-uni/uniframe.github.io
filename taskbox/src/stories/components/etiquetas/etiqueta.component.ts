@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   </span>
   
 `,
-  styleUrl: '../../../src/assets/CSS/Component-Styles/etiquetas.component.css'
+  styleUrl: '../../../assets/CSS/Component-Styles/etiquetas.component.css'
 })
 export class EtiquetasComponent {
 

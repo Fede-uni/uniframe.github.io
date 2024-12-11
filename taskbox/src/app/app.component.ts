@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'taskbox';
+
+   public collapsedPanel: boolean = false;
+  
+
+    public collapsePanel(): void {
+      this.collapsedPanel = !this.collapsedPanel;
+    }
+
 }

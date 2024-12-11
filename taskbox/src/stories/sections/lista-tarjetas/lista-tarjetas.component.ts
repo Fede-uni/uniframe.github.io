@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TarjetaComponent } from '../tarjeta/tarjeta.component';
+import { TarjetaComponent } from 'src/stories/components/tarjetas/tarjeta/tarjeta.component';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -8,7 +8,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-lista-tarjeta',
-  styleUrl: '../../../../assets/CSS/Component-Styles/lista-tarjeta-component.css',
+  styleUrl: '../../../assets/CSS/Component-Styles/lista-tarjeta-component.css',
   standalone: true,
   imports: [TarjetaComponent,MatDividerModule,MatPaginatorModule,MatCheckboxModule,CommonModule],
   template: `
