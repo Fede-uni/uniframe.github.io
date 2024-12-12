@@ -3,7 +3,9 @@
     <div >
       <fieldset class=" Sec-filtros-aplicados"  aria-label="Filtros aplicados">
         <div class="contenedor-filtros-aplicados">
-            <div class="col-auto">
+            <uni-filtros-aplicados></uni-filtros-aplicados>
+            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <div class="col-auto">
               <p class="filtroAplicado">Filtros Aplicados ></p>
             </div>
             <div class="col-auto item-aplicado">
@@ -24,19 +26,23 @@
             </div>
             <div class="col-auto filtroAplicado ">
               <button type="button" class="btn button-link ml-2 btn-sm" aria-label="Limpiar filtros">Limpiar</button>
-            </div>
+            </div> -->
         </div>
         <!-- Botón Reiniciar Filtros -->
         
         <!--btn desplegable-->
-          <button 
+        <uni-button buttonType="primary-outline" icon="filter_alt" showIcon="true" label="Filtros" size="sm" 
+        aria-label="mostrar filtros" [attr.aria-expanded]="!collapsedFiltros" (click)="collapseFilter()">
+        </uni-button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+          <!-- <button 
             class="btn button-primary-outline btn-sm" 
             aria-label="mostrar filtros"
             [attr.aria-expanded]="!collapsedFiltros"
             (click)="collapseFilter()">
             <span class="material-symbols-outlined button-icon" >filter_alt</span>
             Filtros
-          </button> 
+          </button>  -->
       </fieldset>
     </div>
 
@@ -89,6 +95,8 @@
       </div>
 
       <div  class="col-auto">
+        <uni-button buttonType="icon" icon="search" showIcon="true" class="icon-button-color"></uni-button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
         <button type="button" class="btn icon-button icon-button-color" title="Buscar">
             <span class="material-symbols-outlined button-icon ">search</span>
         </button>

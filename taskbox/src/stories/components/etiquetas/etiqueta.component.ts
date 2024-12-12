@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
-  selector: 'app-etiquetas',
+  selector: 'uni-etiquetas',
+  standalone: true,
   template: `
   <span 
       class="etiqueta-estado" 
       mat-raised-button placement="right">
-      etiqueta
+      {{label}}
   </span>
   
 `,
   styleUrl: '../../../assets/CSS/Component-Styles/etiquetas.component.css'
 })
 export class EtiquetasComponent {
-
+  @Input()
+  label = 'Etiqueta';
 }

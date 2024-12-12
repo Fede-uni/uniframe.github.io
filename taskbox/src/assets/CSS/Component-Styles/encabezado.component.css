@@ -38,8 +38,6 @@
     width: auto;
 }
 
-
-
 .encabezado-border{
  border-top-color: var(--encabezado-border-color) !important;
 }

@@ -33,6 +33,11 @@ const meta: Meta<Button> = {
       options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],
       description: 'El tipo de botón a mostrar',
     },
+    size: { 
+      control: 'radio',
+      options: ['default', 'sm',],
+      description: 'tamaño del boton'
+    },
   },
   
 };
@@ -48,6 +53,7 @@ export const Primary: Story = {
     icon: 'check_circle',
     showIcon: true,
     buttonType: 'primary',
+    size:'sm'
   },
 };
 
@@ -138,7 +144,7 @@ export const Link: Story = {
     label: 'Link',
     icon: 'check_circle',
     showIcon: true,
-    buttonType: 'icon',
+    buttonType: 'link',
   },
 };
 

@@ -15,10 +15,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       (click)="onClick.emit($event)"
       [ngClass]="classes"
     ><span *ngIf="showIcon && icon" class="material-symbols-outlined button-icon">{{icon}}</span>
-      {{ label }}
+    <span *ngIf="buttonType !== 'icon'">{{ label }}</span>
     </button>
 
-    <ng-template #secondaryButton>
+    <!-- <ng-template #secondaryButton>
       <button
         type="button"
         (click)="onClick.emit($event)"
@@ -26,18 +26,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       ><span *ngIf="showIcon && icon" class="material-symbols-outlined button-icon">{{icon}}</span>
       {{ label }}
       </button>
-    </ng-template>
+    </ng-template> -->
   `,
   
 })
 export default class ButtonComponent {
-  /**
-   * Is this the principal call to action on the page?
-   */
+  
 
   @Input()
   buttonType: 'primary' | 'primary-outline' | 'negative' | 'negative-outline' | 'icon' | 'link' = 'primary';
-
+  @Input() size: 'sm' | 'lg' | '' = ''; // El tamaño puede ser 'sm', 'lg', o el tamaño por defecto (vacío)
   /**
    * Button contents
    *
@@ -80,6 +78,10 @@ export default class ButtonComponent {
         mode = 'btn button-link';
         break;
     }
-    return [ mode];
+   /*  return [ mode]; */
+
+     // Agregar la clase de tamaño si está definida
+    const sizeClass = this.size ? `btn-${this.size}` : '';
+    return [mode, sizeClass];
   }
 }

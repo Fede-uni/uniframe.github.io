@@ -22,7 +22,6 @@
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
-              "src/stories/button.css",
               "src/assets/CSS/Design-Tokens/index-tokens.css",
               "src/assets/CSS/Component-Styles/index-components.css"
             ],

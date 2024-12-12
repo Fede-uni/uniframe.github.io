@@ -1,3 +1,6 @@
+uni-etiquetas{
+    display: flex !important;
+}
 
 .etiqueta-estado {
     padding: 2px 5px;
@@ -10,3 +13,4 @@
     box-sizing: border-box; /* Incluye padding y borde en el cálculo del alto total */
     color:var(--etiqueta-text-color);
 }
+

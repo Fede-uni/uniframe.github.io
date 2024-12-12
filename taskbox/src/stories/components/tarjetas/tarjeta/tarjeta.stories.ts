@@ -16,8 +16,8 @@ const meta: Meta<TarjetaComponent> = {
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      declarations: [EtiquetasComponent],
-      imports: [CommonModule,MatButtonModule,MatDividerModule],
+      declarations: [],
+      imports: [CommonModule,MatButtonModule,MatDividerModule,EtiquetasComponent],
     }),
   ],
 
@@ -34,60 +34,59 @@ export const Tarjeta: Story = {
 Tarjeta.parameters = { 
   docs: { 
     source: { 
-      code: `<div id="content-listaExp">
-  <div aria-label="lista de documentos formato tarjeta" class="tabla-ListaExp">
-    <div  style="border-bottom: 1px solid var(--color-neutro-200); display: flex; height: 126px;">
-      <div  style="padding: 10px;">
+      code: ` 
+    <div class="tarjeta">
+      <div class="tarjeta-check">
         <input  type="checkbox" value="option1" aria-label="seleccionar tarjeta">
       </div>
-
-      <div class="tarjeta" >
-        <div  style="width: 60px; display: flex; flex-direction: column; align-items: center;">
-          <span class="dot dot_expedientes">EXP</span>
-          <span title="Privado" *>
-            <span class="material-icons candado-ficha">
+      <div class="tarjeta-cuerpo" >
+        <!-- Seccion dot/avatar/tipo de doc -->
+        <div class="tarjeta-secdot" >
+          <span class="dot dot_color">EXP</span>
+          <span title="Privado" class="icon-candado">
+            <span class="material-symbols-outlined">
               lock_outline
             </span>
           </span>
         </div>
-
-        <div  style="width: 100%; display: flex; flex-direction: column; padding-left: 10px;"> 
-          <div  style="display: flex; flex-direction: column; " >
-              <div class="secContenedor__botonesListExp--left secContenedor__botonesListExp--nowrap" >
-                <span tabindex="0"><strong class="tarjeta__col-der--titulo">Carátula de Expediente</strong></span>
-              </div>
-            <div style="font-size: 0.7rem;" id="la-divExpedienteNumero">
+        <!-- Seccion detalle de doc -->
+        <div class="tarjeta-contenido--texto" > 
+            <span tabindex="0" class="tarjeta-texto--titulo">
+              Carátula de Expediente
+            </span>
+            <div class="tarjeta-texto--subtitulo">
               numero/año tipo cuij
             </div>
-          </div>
-  
-          <div class="secContainer-etiquetas" >
-            <!-- AQUI VAN LAS ETIQUETAS -->
+           <!-- Seccion etiquetas de doc -->
+          <div class="tarjeta-contenido-etiquetas" >
+            <uni-etiquetas class="d-flex">etiqueta</uni-etiquetas>
+            <uni-etiquetas class="d-flex">etiqueta</uni-etiquetas>
+            <uni-etiquetas class="d-flex">etiqueta</uni-etiquetas>
+            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <span 
+                class="etiqueta-estado" 
+                mat-raised-button placement="right">
+                etiqueta
+            </span>
             <span 
                 class="etiqueta-estado" 
                 mat-raised-button placement="right">
                 etiqueta
-            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
-            <span 
-                class="etiqueta-estado" 
-                mat-raised-button placement="right">
-                etiqueta
-            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
+            </span> -->
           </div>
         </div>
 
-         <!-- open new_tab -->
-         <div style="padding: 3px 10px;">
-          <a id="la-nuevaPestania" class="btn icon-button" title="Abrir en nueva pestaña" tabindex="0">
-            <span class="material-icons" aria-hidden="true">open_in_new</span><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
-          </a>
-        </div>
       </div>
-      <!-- <mat-divider class="col-12 mt-2" style="border-top-color: var(--color-neutro-200);"></mat-divider> -->
+      <!-- Seccion boton desacoplar -->
+      <div class="tarjeta-secdesacoplar">
+        <uni-button buttonType="icon" showIcon="true" icon="open_in_new" size="sm"></uni-button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+        <!-- <a  class="btn icon-button btn-sm" title="Abrir en nueva pestaña" tabindex="0">
+          <span class="material-symbols-outlined button-icon" aria-hidden="true">open_in_new</span>
+        </a> -->
+      </div>
     </div>
-
-  </div>
-</div>`,
+`,
     }, 
   }, 
 };

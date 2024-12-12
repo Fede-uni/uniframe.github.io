@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { EtiquetasComponent } from '../../etiquetas/etiqueta.component';
+import ButtonComponent from '../../buttons/button.component';
 
 @Component({
   selector: 'app-tarjeta',
   styleUrl: '../../../../assets/CSS/Component-Styles/tarjeta.component.css',
   standalone: true,
+  imports: [EtiquetasComponent, ButtonComponent],
   template: ` 
     <div class="tarjeta">
       <div class="tarjeta-check">
@@ -29,25 +32,31 @@ import { Component } from '@angular/core';
             </div>
            <!-- Seccion etiquetas de doc -->
           <div class="tarjeta-contenido-etiquetas" >
+            <uni-etiquetas class="d-flex">etiqueta</uni-etiquetas>
+            <uni-etiquetas class="d-flex">etiqueta</uni-etiquetas>
+            <uni-etiquetas class="d-flex">etiqueta</uni-etiquetas>
+            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <span 
+                class="etiqueta-estado" 
+                mat-raised-button placement="right">
+                etiqueta
+            </span>
             <span 
                 class="etiqueta-estado" 
                 mat-raised-button placement="right">
                 etiqueta
-            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
-            <span 
-                class="etiqueta-estado" 
-                mat-raised-button placement="right">
-                etiqueta
-            </span><!-- esto se reemplazaría por un <uni-etiqueta> -->
+            </span> -->
           </div>
         </div>
 
       </div>
       <!-- Seccion boton desacoplar -->
       <div class="tarjeta-secdesacoplar">
-        <a  class="btn icon-button btn-sm" title="Abrir en nueva pestaña" tabindex="0">
+        <uni-button buttonType="icon" showIcon="true" icon="open_in_new" size="sm"></uni-button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+        <!-- <a  class="btn icon-button btn-sm" title="Abrir en nueva pestaña" tabindex="0">
           <span class="material-symbols-outlined button-icon" aria-hidden="true">open_in_new</span>
-        </a><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
+        </a> -->
       </div>
     </div>
 `,

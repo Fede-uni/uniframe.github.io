@@ -9,6 +9,7 @@ import { MatCheckbox } from '@angular/material/checkbox';
 import { MatSelect } from '@angular/material/select';
 
 import { FiltrosRapidosComponent } from './filtros-rapidos.component';
+import ButtonComponent from '../../../components/buttons/button.component';
 
 const meta: Meta<FiltrosRapidosComponent> = {
   title: 'Uniframe/Sections/Filtros Rapidos',
@@ -18,7 +19,7 @@ const meta: Meta<FiltrosRapidosComponent> = {
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect],
+      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect, ButtonComponent],
     }),
   ],
 
@@ -27,52 +28,117 @@ const meta: Meta<FiltrosRapidosComponent> = {
 export default meta;
 type Story = StoryObj<FiltrosRapidosComponent>;
 
-export const Tarjeta: Story = {
+export const FiltrosRapidos: Story = {
   args: {
   },
 };
 
-Tarjeta.parameters = { 
+FiltrosRapidos.parameters = { 
   docs: { 
     source: { 
-      code: `<div class="row encabezado-container">
-  <div class="text-container">
-      <div class="contenedor-navegacion-vistas">
-          <div class="row subHeader_espacio-iconos margin-header">
-              <div class="secContenedor__titulo_exp secContenedor__titulo_exp--nowrap float-left">
-                  <div class="text-breadcrum">
-                      <a>
-                          <span class="contraste"> Organismo</span>
-                      </a>
-                      <span class="mx-1">/</span>
-                      <a >
-                          <span class="contraste"> Dependencia </span>
-                      </a>
-                      <span  class="mx-1">/</span>
-                      <label  attr.aria-label="Expediente ">
-                      Expediente  
-                      </label>
-                  </div>
+      code: `<div class="header-filtros-rapidos">
+    <!-- Filtros aplicados -->
+    <div >
+      <fieldset class=" Sec-filtros-aplicados"  aria-label="Filtros aplicados">
+        <div class="contenedor-filtros-aplicados">
+            <uni-filtros-aplicados></uni-filtros-aplicados>
+            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <div class="col-auto">
+              <p class="filtroAplicado">Filtros Aplicados ></p>
+            </div>
+            <div class="col-auto item-aplicado">
+              <p class="filtroAplicado" tabindex="0">Bandeja: <span class="filtroAplicadoDesc">Bandeja seleccionada</span></p>
+            </div>
+            <div class="col-auto item-aplicado">
+              <p class="filtroAplicado">Incluir asignados: <span class="filtroAplicadoDesc">Sí</span></p>
+            </div>
+            <div class="col-auto item-aplicado" >
+              <p class="filtroAplicado" tabindex="0">Tipos: <span class="filtroAplicadoDesc">Todos</span></p>
+            </div>
+            <div class="col-auto item-aplicado" >
+              <p class="filtroAplicado" tabindex="0">Estados: <span class="filtroAplicadoDesc">Todos</span>
+              </p>
+            </div>
+            <div class="col-auto item-aplicado">
+              <p class="filtroAplicado" tabindex="0">Acceso: <span class="filtroAplicadoDesc">Todos</span></p>
+            </div>
+            <div class="col-auto filtroAplicado ">
+              <button type="button" class="btn button-link ml-2 btn-sm" aria-label="Limpiar filtros">Limpiar</button>
+            </div> -->
+        </div>
+        <!-- Botón Reiniciar Filtros -->
+        
+        <!--btn desplegable-->
+        <uni-button buttonType="primary-outline" icon="filter_alt" showIcon="true" label="Filtros" size="sm" 
+        aria-label="mostrar filtros" [attr.aria-expanded]="!collapsedFiltros" (click)="collapseFilter()">
+        </uni-button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+          <!-- <button 
+            class="btn button-primary-outline btn-sm" 
+            aria-label="mostrar filtros"
+            [attr.aria-expanded]="!collapsedFiltros"
+            (click)="collapseFilter()">
+            <span class="material-symbols-outlined button-icon" >filter_alt</span>
+            Filtros
+          </button>  -->
+      </fieldset>
+    </div>
 
-                  <div class="row">
-                      <div class="text-título">
-                      Actuaciones de SECRETARÍA GENERAL CAYT 
-                      </div>
-                  </div>
-              </div>
-          </div>
+<!-- Filtros rápidos -->
+<div class="d-flex gap-3 pb-3" *ngIf="!collapsedFiltros">
+      <div class="col-auto" >
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select placeholder="Bandeja" >
+            <mat-option >
+              Bandeja
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
-  </div>
 
-  <!-- crear expediente -->
+      <div  class="col-auto">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select id="al-nivelesacceso"
+            multiple aria-label="Nivel de acceso">
+            <mat-select-trigger>
+              <span>Acceso: Todos</span>
+            </mat-select-trigger>
+            <mat-option >nivel de acceso</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
-  <div class="btn-container">
-      <button class="btn button-primary">
-        <span class="material-symbols-outlined button-icon">add_circle</span>
-        Crear
-      </button>
-  </div>
-  <mat-divider class="encabezado-border mt-2"></mat-divider>
+      <div class="col-auto">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select  multiple
+            aria-label="Tipos Expedientes">
+            <mat-select-trigger >
+              <span>Tipo: Todos</span>
+            </mat-select-trigger>
+            <mat-option >Tipo de expediente</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div  class="col-auto">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="mat-form-field-format width100">
+          <mat-select id="al-marcadores" multiple
+            aria-label="Marcadores" placeholder="Marcadores">
+            <mat-select-trigger >
+              <span>Marcadores: Todos</span>
+            </mat-select-trigger>
+            <mat-option >marcadores</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div  class="col-auto">
+        <uni-button buttonType="icon" icon="search" showIcon="true" class="icon-button-color"></uni-button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+        <button type="button" class="btn icon-button icon-button-color" title="Buscar">
+            <span class="material-symbols-outlined button-icon ">search</span>
+        </button>
+      </div>
 </div>`,
     }, 
   }, 
