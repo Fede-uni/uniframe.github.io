@@ -34,78 +34,39 @@ export const VistaTarjeta: Story = {
 VistaTarjeta.parameters = { 
   docs: { 
     source: { 
-      code: `<div class="view-module-container" >
-    <div>
-      <div class="header-container">
-        <div class="information-container">
-          <ng-container >
-
-            <div title="Privado" style="padding-left: 10px;">
-              <span class="material-icons">
-                lock_outline
-              </span>
-            </div>
-
-          </ng-container>
-
-          <div style="width: 100%;">
-            <div>
-              <ng-container >
-                <span class="titulo-expediente_ficha--texto" style="font-weight: bold;" tabindex="0">
-                  Carátula
-                </span>
-
-                <ng-container >
-                  <span class="material-icons btn-edit" >edit</span>
-                </ng-container>
+      code: `<app-header></app-header>
+<div class="mx-5 h-100">
+  <app-encabezado></app-encabezado>
+  
+  <app-filtros-rapidos></app-filtros-rapidos>
+  
+  <div class="d-flex">
+      <div class=" sec-tarjetas collapsible-panel" [ngClass]="{ 'collapsed': collapsedPanel }">
+          <app-lista-tarjeta></app-lista-tarjeta>
+          <button 
+              class="collapse-button" 
+              (click)="collapsePanel()">
+  
+              <ng-container *ngIf="collapsedPanel">
+                <span 
+                  class="material-icons" 
+                  aria-hidden="true"
+                  aria-label="Contraer lista de expedientes" 
+                  title="Contraer lista de expedientes">
+                  chevron_right
+                </span> 
               </ng-container>
-
-              <ng-template #editorCaratula>
-                <mat-form-field appearance="outline" class="input-caratula">
-                  <input #inputCaratula matInput placeholder="Carátula" [(ngModel)]="caratula" (blur)="closeEditModeCaratula()">
-                </mat-form-field>
-              </ng-template>
-            </div>
-
-            <div class="botones_margin">
-              <span class="titulo-expediente_ficha--texto" tabindex="0">
-                Títuo de Ficha
-              </span>
-
-              <span class="titulo-expediente_ficha--texto" tabindex="0">
-                Subtitulo de ficha
-              </span>
-
-              <button  class="btn boton-copiar btn-sm etiqueta-estado" title="Copiar cuij">
-                <span class="material-icons boton-secundario_icono" aria-hidden="true">
-                  content_copy
-                </span>
-              </button>
-            </div>
-
-          </div>
-        </div>
+  
+              <ng-container *ngIf="!collapsedPanel">
+                <span class="material-icons" aria-hidden="true">chevron_left</span> 
+              </ng-container>
+  
+            </button>
       </div>
-
-      <div class="action-bar">
-        <div class="column">
-          <ng-container>
-            <p class="module-title" >
-              "MODULO EN VISUALIZACION" del expediente
-            </p>
-          </ng-container>
-        </div>
-
-        <div class="column">
-          <!-- ACÁ VA EL CONTROL DE CAMBIO DE MÓDULO -->
-        </div>
-
+      <div class="sec-Ficha">
+      <app-ficha></app-ficha>
       </div>
-    </div>
-
-    <ng-container>
-    </ng-container>
-
+  </div>
 </div>`,
     }, 
   }, 

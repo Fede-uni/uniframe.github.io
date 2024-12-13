@@ -15,10 +15,10 @@ import { CommonModule } from '@angular/common';
       <img class="header-logo " src="./assets/tramix CN hor-blanco.png" aria-label="Logo del sistema" alt="Logo del sistema">
     </a>
     <!-- Boton hamburguesa/mobile -->
-    <button class="navbar-toggler header-button button-menu " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menú de navegación">
-      <span class="material-symbols-outlined " aria-hidden="true">menu</span>
-    </button>
+    <button class="navbar-toggler header-button button-menu d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menú de navegación">
+   <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+</button>
     <!-- Fin Boton de menu -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <!-- AQUÍ COLOCAR EL BUSCADOR -->

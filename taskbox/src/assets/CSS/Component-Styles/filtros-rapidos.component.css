@@ -40,7 +40,7 @@
 }
 
 
-.icon-button-color{
+.icon-button-color .icon-button, .icon-button-color.icon-button {
     color: var(--button-primary-outline-text-color);
 }
 

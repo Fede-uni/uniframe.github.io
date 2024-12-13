@@ -1,0 +1,51 @@
+
+
+.sec-head-ficha{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icono-acceso{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.sec-head-titles-ficha{
+    display: flex;
+    /* padding: 8px 0px; */
+    flex-direction: column;
+    width: 100%;
+}
+
+.sec-head-title-ficha{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.title-ficha uni-button{
+    position: absolute;
+    right: 0;
+    top: 50%;
+   
+    transform: translateY(-50%);
+}
+
+.sec-head-subtitle-ficha{
+    display: inline-flex;
+    align-items: center;
+    gap: 7.504px;
+}
+
+.title-ficha{
+    color: var(--color-text-label, #4F4F4F);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+}
+

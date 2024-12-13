@@ -102,3 +102,7 @@
     font-size: .8rem;
 }
 
+@media (max-width: 992px) and (min-width: 820px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }}
