@@ -1,0 +1,11 @@
+.drag-and-drop-container{
+    border: #c3c3c3 1.8px dashed;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.drag-and-drop-buttons{
+    display: flex;
+}

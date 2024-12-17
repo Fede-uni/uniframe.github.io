@@ -1,9 +1,17 @@
+.ficha-container{
+    height: 100%;
+    margin: 8px 0 0 16px
+}
 
+
+/* SECCION TITULOS FICHA  */
 
 .sec-head-ficha{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .icono-acceso{
@@ -17,6 +25,7 @@
     /* padding: 8px 0px; */
     flex-direction: column;
     width: 100%;
+    gap: 4px;
 }
 
 .sec-head-title-ficha{
@@ -25,13 +34,13 @@
     width: 100%;
 }
 
+
 .title-ficha uni-button{
     position: absolute;
     right: 0;
     top: 50%;
-   
     transform: translateY(-50%);
-}
+} /* posiciona el boton copy en relación al texto y evita que el div tome el alto del boton */
 
 .sec-head-subtitle-ficha{
     display: inline-flex;
@@ -46,6 +55,55 @@
     text-transform: uppercase;
     display: inline-block;
     position: relative;
-    padding-right: 20px;
+    padding-right: 40px;
 }
 
+.subtitle-ficha{
+    padding-right: 40px;
+    position: relative;
+}
+
+.subtitle-ficha uni-button{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}/* posiciona el boton copy en relación al texto y evita que el div tome el alto del boton */
+
+/* FIN SECCION TITULOS FICHA  */
+
+/* SECCION MENÚ MÓDULOS FICHA  */
+.module-title{
+    color: var(--brand-color-primary-700);
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+.sec-head-menu-modulos-ficha{
+    border-top: 1px solid var(--color-border-primary-default);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+/* SECCION MENÚ MÓDULOS FICHA  */
+
+/* SECCION BOTONES FICHA  */
+
+.sec-head-buttons-ficha{
+border-bottom: 1px solid var(--color-border-neutro);
+border-top: 1px solid var(--color-border-neutro);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 4px 0;
+}
+
+.head-buttons-ficha{
+ display: flex;
+ flex-direction: row;
+ gap:8px;
+}

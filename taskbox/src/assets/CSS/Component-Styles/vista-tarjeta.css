@@ -1,4 +1,9 @@
 
+.vista-tarjeta-container{
+  display: flex;
+  border-top: 1px solid var(--color-border-neutro);
+}
+
 .collapse-button {
     position: absolute;
     top: 33px;
@@ -44,5 +49,5 @@
   }
 
   .sec-Ficha{
-    width: 70%;
+    width: 100%;
   }

@@ -4,7 +4,7 @@
   <div class="mx-5 h-100">
     <app-encabezado></app-encabezado>
     <uni-filtros-rapidos></uni-filtros-rapidos>
-    <div class="d-flex">
+    <div class="vista-tarjeta-container">
       <div class=" sec-tarjetas collapsible-panel" [ngClass]="{ 'collapsed': collapsedPanel }">
         <app-lista-tarjeta></app-lista-tarjeta>
         <button 
@@ -25,7 +25,16 @@
         </button>
       </div>
       <div class="sec-Ficha">
-        <app-ficha></app-ficha>
+        <app-ficha>
+            <uni-button buttons buttonType="primary" icon="signature" showIcon="true" size="sm" label="Firmar">
+            </uni-button>
+            <uni-button buttons buttonType="primary-outline" icon="picture_as_pdf" showIcon="true" size="sm" label="Expediente Digital">
+            </uni-button>
+            <div body>
+              <h2>hola mundo</h2>
+              <p>estoy pobando cositas</p>
+            </div>
+        </app-ficha>
       </div>
     </div>
   </div>

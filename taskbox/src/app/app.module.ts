@@ -23,6 +23,7 @@ import EncabezadoComponent from 'src/stories/sections/encabezado/encabezado.comp
 import { FiltrosRapidosComponent } from 'src/stories/sections/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';
 import { ListaTarjetaComponent } from 'src/stories/sections/lista-tarjetas/lista-tarjetas.component';
 import { FichaComponent } from 'src/stories/sections/ficha/ficha.component';
+import ButtonComponent from 'src/stories/components/buttons/button.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { FichaComponent } from 'src/stories/sections/ficha/ficha.component';
     EncabezadoComponent,
     FiltrosRapidosComponent,
     ListaTarjetaComponent,
-    FichaComponent
+    FichaComponent,
+    ButtonComponent,
   ],
   exports:[
     

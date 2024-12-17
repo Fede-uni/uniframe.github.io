@@ -1,0 +1,35 @@
+.menu-modulos-container{
+    display: flex;
+    background: var( --menu-mod-ficha-background-color);
+    padding: 5px;
+    border-radius: 40px;
+    border: 1px solid var(--menu-mod-ficha-border-color);
+    gap: 8px;
+    width: fit-content;
+}
+
+.menu-modulo-button {
+    border-radius: 50%;
+    border: 1px solid var(--menu-mod-ficha-selector-border-color);
+    color: var(--menu-mod-ficha-selector-icon-color);
+    background-color: var(--menu-mod-ficha-selector-background-color);
+    padding: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .menu-modulo-button.active, .menu-modulo-button.active:hover  {
+    background-color:var(--menu-mod-ficha-selector-background-color-active);  /* Color de fondo cuando está activo */
+    color: var(--menu-mod-ficha-selector-icon-color-active);               /* Color del texto cuando está activo */
+  }
+  
+  .menu-modulo-button:hover {
+    background-color: var(--menu-mod-ficha-selector-background-color-hover);  /* Color de fondo al hacer hover */
+  }
+  
+  .menu-modulo-button .material-symbols-outlined {
+    font-size: 18px;  /* Tamaño del icono */
+  }
+  

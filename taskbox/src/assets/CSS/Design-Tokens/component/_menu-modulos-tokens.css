@@ -1,0 +1,10 @@
+:root {
+  --menu-mod-ficha-selector-background-color: rgba(0, 0, 0, 0);
+  --menu-mod-ficha-selector-icon-color-active: var(--brand-color-neutro-blanco);
+  --menu-mod-ficha-selector-icon-color: var(--color-primary-500-default);
+  --menu-mod-ficha-selector-background-color-hover: var(--color-action-primary-lighter);
+  --menu-mod-ficha-selector-border-color: var(--color-action-secondary-default);
+  --menu-mod-ficha-selector-background-color-active: var(--color-action-primary-default);
+  --menu-mod-ficha-background-color: var(--color-background-neutro-lighter);
+  --menu-mod-ficha-border-color: var(--color-border-neutro);
+}
