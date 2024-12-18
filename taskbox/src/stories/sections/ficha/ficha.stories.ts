@@ -32,77 +32,96 @@ export const Ficha: Story = {
 Ficha.parameters = { 
   docs: { 
     source: { 
-      code: `<div class="view-module-container" >
-    <div>
-      <div class="header-container">
-        <div class="information-container">
-          <ng-container >
+      code: `<div class="ficha-container" >
+    <div class="header-container">
+      <div class="sec-head-ficha">
+        <ng-container >
+          <div class="icono-acceso" title="Privado" >
+            <span class="material-symbols-outlined ">
+              lock_outline
+            </span>
+          </div>
+        </ng-container>
 
-            <div title="Privado" style="padding-left: 10px;">
-              <span class="material-icons">
-                lock_outline
+        <div  class="sec-head-titles-ficha"> 
+          <div class="sec-head-title-ficha">
+              <span  class="title-ficha" tabindex="0">
+                Carátula
+                <uni-button buttonType="icon" icon="content_copy" showIcon="true" size="sm"></uni-button>
+                <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+              <!-- <button class="btn icon-button btn-sm">
+                <span class="material-symbols-outlined button-icon">content_copy</span>
+              </button> -->
               </span>
-            </div>
+          </div>
 
-          </ng-container>
-
-          <div style="width: 100%;">
-            <div>
-              <ng-container >
-                <span class="titulo-expediente_ficha--texto" style="font-weight: bold;" tabindex="0">
-                  Carátula
-                </span>
-
-                <ng-container >
-                  <span class="material-icons btn-edit" >edit</span>
-                </ng-container>
-              </ng-container>
-
-              <ng-template #editorCaratula>
-                <mat-form-field appearance="outline" class="input-caratula">
-                  <input #inputCaratula matInput placeholder="Carátula" [(ngModel)]="caratula" (blur)="closeEditModeCaratula()">
-                </mat-form-field>
-              </ng-template>
-            </div>
-
-            <div class="botones_margin">
-              <span class="titulo-expediente_ficha--texto" tabindex="0">
-                Títuo de Ficha
-              </span>
-
-              <span class="titulo-expediente_ficha--texto" tabindex="0">
-                Subtitulo de ficha
-              </span>
-
-              <button  class="btn boton-copiar btn-sm etiqueta-estado" title="Copiar cuij">
-                <span class="material-icons boton-secundario_icono" aria-hidden="true">
-                  content_copy
-                </span>
-              </button>
-            </div>
-
+          <div class="sec-head-subtitle-ficha">
+            <span class="subtitle-ficha" tabindex="0">
+              Subtitulo de ficha
+              <uni-button buttonType="icon" icon="content_copy" showIcon="true" size="sm"></uni-button>
+              <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+              <!-- <button class="btn icon-button btn-sm">
+                <span class="material-symbols-outlined button-icon">content_copy</span>
+              </button> -->
+            </span>
           </div>
         </div>
       </div>
-
-      <div class="action-bar">
-        <div class="column">
+      <div class="sec-head-menu-modulos-ficha">
           <ng-container>
             <p class="module-title" >
-              "MODULO EN VISUALIZACION" del expediente
+              Ficha del expediente
             </p>
           </ng-container>
-        </div>
-
         <div class="column">
           <!-- ACÁ VA EL CONTROL DE CAMBIO DE MÓDULO -->
+           <uni-menu-modulos></uni-menu-modulos>
+           <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+           <!-- <div class="menu-modulos-container">
+            <button attr.aria-label="Expediente"
+              title="Expediente"
+              class="menu-modulo-button active">
+              <span class="material-symbols-outlined iconSize" id="icono-apps">
+                  content_paste 
+              </span>
+            </button>
+            <button attr.aria-label="Expediente"
+              title="Expediente"
+              class="menu-modulo-button ">
+              <span class="material-symbols-outlined iconSize" id="icono-apps">
+                  content_paste 
+              </span>
+            </button> 
+            <button attr.aria-label="Expediente"
+              title="Expediente"
+              class="menu-modulo-button ">
+              <span class="material-symbols-outlined iconSize" id="icono-apps">
+                  content_paste 
+              </span>
+            </button>      
+           </div> -->
         </div>
-
       </div>
+
+      <div class="sec-head-buttons-ficha">
+        <div class="head-buttons-ficha">
+          <ng-content select="[buttons]">
+            <!-- insertar contenido como botones que accionen sobre la Ficha -->
+          </ng-content>
+        </div>
+        <uni-button buttonType="icon" icon="more_vert" showIcon="true" ></uni-button>
+        !-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <button class="btn icon-button">
+              <span class="material-symbols-outlined button-icon">more_vert</span>
+            </button> -->
+      </div>
+
     </div>
 
-    <ng-container>
-    </ng-container>
+    <ng-content select="[body]">
+      <!-- insertar contenido de la ficha -->
+    </ng-content>
+    
 
 </div>`,
     }, 

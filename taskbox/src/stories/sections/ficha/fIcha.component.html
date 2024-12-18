@@ -14,11 +14,11 @@
               <span  class="title-ficha" tabindex="0">
                 Carátula
                 <uni-button buttonType="icon" icon="content_copy" showIcon="true" size="sm"></uni-button>
+                <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+                <!-- <button class="btn icon-button btn-sm">
+                <span class="material-symbols-outlined button-icon">content_copy</span>
+              </button> -->
               </span>
-              <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
-            <!-- <button class="btn icon-button btn-sm">
-              <span class="material-symbols-outlined button-icon">content_copy</span>
-            </button> -->
           </div>
 
           <div class="sec-head-subtitle-ficha">
@@ -42,16 +42,44 @@
         <div class="column">
           <!-- ACÁ VA EL CONTROL DE CAMBIO DE MÓDULO -->
            <uni-menu-modulos></uni-menu-modulos>
+           <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+           <!-- <div class="menu-modulos-container">
+            <button attr.aria-label="Expediente"
+              title="Expediente"
+              class="menu-modulo-button active">
+              <span class="material-symbols-outlined iconSize" id="icono-apps">
+                  content_paste 
+              </span>
+            </button>
+            <button attr.aria-label="Expediente"
+              title="Expediente"
+              class="menu-modulo-button ">
+              <span class="material-symbols-outlined iconSize" id="icono-apps">
+                  content_paste 
+              </span>
+            </button> 
+            <button attr.aria-label="Expediente"
+              title="Expediente"
+              class="menu-modulo-button ">
+              <span class="material-symbols-outlined iconSize" id="icono-apps">
+                  content_paste 
+              </span>
+            </button>      
+           </div> -->
         </div>
       </div>
 
       <div class="sec-head-buttons-ficha">
         <div class="head-buttons-ficha">
           <ng-content select="[buttons]">
-            <!-- insertar contenido como botones que accionen sobre la lista -->
+            <!-- insertar contenido como botones que accionen sobre la Ficha -->
           </ng-content>
         </div>
         <uni-button buttonType="icon" icon="more_vert" showIcon="true" ></uni-button>
+            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <button class="btn icon-button">
+              <span class="material-symbols-outlined button-icon">more_vert</span>
+            </button> -->
       </div>
 
     </div>

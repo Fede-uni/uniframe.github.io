@@ -24,6 +24,7 @@ import { FiltrosRapidosComponent } from 'src/stories/sections/filtros-rapidos/fi
 import { ListaTarjetaComponent } from 'src/stories/sections/lista-tarjetas/lista-tarjetas.component';
 import { FichaComponent } from 'src/stories/sections/ficha/ficha.component';
 import ButtonComponent from 'src/stories/components/buttons/button.component';
+import { DragAndDropComponent } from "../stories/components/drag-and-drop/drag-and-drop.component";
 
 
 @NgModule({
@@ -41,14 +42,14 @@ import ButtonComponent from 'src/stories/components/buttons/button.component';
     MatFormFieldModule,
     MatSelectModule,
     MatIconModule,
-
     HeaderComponent,
     EncabezadoComponent,
     FiltrosRapidosComponent,
     ListaTarjetaComponent,
     FichaComponent,
     ButtonComponent,
-  ],
+    DragAndDropComponent
+],
   exports:[
     
   ],

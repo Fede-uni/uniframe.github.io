@@ -22,12 +22,12 @@ const meta: Meta<DragAndDropComponent> = {
 export default meta;
 type Story = StoryObj<DragAndDropComponent>;
 
-export const Menumodulos: Story = {
+export const DragandDrop: Story = {
   args: {
   },
 };
 
-Menumodulos.parameters = { 
+DragandDrop.parameters = { 
   docs: { 
     source: { 
       code: ` 

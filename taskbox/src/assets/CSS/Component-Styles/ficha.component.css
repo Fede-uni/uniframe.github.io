@@ -35,7 +35,7 @@
 }
 
 
-.title-ficha uni-button{
+.title-ficha uni-button, .title-ficha button {
     position: absolute;
     right: 0;
     top: 50%;
@@ -63,7 +63,7 @@
     position: relative;
 }
 
-.subtitle-ficha uni-button{
+.subtitle-ficha uni-button, .subtitle-ficha button{
     position: absolute;
     right: 0;
     top: 50%;

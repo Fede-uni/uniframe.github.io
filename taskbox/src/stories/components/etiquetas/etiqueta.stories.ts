@@ -38,7 +38,6 @@ Etiqueta.parameters = {
       code: ` <span 
       class="etiqueta-estado" 
       mat-raised-button placement="right">
-      <ng-content></ng-content>
   </span>`,
     }, 
   }, 

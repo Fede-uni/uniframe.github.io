@@ -1,7 +1,7 @@
 
 <div class="container-page">
   <app-header></app-header>
-  <div class="mx-5 h-100">
+  <div class="container-body">
     <app-encabezado></app-encabezado>
     <uni-filtros-rapidos></uni-filtros-rapidos>
     <div class="vista-tarjeta-container">
@@ -31,8 +31,12 @@
             <uni-button buttons buttonType="primary-outline" icon="picture_as_pdf" showIcon="true" size="sm" label="Expediente Digital">
             </uni-button>
             <div body>
+              <span class="etiqueta-estado" mat-raised-button placement="right">
+                etiqueta 1
+              </span>
               <h2>hola mundo</h2>
               <p>estoy pobando cositas</p>
+              <uni-drag-and-drop></uni-drag-and-drop>
             </div>
         </app-ficha>
       </div>

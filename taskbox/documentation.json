@@ -3,12 +3,12 @@
     "interfaces": [
         {
             "name": "SubApp",
-            "id": "interface-SubApp-ae8dc2a34947738770411993d2c6e85cb6d60917a598afcb73acbbc0dfead5332ca699baf8a4f4a80ae0a23099682ccc2dde7e3c194e2ec587c82cffe3a913a2",
+            "id": "interface-SubApp-43b201707f2f19cfe25bf77c89a53429a884f9358885d888fed618a9d94fbe8bf4fb76fe2eec15d9e6f8dcf3ed1c2b6fce054f18cf851576bfe523611a9ebf22",
             "file": "src/stories/components/menu-modulos/menu-modulos.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nexport interface SubApp {\n  appCod: string;\n  appDescr: string;\n  appIcon?: string;\n  appVisible?: number;\n  selected?: boolean;\n  [key: string]: any; // Propiedades adicionales\n}\n\n@Component({\n  selector: 'uni-menu-modulos',\n  standalone: true,\n  imports: [],\n  templateUrl: './menu-modulos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\n})\nexport class MenuModulosComponent implements OnInit {\n  @Input() apps: SubApp[] = []; // Lista de aplicaciones\n  @Input() module: string = ''; // Aplicación seleccionada por defecto\n  @Input() buttonClass: string = ''; // Personalización de botones\n  @Input() iconClass: string = ''; // Personalización de iconos\n  @Output() appSelected = new EventEmitter<SubApp>(); // Evento para el padre\n\n  ngOnInit() {\n    this.setDefaultApp();\n  }\n\n  setDefaultApp(): void {\n    for (let app of this.apps) {\n      app.selected = app.appCod.toLowerCase() === this.module.toLowerCase();\n      if (app.selected) {\n        this.appSelected.emit(app);\n      }\n    }\n  }\n\n  emitirEvento(app: SubApp) {\n    this.apps.forEach(d => d.selected = d.appCod === app.appCod);\n    this.appSelected.emit(app);\n  }\n\n  getButtonClasses(app: SubApp): any {\n    return Object.assign(\n      { active: app.selected },\n      this.buttonClass ? { [this.buttonClass]: true } : {}\n    );\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nexport interface SubApp {\n  appCod: string;\n  appDescr: string;\n  appIcon?: string;\n  appVisible?: number;\n  selected?: boolean;\n  [key: string]: any; // Propiedades adicionales\n}\n\n@Component({\n  selector: 'uni-menu-modulos',\n  standalone: true,\n  imports: [],\n  templateUrl: './menu-modulos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\n})\nexport class MenuModulosComponent {\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\n\n  \n}\n",
             "properties": [
                 {
                     "name": "appCod",
@@ -58,7 +58,7 @@
             ],
             "indexSignatures": [
                 {
-                    "id": "index-declaration-ae8dc2a34947738770411993d2c6e85cb6d60917a598afcb73acbbc0dfead5332ca699baf8a4f4a80ae0a23099682ccc2dde7e3c194e2ec587c82cffe3a913a2",
+                    "id": "index-declaration-43b201707f2f19cfe25bf77c89a53429a884f9358885d888fed618a9d94fbe8bf4fb76fe2eec15d9e6f8dcf3ed1c2b6fce054f18cf851576bfe523611a9ebf22",
                     "args": [
                         {
                             "name": "key",
@@ -171,13 +171,13 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".container-page{\r\n    height: 100vh;\r\n    overflow: hidden;\r\n    \r\n}",
+                    "data": ".container-page{\r\n    height: 100vh;\r\n    overflow: hidden; \r\n}\r\n\r\n.container-body{\r\n    overflow: hidden;\r\n    height: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding: 0 4rem ;\r\n}",
                     "styleUrl": "./app.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "\r\n<div class=\"container-page\">\r\n  <app-header></app-header>\r\n  <div class=\"mx-5 h-100\">\r\n    <app-encabezado></app-encabezado>\r\n    <uni-filtros-rapidos></uni-filtros-rapidos>\r\n    <div class=\"d-flex\">\r\n      <div class=\" sec-tarjetas collapsible-panel\" [ngClass]=\"{ 'collapsed': collapsedPanel }\">\r\n        <app-lista-tarjeta></app-lista-tarjeta>\r\n        <button \r\n            class=\"collapse-button\" \r\n            (click)=\"collapsePanel()\">\r\n            <ng-container *ngIf=\"collapsedPanel\">\r\n              <span \r\n                class=\"material-icons\" \r\n                aria-hidden=\"true\"\r\n                aria-label=\"Contraer lista de expedientes\" \r\n                title=\"Contraer lista de expedientes\">\r\n                chevron_right\r\n              </span> \r\n            </ng-container>\r\n            <ng-container *ngIf=\"!collapsedPanel\">\r\n              <span class=\"material-icons\" aria-hidden=\"true\">chevron_left</span> \r\n            </ng-container>\r\n        </button>\r\n      </div>\r\n      <div class=\"sec-Ficha\">\r\n        <app-ficha>\r\n            <uni-button buttons buttonType=\"primary\" icon=\"signature\" showIcon=\"true\" size=\"sm\" label=\"Firmar\">\r\n            </uni-button>\r\n            <uni-button buttons buttonType=\"primary-outline\" icon=\"picture_as_pdf\" showIcon=\"true\" size=\"sm\" label=\"Expediente Digital\">\r\n            </uni-button>\r\n            <div body>\r\n              <h2>hola mundo</h2>\r\n              <p>estoy pobando cositas</p>\r\n            </div>\r\n        </app-ficha>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "\r\n<div class=\"container-page\">\r\n  <app-header></app-header>\r\n  <div class=\"container-body\">\r\n    <app-encabezado></app-encabezado>\r\n    <uni-filtros-rapidos></uni-filtros-rapidos>\r\n    <div class=\"vista-tarjeta-container\">\r\n      <div class=\" sec-tarjetas collapsible-panel\" [ngClass]=\"{ 'collapsed': collapsedPanel }\">\r\n        <app-lista-tarjeta></app-lista-tarjeta>\r\n        <button \r\n            class=\"collapse-button\" \r\n            (click)=\"collapsePanel()\">\r\n            <ng-container *ngIf=\"collapsedPanel\">\r\n              <span \r\n                class=\"material-icons\" \r\n                aria-hidden=\"true\"\r\n                aria-label=\"Contraer lista de expedientes\" \r\n                title=\"Contraer lista de expedientes\">\r\n                chevron_right\r\n              </span> \r\n            </ng-container>\r\n            <ng-container *ngIf=\"!collapsedPanel\">\r\n              <span class=\"material-icons\" aria-hidden=\"true\">chevron_left</span> \r\n            </ng-container>\r\n        </button>\r\n      </div>\r\n      <div class=\"sec-Ficha\">\r\n        <app-ficha>\r\n            <uni-button buttons buttonType=\"primary\" icon=\"signature\" showIcon=\"true\" size=\"sm\" label=\"Firmar\">\r\n            </uni-button>\r\n            <uni-button buttons buttonType=\"primary-outline\" icon=\"picture_as_pdf\" showIcon=\"true\" size=\"sm\" label=\"Expediente Digital\">\r\n            </uni-button>\r\n            <div body>\r\n              <h2>hola mundo</h2>\r\n              <p>estoy pobando cositas</p>\r\n            </div>\r\n            <uni-drag-and-drop></uni-drag-and-drop>\r\n        </app-ficha>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "BreadcrumbComponent",
@@ -353,6 +353,49 @@
             }
         },
         {
+            "name": "DragAndDropComponent",
+            "id": "component-DragAndDropComponent-99f9497d2868eeb184741fcc9e770b00f39993ea0bd9028bd4b00218f3817a79a635a4179c3e082dd08148c01ec55e5a52eaaf864e350379b760b353683fed28",
+            "file": "src/stories/components/drag-and-drop/drag-and-drop.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "uni-drag-and-drop",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./drag-and-drop.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport ButtonComponent from '../buttons/button.component';\n\n@Component({\n  selector: 'uni-drag-and-drop',\n  standalone: true,\n  imports: [ButtonComponent],\n  templateUrl: './drag-and-drop.component.html',\n  styleUrl: '../../../assets/CSS/Component-Styles/drag-and-drop.component.css'\n})\nexport class DragAndDropComponent {\n\n}\n",
+            "styleUrl": "../../../assets/CSS/Component-Styles/drag-and-drop.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "\n<form >\n    <div class=\"drag-and-drop-container\" >\n        <div class=\"drag-and-drop-buttons\">\n            <span class=\"material-symbols-outlined\">cloud_upload</span>\n            <div class=\"\">Arrastre Archivos aquí o</div>\n            <uni-button\n            buttonType=\"primary-outline\"\n            showIcon=\"false\"\n            label=\"Explore Archivos\"\n            size=\"sm\"\n            aria-label=\"Explore Archivos\"\n            ></uni-button>\n            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\n            <!-- <button class=\"btn button-primary-outline btn-sm\"  >Explore Archivos</button> -->\n        </div>\n        <input type=\"file\" name=\"avatars\" hidden >\n    </div>\n</form>\n\n"
+        },
+        {
             "name": "EncabezadoComponent",
             "id": "component-EncabezadoComponent-c3b5bcdf6eb3e7cb9dedffbd53c6d4b82787bcb341ebd1f70297700f937a6cc235d1428448c89c161ee1167fc3b598cb09b47df498013487b8e4ed65b8f3dfcb",
             "file": "src/stories/sections/encabezado/encabezado.component.ts",
@@ -497,13 +540,13 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".ficha-container{\r\n    height: 100%;\r\n    margin: 8px 0 0 16px\r\n}\r\n\r\n\r\n/* SECCION TITULOS FICHA  */\r\n\r\n.sec-head-ficha{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    gap: 8px;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.icono-acceso{\r\n    display: flex;\r\n    align-content: center;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.sec-head-titles-ficha{\r\n    display: flex;\r\n    /* padding: 8px 0px; */\r\n    flex-direction: column;\r\n    width: 100%;\r\n    gap: 4px;\r\n}\r\n\r\n.sec-head-title-ficha{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    width: 100%;\r\n}\r\n\r\n\r\n.title-ficha uni-button{\r\n    position: absolute;\r\n    right: 0;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n} /* posiciona el boton copy en relación al texto y evita que el div tome el alto del boton */\r\n\r\n.sec-head-subtitle-ficha{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 7.504px;\r\n}\r\n\r\n.title-ficha{\r\n    color: var(--color-text-label, #4F4F4F);\r\n    font-size: 18px;\r\n    font-weight: 600;\r\n    text-transform: uppercase;\r\n    display: inline-block;\r\n    position: relative;\r\n    padding-right: 40px;\r\n}\r\n\r\n.subtitle-ficha{\r\n    padding-right: 40px;\r\n    position: relative;\r\n}\r\n\r\n.subtitle-ficha uni-button{\r\n    position: absolute;\r\n    right: 0;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}/* posiciona el boton copy en relación al texto y evita que el div tome el alto del boton */\r\n\r\n/* FIN SECCION TITULOS FICHA  */\r\n\r\n/* SECCION MENÚ MÓDULOS FICHA  */\r\n\r\n.sec-head-menu-modulos-ficha{\r\n    border-top: 1px solid var(--color-border-primary-default);\r\n\r\n}\r\n\r\n/* SECCION MENÚ MÓDULOS FICHA  */\r\n\r\n/* SECCION BOTONES FICHA  */\r\n\r\n.sec-head-buttons-ficha{\r\nborder-bottom: 1px solid var(--color-border-neutro);\r\nborder-top: 1px solid var(--color-border-neutro);\r\ndisplay: flex;\r\njustify-content: space-between;\r\nalign-items: center;\r\npadding: 4px 0;\r\n}\r\n\r\n.head-buttons-ficha{\r\n display: flex;\r\n flex-direction: row;\r\n gap:8px;\r\n}",
+                    "data": ".ficha-container{\r\n    height: 100%;\r\n    margin: 8px 0 0 16px\r\n}\r\n\r\n\r\n/* SECCION TITULOS FICHA  */\r\n\r\n.sec-head-ficha{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    gap: 8px;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.icono-acceso{\r\n    display: flex;\r\n    align-content: center;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.sec-head-titles-ficha{\r\n    display: flex;\r\n    /* padding: 8px 0px; */\r\n    flex-direction: column;\r\n    width: 100%;\r\n    gap: 4px;\r\n}\r\n\r\n.sec-head-title-ficha{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    width: 100%;\r\n}\r\n\r\n\r\n.title-ficha uni-button{\r\n    position: absolute;\r\n    right: 0;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n} /* posiciona el boton copy en relación al texto y evita que el div tome el alto del boton */\r\n\r\n.sec-head-subtitle-ficha{\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 7.504px;\r\n}\r\n\r\n.title-ficha{\r\n    color: var(--color-text-label, #4F4F4F);\r\n    font-size: 18px;\r\n    font-weight: 600;\r\n    text-transform: uppercase;\r\n    display: inline-block;\r\n    position: relative;\r\n    padding-right: 40px;\r\n}\r\n\r\n.subtitle-ficha{\r\n    padding-right: 40px;\r\n    position: relative;\r\n}\r\n\r\n.subtitle-ficha uni-button{\r\n    position: absolute;\r\n    right: 0;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}/* posiciona el boton copy en relación al texto y evita que el div tome el alto del boton */\r\n\r\n/* FIN SECCION TITULOS FICHA  */\r\n\r\n/* SECCION MENÚ MÓDULOS FICHA  */\r\n.module-title{\r\n    color: var(--brand-color-primary-700);\r\n    margin: 0;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n    padding-left: 15px;\r\n}\r\n\r\n.sec-head-menu-modulos-ficha{\r\n    border-top: 1px solid var(--color-border-primary-default);\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 4px 0;\r\n}\r\n\r\n/* SECCION MENÚ MÓDULOS FICHA  */\r\n\r\n/* SECCION BOTONES FICHA  */\r\n\r\n.sec-head-buttons-ficha{\r\nborder-bottom: 1px solid var(--color-border-neutro);\r\nborder-top: 1px solid var(--color-border-neutro);\r\ndisplay: flex;\r\njustify-content: space-between;\r\nalign-items: center;\r\npadding: 4px 0;\r\n}\r\n\r\n.head-buttons-ficha{\r\n display: flex;\r\n flex-direction: row;\r\n gap:8px;\r\n}",
                     "styleUrl": "../../../assets/CSS/Component-Styles/ficha.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"ficha-container\" >\r\n    <div class=\"header-container\">\r\n      <div class=\"sec-head-ficha\">\r\n        <ng-container >\r\n          <div class=\"icono-acceso\" title=\"Privado\" >\r\n            <span class=\"material-symbols-outlined \">\r\n              lock_outline\r\n            </span>\r\n          </div>\r\n        </ng-container>\r\n\r\n        <div  class=\"sec-head-titles-ficha\"> \r\n          <div class=\"sec-head-title-ficha\">\r\n              <span  class=\"title-ficha\" tabindex=\"0\">\r\n                Carátula\r\n                <uni-button buttonType=\"icon\" icon=\"content_copy\" showIcon=\"true\" size=\"sm\"></uni-button>\r\n              </span>\r\n              <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n            <!-- <button class=\"btn icon-button btn-sm\">\r\n              <span class=\"material-symbols-outlined button-icon\">content_copy</span>\r\n            </button> -->\r\n          </div>\r\n\r\n          <div class=\"sec-head-subtitle-ficha\">\r\n            <span class=\"subtitle-ficha\" tabindex=\"0\">\r\n              Subtitulo de ficha\r\n              <uni-button buttonType=\"icon\" icon=\"content_copy\" showIcon=\"true\" size=\"sm\"></uni-button>\r\n              <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n              <!-- <button class=\"btn icon-button btn-sm\">\r\n                <span class=\"material-symbols-outlined button-icon\">content_copy</span>\r\n              </button> -->\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"sec-head-menu-modulos-ficha\">\r\n          <ng-container>\r\n            <p class=\"module-title\" >\r\n              \"MODULO EN VISUALIZACION\" del expediente\r\n            </p>\r\n          </ng-container>\r\n        <div class=\"column\">\r\n          <!-- ACÁ VA EL CONTROL DE CAMBIO DE MÓDULO -->\r\n           <uni-menu-modulos></uni-menu-modulos>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"sec-head-buttons-ficha\">\r\n        <div class=\"head-buttons-ficha\">\r\n          <ng-content select=\"[buttons]\">\r\n            <!-- insertar contenido como botones que accionen sobre la lista -->\r\n          </ng-content>\r\n        </div>\r\n        <uni-button buttonType=\"icon\" icon=\"more_vert\" showIcon=\"true\" ></uni-button>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <ng-content select=\"[body]\">\r\n      <!-- insertar contenido de la ficha -->\r\n    </ng-content>\r\n    \r\n\r\n</div>"
+            "templateData": "<div class=\"ficha-container\" >\r\n    <div class=\"header-container\">\r\n      <div class=\"sec-head-ficha\">\r\n        <ng-container >\r\n          <div class=\"icono-acceso\" title=\"Privado\" >\r\n            <span class=\"material-symbols-outlined \">\r\n              lock_outline\r\n            </span>\r\n          </div>\r\n        </ng-container>\r\n\r\n        <div  class=\"sec-head-titles-ficha\"> \r\n          <div class=\"sec-head-title-ficha\">\r\n              <span  class=\"title-ficha\" tabindex=\"0\">\r\n                Carátula\r\n                <uni-button buttonType=\"icon\" icon=\"content_copy\" showIcon=\"true\" size=\"sm\"></uni-button>\r\n              </span>\r\n              <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n            <!-- <button class=\"btn icon-button btn-sm\">\r\n              <span class=\"material-symbols-outlined button-icon\">content_copy</span>\r\n            </button> -->\r\n          </div>\r\n\r\n          <div class=\"sec-head-subtitle-ficha\">\r\n            <span class=\"subtitle-ficha\" tabindex=\"0\">\r\n              Subtitulo de ficha\r\n              <uni-button buttonType=\"icon\" icon=\"content_copy\" showIcon=\"true\" size=\"sm\"></uni-button>\r\n              <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n              <!-- <button class=\"btn icon-button btn-sm\">\r\n                <span class=\"material-symbols-outlined button-icon\">content_copy</span>\r\n              </button> -->\r\n            </span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"sec-head-menu-modulos-ficha\">\r\n          <ng-container>\r\n            <p class=\"module-title\" >\r\n              Ficha del expediente\r\n            </p>\r\n          </ng-container>\r\n        <div class=\"column\">\r\n          <!-- ACÁ VA EL CONTROL DE CAMBIO DE MÓDULO -->\r\n           <uni-menu-modulos></uni-menu-modulos>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"sec-head-buttons-ficha\">\r\n        <div class=\"head-buttons-ficha\">\r\n          <ng-content select=\"[buttons]\">\r\n            <!-- insertar contenido como botones que accionen sobre la lista -->\r\n          </ng-content>\r\n        </div>\r\n        <uni-button buttonType=\"icon\" icon=\"more_vert\" showIcon=\"true\" ></uni-button>\r\n      </div>\r\n\r\n    </div>\r\n\r\n    <ng-content select=\"[body]\">\r\n      <!-- insertar contenido de la ficha -->\r\n    </ng-content>\r\n    \r\n\r\n</div>"
         },
         {
             "name": "FiltrosAplicadosComponent",
@@ -791,7 +834,7 @@
         },
         {
             "name": "MenuModulosComponent",
-            "id": "component-MenuModulosComponent-ae8dc2a34947738770411993d2c6e85cb6d60917a598afcb73acbbc0dfead5332ca699baf8a4f4a80ae0a23099682ccc2dde7e3c194e2ec587c82cffe3a913a2",
+            "id": "component-MenuModulosComponent-43b201707f2f19cfe25bf77c89a53429a884f9358885d888fed618a9d94fbe8bf4fb76fe2eec15d9e6f8dcf3ed1c2b6fce054f18cf851576bfe523611a9ebf22",
             "file": "src/stories/components/menu-modulos/menu-modulos.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -810,131 +853,18 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
-                    "name": "apps",
-                    "defaultValue": "[]",
+                    "name": "icon",
+                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 20,
-                    "type": "SubApp[]",
-                    "decorators": []
-                },
-                {
-                    "name": "buttonClass",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 22,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "iconClass",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 23,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "module",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 21,
-                    "type": "string",
+                    "type": "string | null",
                     "decorators": []
                 }
             ],
-            "outputsClass": [
-                {
-                    "name": "appSelected",
-                    "defaultValue": "new EventEmitter<SubApp>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 24,
-                    "type": "EventEmitter"
-                }
-            ],
+            "outputsClass": [],
             "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "emitirEvento",
-                    "args": [
-                        {
-                            "name": "app",
-                            "type": "SubApp",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 39,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "app",
-                            "type": "SubApp",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "getButtonClasses",
-                    "args": [
-                        {
-                            "name": "app",
-                            "type": "SubApp",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "any",
-                    "typeParameters": [],
-                    "line": 44,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "app",
-                            "type": "SubApp",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 26,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "setDefaultApp",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 30,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -944,20 +874,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nexport interface SubApp {\n  appCod: string;\n  appDescr: string;\n  appIcon?: string;\n  appVisible?: number;\n  selected?: boolean;\n  [key: string]: any; // Propiedades adicionales\n}\n\n@Component({\n  selector: 'uni-menu-modulos',\n  standalone: true,\n  imports: [],\n  templateUrl: './menu-modulos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\n})\nexport class MenuModulosComponent implements OnInit {\n  @Input() apps: SubApp[] = []; // Lista de aplicaciones\n  @Input() module: string = ''; // Aplicación seleccionada por defecto\n  @Input() buttonClass: string = ''; // Personalización de botones\n  @Input() iconClass: string = ''; // Personalización de iconos\n  @Output() appSelected = new EventEmitter<SubApp>(); // Evento para el padre\n\n  ngOnInit() {\n    this.setDefaultApp();\n  }\n\n  setDefaultApp(): void {\n    for (let app of this.apps) {\n      app.selected = app.appCod.toLowerCase() === this.module.toLowerCase();\n      if (app.selected) {\n        this.appSelected.emit(app);\n      }\n    }\n  }\n\n  emitirEvento(app: SubApp) {\n    this.apps.forEach(d => d.selected = d.appCod === app.appCod);\n    this.appSelected.emit(app);\n  }\n\n  getButtonClasses(app: SubApp): any {\n    return Object.assign(\n      { active: app.selected },\n      this.buttonClass ? { [this.buttonClass]: true } : {}\n    );\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nexport interface SubApp {\n  appCod: string;\n  appDescr: string;\n  appIcon?: string;\n  appVisible?: number;\n  selected?: boolean;\n  [key: string]: any; // Propiedades adicionales\n}\n\n@Component({\n  selector: 'uni-menu-modulos',\n  standalone: true,\n  imports: [],\n  templateUrl: './menu-modulos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\n})\nexport class MenuModulosComponent {\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\n\n  \n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".menu-modulo-button {\r\n    background-color: #f1f1f1;  /* Color de fondo por defecto */\r\n    border: none;\r\n    padding: 10px 20px;\r\n    cursor: pointer;\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 8px;\r\n  }\r\n  \r\n  .menu-modulo-button.active {\r\n    background-color: #4CAF50;  /* Color de fondo cuando está activo */\r\n    color: white;               /* Color del texto cuando está activo */\r\n  }\r\n  \r\n  .menu-modulo-button:hover {\r\n    background-color: #ddd;  /* Color de fondo al hacer hover */\r\n  }\r\n  \r\n  .menu-modulo-button .material-symbols-outlined {\r\n    font-size: 24px;  /* Tamaño del icono */\r\n  }\r\n  \r\n  .menu-modulo-button.active .material-symbols-outlined {\r\n    color: white;  /* Cambia el color del ícono cuando el botón está activo */\r\n  }\r\n  ",
+                    "data": ".menu-modulos-container{\r\n    display: flex;\r\n    background: var( --menu-mod-ficha-background-color);\r\n    padding: 5px;\r\n    border-radius: 40px;\r\n    border: 1px solid var(--menu-mod-ficha-border-color);\r\n    gap: 8px;\r\n    width: fit-content;\r\n}\r\n\r\n.menu-modulo-button {\r\n    border-radius: 50%;\r\n    border: 1px solid var(--menu-mod-ficha-selector-border-color);\r\n    color: var(--menu-mod-ficha-selector-icon-color);\r\n    background-color: var(--menu-mod-ficha-selector-background-color);\r\n    padding: 6px;\r\n    cursor: pointer;\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 8px;\r\n  }\r\n  \r\n  .menu-modulo-button.active, .menu-modulo-button.active:hover  {\r\n    background-color:var(--menu-mod-ficha-selector-background-color-active);  /* Color de fondo cuando está activo */\r\n    color: var(--menu-mod-ficha-selector-icon-color-active);               /* Color del texto cuando está activo */\r\n  }\r\n  \r\n  .menu-modulo-button:hover {\r\n    background-color: var(--menu-mod-ficha-selector-background-color-hover);  /* Color de fondo al hacer hover */\r\n  }\r\n  \r\n  .menu-modulo-button .material-symbols-outlined {\r\n    font-size: 18px;  /* Tamaño del icono */\r\n  }\r\n  ",
                     "styleUrl": "../../../assets/CSS/Component-Styles/menu-modulos.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "\n  <!--Menu aplicaciones desde la ficha (horizontal)-->\n<!--   <div *ngIf=\"apps && apps.length > 0\" class=\"bar\">\n    <div *ngFor=\"let app of apps\">\n      <button \n        [attr.aria-label]=\"app.appDescr\"\n        [title]=\"app.appDescr\"\n        [ngClass]=\"{'active': app.selected, [buttonClass]: buttonClass}\"\n        (click)=\"emitirEvento(app)\"\n      >\n        <span \n          class=\"material-symbols-outlined iconSize\" \n          [ngClass]=\"iconClass\"\n        >\n          {{ app.appIcon }}\n        </span>\n      </button>\n    </div>\n  </div> -->\n\n  <button\n  *ngFor=\"let app of apps\"\n  class=\"menu-modulo-button\"\n  (click)=\"emitirEvento(app)\"\n  [class.active]=\"app.selected\"  \n  title=\"{{ app.appDescr }}\"\n  aria-label=\"{{ app.appDescr }}\"\n>\n  <span\n    class=\"material-symbols-outlined\"\n  >\n    {{ app.appIcon }}\n  </span>\n  {{ app.appDescr }}\n</button>\n\n"
+            "templateData": "\n  <!--Menu aplicaciones desde la ficha (horizontal)-->\n  <div class=\"menu-modulos-container\">\n      <button attr.aria-label=\"Expediente\"\n        title=\"Expediente\"\n        class=\"menu-modulo-button active\">\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\n            content_paste \n        </span>\n      </button>\n      <button attr.aria-label=\"Expediente\"\n        title=\"Expediente\"\n        class=\"menu-modulo-button \">\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\n            content_paste \n        </span>\n      </button> \n      <button attr.aria-label=\"Expediente\"\n        title=\"Expediente\"\n        class=\"menu-modulo-button \">\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\n            content_paste \n        </span>\n      </button>      \n  </div>\n\n"
         },
         {
             "name": "PageComponent",
@@ -1177,19 +1104,19 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-header></app-header>\r\n<div class=\"mx-5 h-100\">\r\n  <app-encabezado></app-encabezado>\r\n  \r\n  <uni-filtros-rapidos></uni-filtros-rapidos>\r\n  \r\n  <div class=\"d-flex\">\r\n      <div class=\" sec-tarjetas collapsible-panel\" [ngClass]=\"{ 'collapsed': collapsedPanel }\">\r\n          <app-lista-tarjeta></app-lista-tarjeta>\r\n          <button \r\n              class=\"collapse-button\" \r\n              (click)=\"collapsePanel()\">\r\n  \r\n              <ng-container *ngIf=\"collapsedPanel\">\r\n                <span \r\n                  class=\"material-icons\" \r\n                  aria-hidden=\"true\"\r\n                  aria-label=\"Contraer lista de expedientes\" \r\n                  title=\"Contraer lista de expedientes\">\r\n                  chevron_right\r\n                </span> \r\n              </ng-container>\r\n  \r\n              <ng-container *ngIf=\"!collapsedPanel\">\r\n                <span class=\"material-icons\" aria-hidden=\"true\">chevron_left</span> \r\n              </ng-container>\r\n  \r\n            </button>\r\n      </div>\r\n      <div class=\"sec-Ficha\">\r\n      <app-ficha></app-ficha>\r\n      </div>\r\n  </div>\r\n</div>"
+            "templateData": "<app-header></app-header>\r\n<div class=\"mx-5 h-100\">\r\n  <app-encabezado></app-encabezado>\r\n  \r\n  <uni-filtros-rapidos></uni-filtros-rapidos>\r\n  \r\n  <div class=\"vista-tarjeta-container\">\r\n      <div class=\" sec-tarjetas collapsible-panel\" [ngClass]=\"{ 'collapsed': collapsedPanel }\">\r\n          <app-lista-tarjeta></app-lista-tarjeta>\r\n          <button \r\n              class=\"collapse-button\" \r\n              (click)=\"collapsePanel()\">\r\n  \r\n              <ng-container *ngIf=\"collapsedPanel\">\r\n                <span \r\n                  class=\"material-icons\" \r\n                  aria-hidden=\"true\"\r\n                  aria-label=\"Contraer lista de expedientes\" \r\n                  title=\"Contraer lista de expedientes\">\r\n                  chevron_right\r\n                </span> \r\n              </ng-container>\r\n  \r\n              <ng-container *ngIf=\"!collapsedPanel\">\r\n                <span class=\"material-icons\" aria-hidden=\"true\">chevron_left</span> \r\n              </ng-container>\r\n  \r\n            </button>\r\n      </div>\r\n      <div class=\"sec-Ficha\">\r\n      <app-ficha></app-ficha>\r\n      </div>\r\n  </div>\r\n</div>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-56a7a5c14ce7d0fd788f587346a0f32bd63d9047dbf8f94986897177b7508cb2aa5f1ad3eb58e469815e3f1de354445f1f125273e95510ff674713bfb7b817d5",
+            "id": "module-AppModule-2322743c08a6825159fcd633cc127e984b96ee407f1b9248651fc3e285bd78635e9d286d3816e16c51501451d04f1e810966f3c588aa3ac1d079c0a5ebc2662e",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { provideAnimationsAsync } from '@angular/platform-browser/animations/async';\r\n\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport {MatMenuModule} from '@angular/material/menu';\r\nimport {MatSidenavModule} from '@angular/material/sidenav';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\n\r\n\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport {MatIconModule} from '@angular/material/icon';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\nimport HeaderComponent from 'src/stories/components/header/header.component';\r\nimport EncabezadoComponent from 'src/stories/sections/encabezado/encabezado.component';\r\nimport { FiltrosRapidosComponent } from 'src/stories/sections/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';\r\nimport { ListaTarjetaComponent } from 'src/stories/sections/lista-tarjetas/lista-tarjetas.component';\r\nimport { FichaComponent } from 'src/stories/sections/ficha/ficha.component';\r\nimport ButtonComponent from 'src/stories/components/buttons/button.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    CommonModule,\r\n    MatButtonModule,\r\n    MatMenuModule,\r\n    MatSidenavModule,\r\n    MatDividerModule,\r\n    MatCheckboxModule,\r\n    MatFormFieldModule,\r\n    MatSelectModule,\r\n    MatIconModule,\r\n\r\n    HeaderComponent,\r\n    EncabezadoComponent,\r\n    FiltrosRapidosComponent,\r\n    ListaTarjetaComponent,\r\n    FichaComponent,\r\n    ButtonComponent,\r\n  ],\r\n  exports:[\r\n    \r\n  ],\r\n  providers: [\r\n    provideAnimationsAsync()\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { provideAnimationsAsync } from '@angular/platform-browser/animations/async';\r\n\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport {MatMenuModule} from '@angular/material/menu';\r\nimport {MatSidenavModule} from '@angular/material/sidenav';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\n\r\n\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport {MatIconModule} from '@angular/material/icon';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\nimport HeaderComponent from 'src/stories/components/header/header.component';\r\nimport EncabezadoComponent from 'src/stories/sections/encabezado/encabezado.component';\r\nimport { FiltrosRapidosComponent } from 'src/stories/sections/filtros-rapidos/filtros-rapidos/filtros-rapidos.component';\r\nimport { ListaTarjetaComponent } from 'src/stories/sections/lista-tarjetas/lista-tarjetas.component';\r\nimport { FichaComponent } from 'src/stories/sections/ficha/ficha.component';\r\nimport ButtonComponent from 'src/stories/components/buttons/button.component';\r\nimport { DragAndDropComponent } from \"../stories/components/drag-and-drop/drag-and-drop.component\";\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    CommonModule,\r\n    MatButtonModule,\r\n    MatMenuModule,\r\n    MatSidenavModule,\r\n    MatDividerModule,\r\n    MatCheckboxModule,\r\n    MatFormFieldModule,\r\n    MatSelectModule,\r\n    MatIconModule,\r\n    HeaderComponent,\r\n    EncabezadoComponent,\r\n    FiltrosRapidosComponent,\r\n    ListaTarjetaComponent,\r\n    FichaComponent,\r\n    ButtonComponent,\r\n    DragAndDropComponent\r\n],\r\n  exports:[\r\n    \r\n  ],\r\n  providers: [\r\n    provideAnimationsAsync()\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1208,6 +1135,9 @@
                     "elements": [
                         {
                             "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "DragAndDropComponent"
                         },
                         {
                             "name": "EncabezadoComponent"
@@ -1252,6 +1182,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/components/breadcrumb/breadcrumb/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n  },\n}"
+            },
+            {
+                "name": "DragandDrop",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1395,7 +1335,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    apps: [\n      { appCod: 'APP1', appDescr: 'Aplicación 1', appIcon: 'home', selected: false },\n      { appCod: 'APP2', appDescr: 'Aplicación 2', appIcon: 'settings', selected: false },\n      { appCod: 'APP3', appDescr: 'Aplicación 3', appIcon: 'account_circle', selected: false },\n    ] as SubApp[],\n    module: 'APP1',  // El módulo por defecto\n    \n  },\n}"
+                "defaultValue": "{\n  args: {\n  },\n}"
             },
             {
                 "name": "meta",
@@ -1406,6 +1346,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<Page>",
                 "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, HeaderComponent],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DragAndDropComponent>",
+                "defaultValue": "{\n  title: 'Uniframe/Components/Drag and Drop',\n  component:DragAndDropComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
             },
             {
                 "name": "meta",
@@ -1455,7 +1405,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<MenuModulosComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Components/Menu Modulos',\n  component:MenuModulosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n  argTypes: {\n    apps: { control: 'array' },  // Permite controlar el array de aplicaciones desde la interfaz de Storybook\n  },\n\n}"
+                "defaultValue": "{\n  title: 'Uniframe/Components/Menu Modulos',\n  component:MenuModulosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
             },
             {
                 "name": "meta",
@@ -1606,6 +1556,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Page>",
                 "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DragAndDropComponent>",
+                "file": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1766,6 +1727,28 @@
                     "deprecationMessage": "",
                     "type": "Meta<BreadcrumbComponent>",
                     "defaultValue": "{\n  title: 'Uniframe/Components/Breadcrumb',\n  component:BreadcrumbComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      \n      imports: [CommonModule],\n    }),\n  ],\n\n}"
+                }
+            ],
+            "src/stories/components/drag-and-drop/drag-and-drop.stories.ts": [
+                {
+                    "name": "DragandDrop",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DragAndDropComponent>",
+                    "defaultValue": "{\n  title: 'Uniframe/Components/Drag and Drop',\n  component:DragAndDropComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
                 }
             ],
             "src/stories/sections/encabezado/encabezado.stories.ts": [
@@ -2059,7 +2042,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    apps: [\n      { appCod: 'APP1', appDescr: 'Aplicación 1', appIcon: 'home', selected: false },\n      { appCod: 'APP2', appDescr: 'Aplicación 2', appIcon: 'settings', selected: false },\n      { appCod: 'APP3', appDescr: 'Aplicación 3', appIcon: 'account_circle', selected: false },\n    ] as SubApp[],\n    module: 'APP1',  // El módulo por defecto\n    \n  },\n}"
+                    "defaultValue": "{\n  args: {\n  },\n}"
                 },
                 {
                     "name": "meta",
@@ -2069,7 +2052,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<MenuModulosComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Components/Menu Modulos',\n  component:MenuModulosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n  argTypes: {\n    apps: { control: 'array' },  // Permite controlar el array de aplicaciones desde la interfaz de Storybook\n  },\n\n}"
+                    "defaultValue": "{\n  title: 'Uniframe/Components/Menu Modulos',\n  component:MenuModulosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
                 }
             ],
             "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts": [
@@ -2139,6 +2122,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Page>",
                     "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/drag-and-drop/drag-and-drop.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DragAndDropComponent>",
+                    "file": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2495,6 +2491,35 @@
                 "status": "medium"
             },
             {
+                "filePath": "src/stories/components/drag-and-drop/drag-and-drop.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DragAndDropComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DragandDrop",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/drag-and-drop/drag-and-drop.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/etiquetas/etiqueta.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2587,7 +2612,7 @@
                 "linktype": "component",
                 "name": "MenuModulosComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/10",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {

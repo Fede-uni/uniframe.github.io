@@ -4,15 +4,15 @@ import { TarjetaComponent } from 'src/stories/components/tarjetas/tarjeta/tarjet
 import { MatDividerModule } from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import ButtonComponent from '../../components/buttons/button.component';
 
 
 @Component({
   selector: 'app-lista-tarjeta',
   styleUrl: '../../../assets/CSS/Component-Styles/lista-tarjeta-component.css',
   standalone: true,
-  imports: [TarjetaComponent,MatDividerModule,MatPaginatorModule,MatCheckboxModule,CommonModule],
+  imports: [TarjetaComponent,MatDividerModule,MatPaginatorModule,MatCheckboxModule,CommonModule, ButtonComponent],
   template: `
-  <!-- <div class="collapsible-panel" [ngClass]="{ 'collapsed': collapsedPanel }"> -->
     <fieldset class="h-100 overflow-hidden"  aria-label="lista de expedientes formato tarjeta" >
         <div class="sec-encabezado-lista-tarjeta">
           <!-- Check de seleccinar toda la lista -->
@@ -22,7 +22,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
           <div class="d-flex align-items-center w-100 gap-3">
             <!-- Botón acciones -->
             <button id="al-crear"  class="btn button-primary-outline btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Acciones a realizar con la selección actual">
-            <span class="material-symbols-outlined  button-icon">task_alt</span>Acciones</button><!-- esto se reemplazaría por un <uni-button> -->
+            <span class="material-symbols-outlined  button-icon">task_alt</span>Acciones</button><!-- esto se podría reemplazaría por un <uni-button> si logramos ajustarlo-->
             <!-- Lista acciones -->
             <ul id="al-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu" style="cursor: pointer">
                 <li mat-menu-item  class="dropdown-item-size">
@@ -37,9 +37,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
             </span>
           </div> 
           <!-- Botón aactualizar -->
-          <button id="lis-actualizarBoton"  class="btn icon-button btn-sm" title="Actualizar">
+          <uni-button buttonType="icon" showIcon="true" icon="autorenew" size="sm"></uni-button>
+          <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+         <!--  <button id="lis-actualizarBoton"  class="btn icon-button btn-sm" title="Actualizar">
             <span id="lis-actualizar" class="material-symbols-outlined button-icon" aria-hidden="true">autorenew</span>
-          </button><!-- esto se reemplazaría por un <uni-button> [buttonType]="'icon'"  -->
+          </button> -->
         </div>
         <mat-divider style="border-top-color: var(--color-neutro-200);"></mat-divider>
         <div id="content-lista-tarjetas">

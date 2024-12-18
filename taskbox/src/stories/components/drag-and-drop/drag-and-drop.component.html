@@ -3,7 +3,7 @@
     <div class="drag-and-drop-container" >
         <div class="drag-and-drop-buttons">
             <span class="material-symbols-outlined">cloud_upload</span>
-            <div class="dd-txt mr-2 contraste_2">Arrastre Archivos aquí o</div>
+            <div class="">Arrastre Archivos aquí o</div>
             <uni-button
             buttonType="primary-outline"
             showIcon="false"
@@ -11,9 +11,10 @@
             size="sm"
             aria-label="Explore Archivos"
             ></uni-button>
-            <button class="btn  btn-principal-outline  btn-sm dd-txt-btn"  >Explore Archivos</button>
+            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+            <!-- <button class="btn button-primary-outline btn-sm"  >Explore Archivos</button> -->
         </div>
-        <input type="file" name="avatars"  >
+        <input type="file" name="avatars" hidden >
     </div>
 </form>
 

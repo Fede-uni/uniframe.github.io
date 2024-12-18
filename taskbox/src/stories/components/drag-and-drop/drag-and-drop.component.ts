@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import ButtonComponent from '../buttons/button.component';
 
 @Component({
-  selector: 'app-drag-and-drop',
+  selector: 'uni-drag-and-drop',
   standalone: true,
   imports: [ButtonComponent],
   templateUrl: './drag-and-drop.component.html',
