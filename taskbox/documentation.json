@@ -3,12 +3,12 @@
     "interfaces": [
         {
             "name": "SubApp",
-            "id": "interface-SubApp-43b201707f2f19cfe25bf77c89a53429a884f9358885d888fed618a9d94fbe8bf4fb76fe2eec15d9e6f8dcf3ed1c2b6fce054f18cf851576bfe523611a9ebf22",
+            "id": "interface-SubApp-87bc969a1ee17e0caa6b1c3808ca6babaa03ed97cdc01cf70c0ca7838e058e52d7ffd9cf0f944ab3b43d3dc9cc83f216cd604fc21716b4f3dc5c0433f64709ca",
             "file": "src/stories/components/menu-modulos/menu-modulos.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nexport interface SubApp {\n  appCod: string;\n  appDescr: string;\n  appIcon?: string;\n  appVisible?: number;\n  selected?: boolean;\n  [key: string]: any; // Propiedades adicionales\n}\n\n@Component({\n  selector: 'uni-menu-modulos',\n  standalone: true,\n  imports: [],\n  templateUrl: './menu-modulos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\n})\nexport class MenuModulosComponent {\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\n\n  \n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\r\n\r\nexport interface SubApp {\r\n  appCod: string;\r\n  appDescr: string;\r\n  appIcon?: string;\r\n  appVisible?: number;\r\n  selected?: boolean;\r\n  [key: string]: any; // Propiedades adicionales\r\n}\r\n\r\n@Component({\r\n  selector: 'uni-menu-modulos',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './menu-modulos.component.html',\r\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\r\n})\r\nexport class MenuModulosComponent {\r\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\r\n\r\n  \r\n}\r\n",
             "properties": [
                 {
                     "name": "appCod",
@@ -58,7 +58,7 @@
             ],
             "indexSignatures": [
                 {
-                    "id": "index-declaration-43b201707f2f19cfe25bf77c89a53429a884f9358885d888fed618a9d94fbe8bf4fb76fe2eec15d9e6f8dcf3ed1c2b6fce054f18cf851576bfe523611a9ebf22",
+                    "id": "index-declaration-87bc969a1ee17e0caa6b1c3808ca6babaa03ed97cdc01cf70c0ca7838e058e52d7ffd9cf0f944ab3b43d3dc9cc83f216cd604fc21716b4f3dc5c0433f64709ca",
                     "args": [
                         {
                             "name": "key",
@@ -79,12 +79,12 @@
         },
         {
             "name": "User",
-            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400",
             "file": "src/stories/User.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {}\n",
+            "sourceCode": "export interface User {}\r\n",
             "properties": [],
             "indexSignatures": [],
             "methods": [],
@@ -181,7 +181,7 @@
         },
         {
             "name": "BreadcrumbComponent",
-            "id": "component-BreadcrumbComponent-2508e7152b9dfbbe6d40afb99483167a57e38b83dbe46232fb9458bf10e553f3e0f60183fe4284771027aa1731820bd4e0f2704345690e6c02fe66c54097c57d",
+            "id": "component-BreadcrumbComponent-e9e9df6a820f92bf9e7062ff7ff5d43f59f8fe50054c69d23c20aa490aeda631c2bfc8384f19a2c5c3c2da5bf217836af48ac5006bf4f02b3242e97b03beff95",
             "file": "src/stories/components/breadcrumb/breadcrumb/breadcrumb.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -208,7 +208,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'uni-breadcrumb',\n  standalone: true,\n  imports: [],\n  template: `<div class=\"text-breadcrum\">\n  <a>\n      <span class=\"contraste\"> Organismo</span>\n  </a>\n  <span class=\"mx-1\">/</span>\n  <a >\n      <span class=\"contraste\"> Dependencia </span>\n  </a>\n  <span  class=\"mx-1\">/</span>\n  <label  attr.aria-label=\"Expediente \">\n  Expediente  \n  </label>\n</div>`,\n  styleUrl: '../../../../assets/CSS/Component-Styles/encabezado.component.css'\n})\nexport class BreadcrumbComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'uni-breadcrumb',\r\n  standalone: true,\r\n  imports: [],\r\n  template: `<div class=\"text-breadcrum\">\r\n  <a>\r\n      <span class=\"contraste\"> Organismo</span>\r\n  </a>\r\n  <span class=\"mx-1\">/</span>\r\n  <a >\r\n      <span class=\"contraste\"> Dependencia </span>\r\n  </a>\r\n  <span  class=\"mx-1\">/</span>\r\n  <label  attr.aria-label=\"Expediente \">\r\n  Expediente  \r\n  </label>\r\n</div>`,\r\n  styleUrl: '../../../../assets/CSS/Component-Styles/encabezado.component.css'\r\n})\r\nexport class BreadcrumbComponent {\r\n\r\n}\r\n",
             "styleUrl": "../../../../assets/CSS/Component-Styles/encabezado.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -354,7 +354,7 @@
         },
         {
             "name": "DragAndDropComponent",
-            "id": "component-DragAndDropComponent-99f9497d2868eeb184741fcc9e770b00f39993ea0bd9028bd4b00218f3817a79a635a4179c3e082dd08148c01ec55e5a52eaaf864e350379b760b353683fed28",
+            "id": "component-DragAndDropComponent-e735da408802b1045a21053628e014c24207e2576419b2e208f689091bf394352363607fe91b59b4d0c2340865e70a2d8c6e06581a684ef44285a595d38ff326",
             "file": "src/stories/components/drag-and-drop/drag-and-drop.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -387,13 +387,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport ButtonComponent from '../buttons/button.component';\n\n@Component({\n  selector: 'uni-drag-and-drop',\n  standalone: true,\n  imports: [ButtonComponent],\n  templateUrl: './drag-and-drop.component.html',\n  styleUrl: '../../../assets/CSS/Component-Styles/drag-and-drop.component.css'\n})\nexport class DragAndDropComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport ButtonComponent from '../buttons/button.component';\r\n\r\n@Component({\r\n  selector: 'uni-drag-and-drop',\r\n  standalone: true,\r\n  imports: [ButtonComponent],\r\n  templateUrl: './drag-and-drop.component.html',\r\n  styleUrl: '../../../assets/CSS/Component-Styles/drag-and-drop.component.css'\r\n})\r\nexport class DragAndDropComponent {\r\n\r\n}\r\n",
             "styleUrl": "../../../assets/CSS/Component-Styles/drag-and-drop.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "\n<form >\n    <div class=\"drag-and-drop-container\" >\n        <div class=\"drag-and-drop-buttons\">\n            <span class=\"material-symbols-outlined\">cloud_upload</span>\n            <div class=\"\">Arrastre Archivos aquí o</div>\n            <uni-button\n            buttonType=\"primary-outline\"\n            showIcon=\"false\"\n            label=\"Explore Archivos\"\n            size=\"sm\"\n            aria-label=\"Explore Archivos\"\n            ></uni-button>\n            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\n            <!-- <button class=\"btn button-primary-outline btn-sm\"  >Explore Archivos</button> -->\n        </div>\n        <input type=\"file\" name=\"avatars\" hidden >\n    </div>\n</form>\n\n"
+            "templateData": "\r\n<form >\r\n    <div class=\"drag-and-drop-container\" >\r\n        <div class=\"drag-and-drop-buttons\">\r\n            <span class=\"material-symbols-outlined\">cloud_upload</span>\r\n            <div class=\"\">Arrastre Archivos aquí o</div>\r\n            <uni-button\r\n            buttonType=\"primary-outline\"\r\n            showIcon=\"false\"\r\n            label=\"Explore Archivos\"\r\n            size=\"sm\"\r\n            aria-label=\"Explore Archivos\"\r\n            ></uni-button>\r\n            <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n            <!-- <button class=\"btn button-primary-outline btn-sm\"  >Explore Archivos</button> -->\r\n        </div>\r\n        <input type=\"file\" name=\"avatars\" hidden >\r\n    </div>\r\n</form>\r\n\r\n"
         },
         {
             "name": "EncabezadoComponent",
@@ -550,7 +550,7 @@
         },
         {
             "name": "FiltrosAplicadosComponent",
-            "id": "component-FiltrosAplicadosComponent-ec777134333ca480ff8c823df65ca977ee4e39aa9a883b70eadd23277f47e642411b4d1488df6f6dfaee9cb74dcd011af13ff43929dbeb74833afe414d5982de",
+            "id": "component-FiltrosAplicadosComponent-c350f7396c1bb386aff3e3ebcd50fb8d29ce3da33e772a82887093b9758eca5355bdc5a83e6bac0dce9a5f131602e27b38c9d32202d3502b4aa77d3c0e42572f",
             "file": "src/stories/components/filtros-aplicados/filtros-aplicados.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -582,7 +582,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport ButtonComponent from '../buttons/button.component';\n\n@Component({\n  selector: 'uni-filtros-aplicados',\n  standalone: true,\n  imports: [ButtonComponent],\n  styleUrl: './../../../assets/CSS/Component-Styles/filtros-rapidos.component.css',\n  template: `<div class=\"contenedor-filtros-aplicados\">\n  <div class=\"col-auto\">\n    <p class=\"filtroAplicado\">Filtros Aplicados ></p>\n  </div>\n  <div class=\"col-auto item-aplicado\">\n    <p class=\"filtroAplicado\" tabindex=\"0\">Bandeja: <span class=\"filtroAplicadoDesc\">Bandeja seleccionada</span></p>\n  </div>\n  <div class=\"col-auto item-aplicado\">\n    <p class=\"filtroAplicado\">Incluir asignados: <span class=\"filtroAplicadoDesc\">Sí</span></p>\n  </div>\n  <div class=\"col-auto item-aplicado\" >\n    <p class=\"filtroAplicado\" tabindex=\"0\">Tipos: <span class=\"filtroAplicadoDesc\">Todos</span></p>\n  </div>\n  <div class=\"col-auto item-aplicado\" >\n    <p class=\"filtroAplicado\" tabindex=\"0\">Estados: <span class=\"filtroAplicadoDesc\">Todos</span>\n    </p>\n  </div>\n  <div class=\"col-auto item-aplicado\">\n    <p class=\"filtroAplicado\" tabindex=\"0\">Acceso: <span class=\"filtroAplicadoDesc\">Todos</span></p>\n  </div>\n  <div class=\"col-auto filtroAplicado \">\n    <uni-button buttonType=\"link\"  showIcon=\"false\" label=\"Limpiar\" size=\"sm\" aria-label=\"Limpiar filtros\"></uni-button>\n     <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\n    <!-- <button type=\"button\" class=\"btn button-link ml-2 btn-sm\" aria-label=\"Limpiar filtros\">Limpiar</button> -->\n  </div>\n</div>`,\n})\nexport class FiltrosAplicadosComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport ButtonComponent from '../buttons/button.component';\r\n\r\n@Component({\r\n  selector: 'uni-filtros-aplicados',\r\n  standalone: true,\r\n  imports: [ButtonComponent],\r\n  styleUrl: './../../../assets/CSS/Component-Styles/filtros-rapidos.component.css',\r\n  template: `<div class=\"contenedor-filtros-aplicados\">\r\n  <div class=\"col-auto\">\r\n    <p class=\"filtroAplicado\">Filtros Aplicados ></p>\r\n  </div>\r\n  <div class=\"col-auto item-aplicado\">\r\n    <p class=\"filtroAplicado\" tabindex=\"0\">Bandeja: <span class=\"filtroAplicadoDesc\">Bandeja seleccionada</span></p>\r\n  </div>\r\n  <div class=\"col-auto item-aplicado\">\r\n    <p class=\"filtroAplicado\">Incluir asignados: <span class=\"filtroAplicadoDesc\">Sí</span></p>\r\n  </div>\r\n  <div class=\"col-auto item-aplicado\" >\r\n    <p class=\"filtroAplicado\" tabindex=\"0\">Tipos: <span class=\"filtroAplicadoDesc\">Todos</span></p>\r\n  </div>\r\n  <div class=\"col-auto item-aplicado\" >\r\n    <p class=\"filtroAplicado\" tabindex=\"0\">Estados: <span class=\"filtroAplicadoDesc\">Todos</span>\r\n    </p>\r\n  </div>\r\n  <div class=\"col-auto item-aplicado\">\r\n    <p class=\"filtroAplicado\" tabindex=\"0\">Acceso: <span class=\"filtroAplicadoDesc\">Todos</span></p>\r\n  </div>\r\n  <div class=\"col-auto filtroAplicado \">\r\n    <uni-button buttonType=\"link\"  showIcon=\"false\" label=\"Limpiar\" size=\"sm\" aria-label=\"Limpiar filtros\"></uni-button>\r\n     <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n    <!-- <button type=\"button\" class=\"btn button-link ml-2 btn-sm\" aria-label=\"Limpiar filtros\">Limpiar</button> -->\r\n  </div>\r\n</div>`,\r\n})\r\nexport class FiltrosAplicadosComponent {\r\n\r\n}\r\n",
             "styleUrl": "./../../../assets/CSS/Component-Styles/filtros-rapidos.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -591,7 +591,7 @@
         },
         {
             "name": "FiltrosRapidosComponent",
-            "id": "component-FiltrosRapidosComponent-b2c61c5ff6018ffe110e95932722c32f78e9b762376eee4e98d5595e131b9e59f2a47851b775d9355ede17264b58566a2d44674e1c818a1978b1f3c46b06cb7e",
+            "id": "component-FiltrosRapidosComponent-43eff7d1cf8758f43b9e1e5ecb75f894aa272ba49e40928427909d86479721404aefad8a3d5f6f3e94d21c105c46f98d4326ab87a2d8e613cb2ed66cd64f5d1f",
             "file": "src/stories/sections/filtros-rapidos/filtros-rapidos/filtros-rapidos.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -670,7 +670,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component } from '@angular/core';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatSelectModule } from '@angular/material/select';\nimport ButtonComponent from '../../../components/buttons/button.component';\nimport { FiltrosAplicadosComponent } from 'src/stories/components/filtros-aplicados/filtros-aplicados.component';\n\n\n@Component({\n  selector: 'uni-filtros-rapidos',\n  standalone: true, // Si este componente es standalone\n  imports: [CommonModule,MatFormFieldModule, MatSelectModule,ButtonComponent,FiltrosAplicadosComponent],\n  styleUrls: ['../../../../assets/CSS/Component-Styles/filtros-rapidos.component.css'],\n  templateUrl: './filtros-rapidos.component.html',\n})\nexport class FiltrosRapidosComponent {\n  public collapsedFiltros: boolean = false;\n\n  public collapseFilter(): void {\n    this.collapsedFiltros = !this.collapsedFiltros;\n  }\n\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport ButtonComponent from '../../../components/buttons/button.component';\r\nimport { FiltrosAplicadosComponent } from 'src/stories/components/filtros-aplicados/filtros-aplicados.component';\r\n\r\n\r\n@Component({\r\n  selector: 'uni-filtros-rapidos',\r\n  standalone: true, // Si este componente es standalone\r\n  imports: [CommonModule,MatFormFieldModule, MatSelectModule,ButtonComponent,FiltrosAplicadosComponent],\r\n  styleUrls: ['../../../../assets/CSS/Component-Styles/filtros-rapidos.component.css'],\r\n  templateUrl: './filtros-rapidos.component.html',\r\n})\r\nexport class FiltrosRapidosComponent {\r\n  public collapsedFiltros: boolean = false;\r\n\r\n  public collapseFilter(): void {\r\n    this.collapsedFiltros = !this.collapsedFiltros;\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -838,7 +838,7 @@
         },
         {
             "name": "MenuModulosComponent",
-            "id": "component-MenuModulosComponent-43b201707f2f19cfe25bf77c89a53429a884f9358885d888fed618a9d94fbe8bf4fb76fe2eec15d9e6f8dcf3ed1c2b6fce054f18cf851576bfe523611a9ebf22",
+            "id": "component-MenuModulosComponent-87bc969a1ee17e0caa6b1c3808ca6babaa03ed97cdc01cf70c0ca7838e058e52d7ffd9cf0f944ab3b43d3dc9cc83f216cd604fc21716b4f3dc5c0433f64709ca",
             "file": "src/stories/components/menu-modulos/menu-modulos.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -878,7 +878,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nexport interface SubApp {\n  appCod: string;\n  appDescr: string;\n  appIcon?: string;\n  appVisible?: number;\n  selected?: boolean;\n  [key: string]: any; // Propiedades adicionales\n}\n\n@Component({\n  selector: 'uni-menu-modulos',\n  standalone: true,\n  imports: [],\n  templateUrl: './menu-modulos.component.html',\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\n})\nexport class MenuModulosComponent {\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\n\n  \n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\r\n\r\nexport interface SubApp {\r\n  appCod: string;\r\n  appDescr: string;\r\n  appIcon?: string;\r\n  appVisible?: number;\r\n  selected?: boolean;\r\n  [key: string]: any; // Propiedades adicionales\r\n}\r\n\r\n@Component({\r\n  selector: 'uni-menu-modulos',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './menu-modulos.component.html',\r\n  styleUrls: ['../../../assets/CSS/Component-Styles/menu-modulos.component.css']\r\n})\r\nexport class MenuModulosComponent {\r\n  @Input() icon: string | null = '';  // Ícono recibido por el componente\r\n\r\n  \r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -888,11 +888,11 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "\n  <!--Menu aplicaciones desde la ficha (horizontal)-->\n  <div class=\"menu-modulos-container\">\n      <button attr.aria-label=\"Expediente\"\n        title=\"Expediente\"\n        class=\"menu-modulo-button active\">\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\n            content_paste \n        </span>\n      </button>\n      <button attr.aria-label=\"Expediente\"\n        title=\"Expediente\"\n        class=\"menu-modulo-button \">\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\n            content_paste \n        </span>\n      </button> \n      <button attr.aria-label=\"Expediente\"\n        title=\"Expediente\"\n        class=\"menu-modulo-button \">\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\n            content_paste \n        </span>\n      </button>      \n  </div>\n\n"
+            "templateData": "\r\n  <!--Menu aplicaciones desde la ficha (horizontal)-->\r\n  <div class=\"menu-modulos-container\">\r\n      <button attr.aria-label=\"Expediente\"\r\n        title=\"Expediente\"\r\n        class=\"menu-modulo-button active\">\r\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\r\n            content_paste \r\n        </span>\r\n      </button>\r\n      <button attr.aria-label=\"Expediente\"\r\n        title=\"Expediente\"\r\n        class=\"menu-modulo-button \">\r\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\r\n            content_paste \r\n        </span>\r\n      </button> \r\n      <button attr.aria-label=\"Expediente\"\r\n        title=\"Expediente\"\r\n        class=\"menu-modulo-button \">\r\n        <span class=\"material-symbols-outlined iconSize\" id=\"icono-apps\">\r\n            content_paste \r\n        </span>\r\n      </button>      \r\n  </div>\r\n\r\n"
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-d04d4bf7aca128c4fc3bc2e68432582f92b7b8c0e270c7884c18fe50e420fb81d0e5fb4f2392b15d0287b6f78b69dbda79dda9c93005264d74269879d4da67b8",
+            "id": "component-PageComponent-5270f2c9bd231585c18bb1920dcaa1077efeff2cd5b2765b0cc046dd047a6a64e2161a261cd265b3c708a3373be784bab136293e62515d52d30a1d2b38d55660",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -963,11 +963,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n  \n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-page',\r\n  template: `<article>\r\n  \r\n    <section>\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Storybook tutorials\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  user: User | null = null;\r\n\r\n  doLogout() {\r\n    this.user = null;\r\n  }\r\n\r\n  doLogin() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n\r\n  doCreateAccount() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "data": "section {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\nsection h2 {\r\n  font-weight: 700;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nsection p {\r\n  margin: 1em 0;\r\n}\r\n\r\nsection a {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\nsection ul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\nsection li {\r\n  margin-bottom: 8px;\r\n}\r\n\r\nsection .tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\nsection .tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\nsection .tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\nsection .tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
                     "styleUrl": "./page.css"
                 }
             ],
@@ -1189,7 +1189,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
             },
             {
                 "name": "DragandDrop",
@@ -1199,7 +1199,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
             },
             {
                 "name": "Encabezado",
@@ -1219,7 +1219,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: true,\n}"
+                "defaultValue": "{\r\n  production: true,\r\n}"
             },
             {
                 "name": "environment",
@@ -1229,7 +1229,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: false,\n}"
+                "defaultValue": "{\r\n  production: false,\r\n}"
             },
             {
                 "name": "Etiqueta",
@@ -1259,7 +1259,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
             },
             {
                 "name": "FiltrosRapidos",
@@ -1269,7 +1269,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
             },
             {
                 "name": "Header",
@@ -1319,7 +1319,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1339,7 +1339,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DragAndDropComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Components/Drag and Drop',\n  component:DragAndDropComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+                "defaultValue": "{\r\n  title: 'Uniframe/Components/Drag and Drop',\r\n  component:DragAndDropComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1359,7 +1359,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FiltrosAplicadosComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Components/Filtros Aplicados',\n  component:FiltrosAplicadosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+                "defaultValue": "{\r\n  title: 'Uniframe/Components/Filtros Aplicados',\r\n  component:FiltrosAplicadosComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CommonModule,],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1379,7 +1379,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<MenuModulosComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Components/Menu Modulos',\n  component:MenuModulosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+                "defaultValue": "{\r\n  title: 'Uniframe/Components/Menu Modulos',\r\n  component:MenuModulosComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1429,7 +1429,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BreadcrumbComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Components/Breadcrumb',\n  component:BreadcrumbComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      \n      imports: [CommonModule],\n    }),\n  ],\n\n}"
+                "defaultValue": "{\r\n  title: 'Uniframe/Components/Breadcrumb',\r\n  component:BreadcrumbComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      \r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1439,7 +1439,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TarjetaComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Components/Tarjetas',\n  component:TarjetaComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,MatButtonModule,MatDividerModule,EtiquetasComponent],\n    }),\n  ],\n\n}"
+                "defaultValue": "{\r\n  title: 'Uniframe/Components/Tarjetas',\r\n  component:TarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule,EtiquetasComponent],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1449,7 +1449,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FiltrosRapidosComponent>",
-                "defaultValue": "{\n  title: 'Uniframe/Sections/Filtros Rapidos',\n  component:FiltrosRapidosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect, ButtonComponent],\n    }),\n  ],\n\n}"
+                "defaultValue": "{\r\n  title: 'Uniframe/Sections/Filtros Rapidos',\r\n  component:FiltrosRapidosComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect, ButtonComponent],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "Negative",
@@ -1509,7 +1509,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
             },
             {
                 "name": "VistaTarjeta",
@@ -1679,7 +1679,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1689,7 +1689,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BreadcrumbComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Components/Breadcrumb',\n  component:BreadcrumbComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      \n      imports: [CommonModule],\n    }),\n  ],\n\n}"
+                    "defaultValue": "{\r\n  title: 'Uniframe/Components/Breadcrumb',\r\n  component:BreadcrumbComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      \r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n\r\n}"
                 }
             ],
             "src/stories/components/drag-and-drop/drag-and-drop.stories.ts": [
@@ -1701,7 +1701,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1711,7 +1711,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DragAndDropComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Components/Drag and Drop',\n  component:DragAndDropComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+                    "defaultValue": "{\r\n  title: 'Uniframe/Components/Drag and Drop',\r\n  component:DragAndDropComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,],\r\n    }),\r\n  ],\r\n\r\n}"
                 }
             ],
             "src/stories/sections/encabezado/encabezado.stories.ts": [
@@ -1745,7 +1745,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: true,\n}"
+                    "defaultValue": "{\r\n  production: true,\r\n}"
                 }
             ],
             "src/environments/environment.ts": [
@@ -1757,7 +1757,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: false,\n}"
+                    "defaultValue": "{\r\n  production: false,\r\n}"
                 }
             ],
             "src/stories/components/etiquetas/etiqueta.stories.ts": [
@@ -1813,7 +1813,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1823,7 +1823,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FiltrosAplicadosComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Components/Filtros Aplicados',\n  component:FiltrosAplicadosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+                    "defaultValue": "{\r\n  title: 'Uniframe/Components/Filtros Aplicados',\r\n  component:FiltrosAplicadosComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CommonModule,],\r\n    }),\r\n  ],\r\n\r\n}"
                 }
             ],
             "src/stories/sections/filtros-rapidos/filtros-rapidos/filtros-rapidos.stories.ts": [
@@ -1835,7 +1835,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1845,7 +1845,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FiltrosRapidosComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Sections/Filtros Rapidos',\n  component:FiltrosRapidosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect, ButtonComponent],\n    }),\n  ],\n\n}"
+                    "defaultValue": "{\r\n  title: 'Uniframe/Sections/Filtros Rapidos',\r\n  component:FiltrosRapidosComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule, MatCheckbox, MatFormField, MatSelect, ButtonComponent],\r\n    }),\r\n  ],\r\n\r\n}"
                 }
             ],
             "src/stories/components/header/Header.stories.ts": [
@@ -1973,7 +1973,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1983,7 +1983,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<MenuModulosComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Components/Menu Modulos',\n  component:MenuModulosComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+                    "defaultValue": "{\r\n  title: 'Uniframe/Components/Menu Modulos',\r\n  component:MenuModulosComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,],\r\n    }),\r\n  ],\r\n\r\n}"
                 }
             ],
             "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts": [
@@ -2017,7 +2017,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TarjetaComponent>",
-                    "defaultValue": "{\n  title: 'Uniframe/Components/Tarjetas',\n  component:TarjetaComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,MatButtonModule,MatDividerModule,EtiquetasComponent],\n    }),\n  ],\n\n}"
+                    "defaultValue": "{\r\n  title: 'Uniframe/Components/Tarjetas',\r\n  component:TarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule,EtiquetasComponent],\r\n    }),\r\n  ],\r\n\r\n}"
                 },
                 {
                     "name": "Tarjeta",
@@ -2027,7 +2027,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n  },\r\n}"
                 }
             ],
             ".storybook/preview.ts": [
