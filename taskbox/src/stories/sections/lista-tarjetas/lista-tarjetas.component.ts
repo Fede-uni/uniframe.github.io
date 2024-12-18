@@ -39,9 +39,9 @@ import ButtonComponent from '../../components/buttons/button.component';
           <!-- Botón aactualizar -->
           <uni-button buttonType="icon" showIcon="true" icon="autorenew" size="sm"></uni-button>
           <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
-         <!--  <button id="lis-actualizarBoton"  class="btn icon-button btn-sm" title="Actualizar">
-            <span id="lis-actualizar" class="material-symbols-outlined button-icon" aria-hidden="true">autorenew</span>
-          </button> -->
+          <!-- <button id="lis-actualizarBoton"  class="btn icon-button btn-sm" title="Actualizar">
+                <span id="lis-actualizar" class="material-symbols-outlined button-icon" aria-hidden="true">autorenew</span>
+              </button> -->
         </div>
         <mat-divider style="border-top-color: var(--color-neutro-200);"></mat-divider>
         <div id="content-lista-tarjetas">
@@ -49,33 +49,15 @@ import ButtonComponent from '../../components/buttons/button.component';
                 <app-tarjeta></app-tarjeta>
                 <app-tarjeta></app-tarjeta>
                 <app-tarjeta></app-tarjeta>
+                <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+                 <!-- insertar código de tarjeta -->
             </div>   
         </div> 
         <div class="d-flex" style="border-top: 1px solid var(--color-neutro-200); justify-content: flex-end;">
             <mat-paginator #paginator id="width_mobile" [pageSizeOptions]="[15,30,45,100]" >
             </mat-paginator>  
         </div>
-    </fieldset>
-<!--     <button 
-            class="collapse-button" 
-            (click)="collapsePanel()">
-
-            <ng-container *ngIf="collapsedPanel">
-              <span 
-                class="material-icons" 
-                aria-hidden="true"
-                aria-label="Contraer lista de expedientes" 
-                title="Contraer lista de expedientes">
-                chevron_right
-              </span> 
-            </ng-container>
-
-            <ng-container *ngIf="!collapsedPanel">
-              <span class="material-icons" aria-hidden="true">chevron_left</span> 
-            </ng-container>
-
-          </button>
-</div> -->`,
+    </fieldset>`,
   
 
 })
