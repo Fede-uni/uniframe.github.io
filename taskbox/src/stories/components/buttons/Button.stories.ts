@@ -53,7 +53,7 @@ export const Primary: Story = {
     icon: 'check_circle',
     showIcon: true,
     buttonType: 'primary',
-    size:'sm'
+    size:''
   },
 };
 
