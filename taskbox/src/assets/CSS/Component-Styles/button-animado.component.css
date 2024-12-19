@@ -1,0 +1,80 @@
+/*BOTON IRIX MIND ANIMADO*/
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 45px;
+  }
+  
+  .animated-elements {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+  
+  .bar {
+    width: 3px;
+    background-color: white;
+    margin: 1px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* altura de las barras individuales */
+  #bar1 {
+    height: 20%; 
+  }
+  
+  #bar2 {
+    height: 30%; 
+  }
+  
+  #bar3 {
+    height: 40%;
+  }
+  
+  #bar4 {
+    height: 30%; 
+  }
+  
+  #bar5 {
+    height: 20%; 
+  }
+  
+
+  .logo-container:hover .bar {
+    animation: grow 1s infinite ease-in-out;
+  }
+  
+  
+  @keyframes grow {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(2); /* Escala más alta en el medio de la animación */
+    }
+  }
+  
+  
+  #bar1 {
+    animation-delay: 0s;
+  }
+  
+  #bar2 {
+    animation-delay: 0.2s;
+  }
+  
+  #bar3 {
+    animation-delay: 0.4s;
+  }
+  
+  #bar4 {
+    animation-delay: 0.6s;
+  }
+  
+  #bar5 {
+    animation-delay: 0.8s;
+  }

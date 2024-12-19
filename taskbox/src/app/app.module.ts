@@ -25,6 +25,7 @@ import { ListaTarjetaComponent } from 'src/stories/sections/lista-tarjetas/lista
 import { FichaComponent } from 'src/stories/sections/ficha/ficha.component';
 import ButtonComponent from 'src/stories/components/buttons/button.component';
 import { DragAndDropComponent } from "../stories/components/drag-and-drop/drag-and-drop.component";
+import { ButtonAnimadoComponent } from 'src/stories/components/button-animado/button-animado.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { DragAndDropComponent } from "../stories/components/drag-and-drop/drag-a
     ListaTarjetaComponent,
     FichaComponent,
     ButtonComponent,
-    DragAndDropComponent
+    DragAndDropComponent,
+    ButtonAnimadoComponent
 ],
   exports:[
     

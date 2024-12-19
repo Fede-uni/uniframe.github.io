@@ -3,12 +3,13 @@ import type { User } from 'src/stories/User';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CommonModule } from '@angular/common';
+import { ButtonAnimadoComponent } from "../button-animado/button-animado.component";
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatMenuModule, MatSidenavModule,CommonModule],
+  imports: [MatMenuModule, MatSidenavModule, CommonModule, ButtonAnimadoComponent],
   template: `
   <nav  class="navbar navbar-expand-lg header" role="main">
     <a class="navbar-brand"  aria-label="Ir al inicio" title="Ir al inicio">
@@ -55,6 +56,7 @@ import { CommonModule } from '@angular/common';
           <span aria-label="Ayuda" class="material-symbols-outlined button-icon" id="icono-apps">help_outline</span>
           <span aria-label="Ver más opciones" class="material-symbols-outlined ">expand_more</span>
         </button>
+        <uni-button-animado></uni-button-animado>
         <!--Datos de usuario-->
         <button  class="btn header-button" style="align-items: center;">
           <div class="me-2">
