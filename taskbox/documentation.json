@@ -765,7 +765,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-9d22a0603e0651a971d56a2d5d54fdc6f4cf5f6637c976474b88f3a49af3328e1c48192f2e788a79f6d5799b01487408bf107d30b712defccc7fd5d161bd1bb4",
+            "id": "component-HeaderComponent-02abae76765099303e340423ad65bfe8303bde8aa289e24217b84252ca4a76c6724b3ce65e732192d9684371b8d042d7c1b2191ad9880be18831e3b31d81ebd9",
             "file": "src/stories/components/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -777,7 +777,7 @@
                 "../../../assets/CSS/Component-Styles/headerprueba.component.css"
             ],
             "styles": [],
-            "template": "  <nav  class=\"navbar navbar-expand-lg header\" role=\"main\">\n    <a class=\"navbar-brand\"  aria-label=\"Ir al inicio\" title=\"Ir al inicio\">\n      <img class=\"header-logo \" src=\"./assets/tramix CN hor-blanco.png\" aria-label=\"Logo del sistema\" alt=\"Logo del sistema\">\n    </a>\n    <!-- Boton hamburguesa/mobile -->\n    <button class=\"navbar-toggler header-button button-menu d-lg-none\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"\n   aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Menú de navegación\">\n   <span class=\"material-symbols-outlined\" aria-hidden=\"true\">menu</span>\n</button>\n    <!-- Fin Boton de menu -->\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <!-- AQUÍ COLOCAR EL BUSCADOR -->\n    <!-- fIN BUSCADOR -->\n      <span class=\"ms-auto header-buttons-group\">\n         <!--Aplicaciones-->\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn header-button button-menu \" aria-label=\"Módulos\" title=\"Módulos\">\n          <span class=\"material-symbols-outlined button-icon \" id=\"icono-apps\">apps</span>\n          <span aria-label=\"Ver más opciones\"  class=\"material-symbols-outlined \">expand_more</span>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <div class=\"header--apps-dropdown\">\n            <div class=\"col-12 header--apps--align\">\n              <button class=\"btn button-apps-menu\">\n                <span class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">library_books</span>\n                <span class=\"btn-app-txt ml-2\">Liquidaciones</span>\n              </button>\n            </div>\n          </div>\n        </mat-menu>\n        <!--Novedades-->\n        <mat-drawer-container autosize class=\"header--drawer\">\n          <mat-drawer #sidenav mode=\"over\" position=\"end\" class=\"header--drawer--sidenav\">\n          </mat-drawer>\n          <div class=\"\">\n            <button id=\"novedades\" aria-label=\"Novedades\"  class=\"btn header-button \" aria-label=\"Novedades\" title=\"Novedades\">\n              <span aria-label=\"Novedades\"  class=\"material-symbols-outlined button-icon \" id=\"icono-usuario_mobile\">notifications</span>\n              <span class=\"badge rounded-pill badge-novedades bg-danger\">10</span>\n            </button>\n          </div>\n        </mat-drawer-container>\n        <!--Helper-->\n        <button  class=\"btn header-button\" aria-label=\"Ayuda\" title=\"Ayuda\">\n          <span aria-label=\"Ayuda\" class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">help_outline</span>\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\n        </button>\n        <uni-button-animado></uni-button-animado>\n        <!--Datos de usuario-->\n        <button  class=\"btn header-button\" style=\"align-items: center;\">\n          <div class=\"me-2\">\n              <span class=\"user-text\">Usuario: nombre usuario</span>\n          </div>\n          <span aria-label=\"Datos del usuario\" class=\"material-symbols-outlined button-icon\" id=\"icono-usuario_mobile\">account_circle</span>\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\n        </button>\n      </span>\n    </div>\n  </nav>",
+            "template": "  <nav  class=\"navbar navbar-expand-lg header\" role=\"main\">\n    <a class=\"navbar-brand\"  aria-label=\"Ir al inicio\" title=\"Ir al inicio\">\n      <img class=\"header-logo \" src=\"./assets/tramix CN hor-blanco.png\" aria-label=\"Logo del sistema\" alt=\"Logo del sistema\">\n    </a>\n    <!-- Boton hamburguesa/mobile -->\n    <button class=\"navbar-toggler header-button button-menu d-lg-none\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"\n   aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Menú de navegación\">\n   <span class=\"material-symbols-outlined\" aria-hidden=\"true\">menu</span>\n</button>\n    <!-- Fin Boton de menu -->\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n    <!-- AQUÍ COLOCAR EL BUSCADOR -->\n    <!-- fIN BUSCADOR -->\n      <span class=\"ms-auto header-buttons-group\">\n         <!--Aplicaciones-->\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn header-button button-menu \" aria-label=\"Módulos\" title=\"Módulos\">\n          <span class=\"material-symbols-outlined button-icon \" id=\"icono-apps\">apps</span>\n          <span aria-label=\"Ver más opciones\"  class=\"material-symbols-outlined \">expand_more</span>\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <div class=\"header--apps-dropdown\">\n            <div class=\"col-12 header--apps--align\">\n              <button class=\"btn button-apps-menu\">\n                <span class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">library_books</span>\n                <span class=\"btn-app-txt ml-2\">Liquidaciones</span>\n              </button>\n            </div>\n          </div>\n        </mat-menu>\n        <!--Novedades-->\n        <mat-drawer-container autosize class=\"header--drawer\">\n          <mat-drawer #sidenav mode=\"over\" position=\"end\" class=\"header--drawer--sidenav\">\n          </mat-drawer>\n          <div class=\"\">\n            <button id=\"novedades\" aria-label=\"Novedades\"  class=\"btn header-button \" aria-label=\"Novedades\" title=\"Novedades\">\n              <span aria-label=\"Novedades\"  class=\"material-symbols-outlined button-icon \" id=\"icono-usuario_mobile\">notifications</span>\n              <span class=\"badge rounded-pill badge-novedades bg-danger\">10</span>\n            </button>\n          </div>\n        </mat-drawer-container>\n        <!--Helper-->\n        <button  class=\"btn header-button\" aria-label=\"Ayuda\" title=\"Ayuda\">\n          <span aria-label=\"Ayuda\" class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">help_outline</span>\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\n        </button>\n        <!-- Boton animago iuri mind  -->\n        <uni-button-animado></uni-button-animado>\n        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\n        <!-- <button class=\"logo-container btn btn-header_noFill header_cod-usuario--version\">\n        <svg width=\"78\" height=\"77\" viewBox=\"0 0 78 77\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"height: 40px; width: 40px;\">\n          <path d=\"M0.985107 38.4395C0.985107 17.3297 18.098 0.216797 39.2078 0.216797C60.3176 0.216797 77.4305 17.3297 77.4305 38.4395C77.4305 59.5493 60.3176 76.6622 39.2078 76.6622H0.985107V38.4395Z\" fill=\"#0C517A\"/>\n          </svg>\n\n        <div class=\"animated-elements\">\n          <div class=\"bar\" id=\"bar1\"></div>\n          <div class=\"bar\" id=\"bar2\"></div>\n          <div class=\"bar\" id=\"bar3\"></div>\n          <div class=\"bar\" id=\"bar4\"></div>\n          <div class=\"bar\" id=\"bar5\"></div>\n        </div>\n      </button> -->\n\n        <!--Datos de usuario-->\n        <button  class=\"btn header-button\" style=\"align-items: center;\">\n          <div class=\"me-2\">\n              <span class=\"user-text\">Usuario: nombre usuario</span>\n          </div>\n          <span aria-label=\"Datos del usuario\" class=\"material-symbols-outlined button-icon\" id=\"icono-usuario_mobile\">account_circle</span>\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\n        </button>\n      </span>\n    </div>\n  </nav>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -787,7 +787,7 @@
                     "defaultValue": "null",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 75,
+                    "line": 91,
                     "type": "User | null",
                     "decorators": []
                 }
@@ -821,7 +821,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from 'src/stories/User';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSidenavModule } from '@angular/material/sidenav';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ButtonAnimadoComponent } from \"../button-animado/button-animado.component\";\r\n\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [MatMenuModule, MatSidenavModule, CommonModule, ButtonAnimadoComponent],\r\n  template: `\r\n  <nav  class=\"navbar navbar-expand-lg header\" role=\"main\">\r\n    <a class=\"navbar-brand\"  aria-label=\"Ir al inicio\" title=\"Ir al inicio\">\r\n      <img class=\"header-logo \" src=\"./assets/tramix CN hor-blanco.png\" aria-label=\"Logo del sistema\" alt=\"Logo del sistema\">\r\n    </a>\r\n    <!-- Boton hamburguesa/mobile -->\r\n    <button class=\"navbar-toggler header-button button-menu d-lg-none\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"\r\n   aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Menú de navegación\">\r\n   <span class=\"material-symbols-outlined\" aria-hidden=\"true\">menu</span>\r\n</button>\r\n    <!-- Fin Boton de menu -->\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <!-- AQUÍ COLOCAR EL BUSCADOR -->\r\n    <!-- fIN BUSCADOR -->\r\n      <span class=\"ms-auto header-buttons-group\">\r\n         <!--Aplicaciones-->\r\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn header-button button-menu \" aria-label=\"Módulos\" title=\"Módulos\"> \r\n          <span class=\"material-symbols-outlined button-icon \" id=\"icono-apps\">apps</span>\r\n          <span aria-label=\"Ver más opciones\"  class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <mat-menu #menu=\"matMenu\">\r\n          <div class=\"header--apps-dropdown\">            \r\n            <div class=\"col-12 header--apps--align\">\r\n              <button class=\"btn button-apps-menu\">\r\n                <span class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">library_books</span>\r\n                <span class=\"btn-app-txt ml-2\">Liquidaciones</span>\r\n              </button>\r\n            </div>            \r\n          </div>\r\n        </mat-menu>\r\n        <!--Novedades-->\r\n        <mat-drawer-container autosize class=\"header--drawer\">\r\n          <mat-drawer #sidenav mode=\"over\" position=\"end\" class=\"header--drawer--sidenav\"> \r\n          </mat-drawer>              \r\n          <div class=\"\">\r\n            <button id=\"novedades\" aria-label=\"Novedades\"  class=\"btn header-button \" aria-label=\"Novedades\" title=\"Novedades\">                        \r\n              <span aria-label=\"Novedades\"  class=\"material-symbols-outlined button-icon \" id=\"icono-usuario_mobile\">notifications</span>\r\n              <span class=\"badge rounded-pill badge-novedades bg-danger\">10</span>\r\n            </button>\r\n          </div>              \r\n        </mat-drawer-container>     \r\n        <!--Helper-->\r\n        <button  class=\"btn header-button\" aria-label=\"Ayuda\" title=\"Ayuda\">\r\n          <span aria-label=\"Ayuda\" class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">help_outline</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <uni-button-animado></uni-button-animado>\r\n        <!--Datos de usuario-->\r\n        <button  class=\"btn header-button\" style=\"align-items: center;\">\r\n          <div class=\"me-2\">\r\n              <span class=\"user-text\">Usuario: nombre usuario</span> \r\n          </div>\r\n          <span aria-label=\"Datos del usuario\" class=\"material-symbols-outlined button-icon\" id=\"icono-usuario_mobile\">account_circle</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n      </span>\r\n    </div>\r\n  </nav>`,\r\n  styleUrls: ['../../../assets/CSS/Component-Styles/headerprueba.component.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from 'src/stories/User';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatSidenavModule } from '@angular/material/sidenav';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ButtonAnimadoComponent } from \"../button-animado/button-animado.component\";\r\n\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [MatMenuModule, MatSidenavModule, CommonModule, ButtonAnimadoComponent],\r\n  template: `\r\n  <nav  class=\"navbar navbar-expand-lg header\" role=\"main\">\r\n    <a class=\"navbar-brand\"  aria-label=\"Ir al inicio\" title=\"Ir al inicio\">\r\n      <img class=\"header-logo \" src=\"./assets/tramix CN hor-blanco.png\" aria-label=\"Logo del sistema\" alt=\"Logo del sistema\">\r\n    </a>\r\n    <!-- Boton hamburguesa/mobile -->\r\n    <button class=\"navbar-toggler header-button button-menu d-lg-none\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"\r\n   aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Menú de navegación\">\r\n   <span class=\"material-symbols-outlined\" aria-hidden=\"true\">menu</span>\r\n</button>\r\n    <!-- Fin Boton de menu -->\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <!-- AQUÍ COLOCAR EL BUSCADOR -->\r\n    <!-- fIN BUSCADOR -->\r\n      <span class=\"ms-auto header-buttons-group\">\r\n         <!--Aplicaciones-->\r\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn header-button button-menu \" aria-label=\"Módulos\" title=\"Módulos\"> \r\n          <span class=\"material-symbols-outlined button-icon \" id=\"icono-apps\">apps</span>\r\n          <span aria-label=\"Ver más opciones\"  class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <mat-menu #menu=\"matMenu\">\r\n          <div class=\"header--apps-dropdown\">            \r\n            <div class=\"col-12 header--apps--align\">\r\n              <button class=\"btn button-apps-menu\">\r\n                <span class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">library_books</span>\r\n                <span class=\"btn-app-txt ml-2\">Liquidaciones</span>\r\n              </button>\r\n            </div>            \r\n          </div>\r\n        </mat-menu>\r\n        <!--Novedades-->\r\n        <mat-drawer-container autosize class=\"header--drawer\">\r\n          <mat-drawer #sidenav mode=\"over\" position=\"end\" class=\"header--drawer--sidenav\"> \r\n          </mat-drawer>              \r\n          <div class=\"\">\r\n            <button id=\"novedades\" aria-label=\"Novedades\"  class=\"btn header-button \" aria-label=\"Novedades\" title=\"Novedades\">                        \r\n              <span aria-label=\"Novedades\"  class=\"material-symbols-outlined button-icon \" id=\"icono-usuario_mobile\">notifications</span>\r\n              <span class=\"badge rounded-pill badge-novedades bg-danger\">10</span>\r\n            </button>\r\n          </div>              \r\n        </mat-drawer-container>     \r\n        <!--Helper-->\r\n        <button  class=\"btn header-button\" aria-label=\"Ayuda\" title=\"Ayuda\">\r\n          <span aria-label=\"Ayuda\" class=\"material-symbols-outlined button-icon\" id=\"icono-apps\">help_outline</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n        <!-- Boton animago iuri mind  -->\r\n        <uni-button-animado></uni-button-animado>\r\n        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->\r\n        <!-- <button class=\"logo-container btn btn-header_noFill header_cod-usuario--version\">\r\n        <svg width=\"78\" height=\"77\" viewBox=\"0 0 78 77\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"height: 40px; width: 40px;\">\r\n          <path d=\"M0.985107 38.4395C0.985107 17.3297 18.098 0.216797 39.2078 0.216797C60.3176 0.216797 77.4305 17.3297 77.4305 38.4395C77.4305 59.5493 60.3176 76.6622 39.2078 76.6622H0.985107V38.4395Z\" fill=\"#0C517A\"/>\r\n          </svg>\r\n          \r\n        <div class=\"animated-elements\">\r\n          <div class=\"bar\" id=\"bar1\"></div>\r\n          <div class=\"bar\" id=\"bar2\"></div>\r\n          <div class=\"bar\" id=\"bar3\"></div>\r\n          <div class=\"bar\" id=\"bar4\"></div>\r\n          <div class=\"bar\" id=\"bar5\"></div>\r\n        </div>\r\n      </button> -->\r\n\r\n        <!--Datos de usuario-->\r\n        <button  class=\"btn header-button\" style=\"align-items: center;\">\r\n          <div class=\"me-2\">\r\n              <span class=\"user-text\">Usuario: nombre usuario</span> \r\n          </div>\r\n          <span aria-label=\"Datos del usuario\" class=\"material-symbols-outlined button-icon\" id=\"icono-usuario_mobile\">account_circle</span>\r\n          <span aria-label=\"Ver más opciones\" class=\"material-symbols-outlined \">expand_more</span>\r\n        </button>\r\n      </span>\r\n    </div>\r\n  </nav>`,\r\n  styleUrls: ['../../../assets/CSS/Component-Styles/headerprueba.component.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1443,21 +1443,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/buttons/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Button>",
-                "defaultValue": "{\r\n  title: 'Uniframe/Components/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({ \r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    moduleMetadata: { // Aquí se agregan los módulos necesarios\r\n      declarations: [], // Declarar el componente si no es standalone\r\n      imports: [CommonModule,Button], // Importar módulos necesarios\r\n    },\r\n  }),\r\n  argTypes: {\r\n    label: { control: 'text', defaultValue: 'Button' },\r\n    icon: { \r\n      control: 'text',\r\n      description: 'El nombre del icono de Material Symbols a mostrar',\r\n      defaultValue: 'check_circle',  // Ícono predeterminado\r\n    },\r\n    showIcon: { \r\n      control: 'boolean',\r\n      description: 'Mostrar o no el icono',\r\n      defaultValue: true,  // Muestra el ícono por defecto\r\n    },\r\n    buttonType: {\r\n      control: 'radio',\r\n      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],\r\n      description: 'El tipo de botón a mostrar',\r\n    },\r\n    size: { \r\n      control: 'radio',\r\n      options: ['default', 'sm',],\r\n      description: 'tamaño del boton'\r\n    },\r\n  },\r\n  \r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/components/desplegable/desplegable.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DesplegableComponent>",
                 "defaultValue": "{\n  title: 'Uniframe/Components/Desplegables',\n  component:DesplegableComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule,],\n    }),\n  ],\n\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/buttons/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\r\n  title: 'Uniframe/Components/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({ \r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    moduleMetadata: { // Aquí se agregan los módulos necesarios\r\n      declarations: [], // Declarar el componente si no es standalone\r\n      imports: [CommonModule,Button], // Importar módulos necesarios\r\n    },\r\n  }),\r\n  argTypes: {\r\n    label: { control: 'text', defaultValue: 'Button' },\r\n    icon: { \r\n      control: 'text',\r\n      description: 'El nombre del icono de Material Symbols a mostrar',\r\n      defaultValue: 'check_circle',  // Ícono predeterminado\r\n    },\r\n    showIcon: { \r\n      control: 'boolean',\r\n      description: 'Mostrar o no el icono',\r\n      defaultValue: true,  // Muestra el ícono por defecto\r\n    },\r\n    buttonType: {\r\n      control: 'radio',\r\n      options: ['primary', 'primary-outline', 'negative', 'negative-outline','icon','link'],\r\n      description: 'El tipo de botón a mostrar',\r\n    },\r\n    size: { \r\n      control: 'radio',\r\n      options: ['default', 'sm',],\r\n      description: 'tamaño del boton'\r\n    },\r\n  },\r\n  \r\n}"
             },
             {
                 "name": "meta",
@@ -1513,6 +1513,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VistaTarjetaComponent>",
+                "defaultValue": "{\r\n  title: 'Uniframe/Pages/vista tarjeta',\r\n  component:VistaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule,BrowserAnimationsModule],\r\n    }),\r\n  ],\r\n\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/sections/encabezado/encabezado.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1538,16 +1548,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<ListaTarjetaComponent>",
                 "defaultValue": "{\r\n  title: 'Uniframe/Sections/Lista Tarjetas',\r\n  component:ListaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      \r\n      imports: [CommonModule,MatButtonModule,MatDividerModule],\r\n    }),\r\n  ],\r\n\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<VistaTarjetaComponent>",
-                "defaultValue": "{\r\n  title: 'Uniframe/Pages/vista tarjeta',\r\n  component:VistaTarjetaComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule,MatButtonModule,MatDividerModule,BrowserAnimationsModule],\r\n    }),\r\n  ],\r\n\r\n}"
             },
             {
                 "name": "meta",
@@ -1667,8 +1667,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Button>",
-                "file": "src/stories/components/buttons/Button.stories.ts",
+                "rawtype": "StoryObj<DesplegableComponent>",
+                "file": "src/stories/components/desplegable/desplegable.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1678,8 +1678,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DesplegableComponent>",
-                "file": "src/stories/components/desplegable/desplegable.stories.ts",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/components/buttons/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1744,6 +1744,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<VistaTarjetaComponent>",
+                "file": "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<EncabezadoComponent>",
                 "file": "src/stories/sections/encabezado/encabezado.stories.ts",
                 "deprecated": false,
@@ -1768,17 +1779,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ListaTarjetaComponent>",
                 "file": "src/stories/sections/lista-tarjetas/lista-tarjeta.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<VistaTarjetaComponent>",
-                "file": "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2253,19 +2253,6 @@
                     "kind": 183
                 }
             ],
-            "src/stories/components/buttons/Button.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Button>",
-                    "file": "src/stories/components/buttons/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "src/stories/components/desplegable/desplegable.stories.ts": [
                 {
                     "name": "Story",
@@ -2273,6 +2260,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<DesplegableComponent>",
                     "file": "src/stories/components/desplegable/desplegable.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/buttons/Button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/components/buttons/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2344,6 +2344,19 @@
                     "kind": 183
                 }
             ],
+            "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VistaTarjetaComponent>",
+                    "file": "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "src/stories/sections/encabezado/encabezado.stories.ts": [
                 {
                     "name": "Story",
@@ -2377,19 +2390,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ListaTarjetaComponent>",
                     "file": "src/stories/sections/lista-tarjetas/lista-tarjeta.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<VistaTarjetaComponent>",
-                    "file": "src/stories/pages/vista-tarjeta/vista-tarjetas.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

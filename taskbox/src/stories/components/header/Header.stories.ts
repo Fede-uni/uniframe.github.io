@@ -86,6 +86,20 @@ Header.parameters = {
           <span aria-label="Ayuda" class="material-symbols-outlined button-icon" id="icono-apps">help_outline</span>
           <span aria-label="Ver más opciones" class="material-symbols-outlined ">expand_more</span>
         </button>
+        <!-- USAR EN CASO DE NO TENER EL COMPONENTE -->
+        <!-- <button class="logo-container btn btn-header_noFill header_cod-usuario--version">
+        <svg width="78" height="77" viewBox="0 0 78 77" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 40px; width: 40px;">
+          <path d="M0.985107 38.4395C0.985107 17.3297 18.098 0.216797 39.2078 0.216797C60.3176 0.216797 77.4305 17.3297 77.4305 38.4395C77.4305 59.5493 60.3176 76.6622 39.2078 76.6622H0.985107V38.4395Z" fill="#0C517A"/>
+          </svg>
+          
+        <div class="animated-elements">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+          <div class="bar" id="bar4"></div>
+          <div class="bar" id="bar5"></div>
+        </div>
+      </button> -->
         <!--Datos de usuario-->
         <button  class="btn header-button" style="align-items: center;">
           <div class="me-2">
