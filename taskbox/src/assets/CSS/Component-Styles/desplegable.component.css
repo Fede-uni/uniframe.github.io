@@ -1,0 +1,7 @@
+.mat-expansion-panel:not([class*='mat-elevation-z']) , .mat-expansion-panel {
+    box-shadow: none;
+}
+
+.mat-expansion-panel{
+    border-bottom: 1px solid var(--color-border-neutro);
+}

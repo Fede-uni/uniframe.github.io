@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 
 import { CommonModule } from '@angular/common';
 import { DesplegableComponent } from './desplegable.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const meta: Meta<DesplegableComponent> = {
   title: 'Uniframe/Components/Desplegables',
@@ -13,7 +14,7 @@ const meta: Meta<DesplegableComponent> = {
   decorators: [
     moduleMetadata({
       declarations: [],
-      imports: [CommonModule,],
+      imports: [CommonModule, BrowserAnimationsModule],
     }),
   ],
 
@@ -31,29 +32,15 @@ Dresplegable.parameters = {
   docs: { 
     source: { 
       code: ` 
-      <div class="menu-modulos-container">
-      <button attr.aria-label="Expediente"
-        title="Expediente"
-        class="menu-modulo-button active">
-        <span class="material-symbols-outlined iconSize" id="icono-apps">
-            content_paste 
-        </span>
-      </button>
-      <button attr.aria-label="Expediente"
-        title="Expediente"
-        class="menu-modulo-button ">
-        <span class="material-symbols-outlined iconSize" id="icono-apps">
-            content_paste 
-        </span>
-      </button> 
-      <button attr.aria-label="Expediente"
-        title="Expediente"
-        class="menu-modulo-button ">
-        <span class="material-symbols-outlined iconSize" id="icono-apps">
-            content_paste 
-        </span>
-      </button>      
-  </div>
+     <mat-expansion-panel >
+      <mat-expansion-panel-header >
+        <span>Titulo de Desplegable</span>
+      </mat-expansion-panel-header>
+      <div>
+        Contenido del desplegable
+      </div>
+  </mat-expansion-panel>
+  
 `,
     }, 
   }, 

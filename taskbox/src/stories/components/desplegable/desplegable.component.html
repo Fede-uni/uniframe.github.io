@@ -1,16 +1,11 @@
-<!--DATOS ADICIONALES -->
-<div class="secContenedor__datosAdicionales tabla-scroll-responsive">
-    <mat-expansion-panel class="tabla-width-650" >
-      <mat-expansion-panel-header class="disable_ripple padd-colapsable-header">
-        <span class="titulos_desplegables">Datos Adicionales</span>
-      </mat-expansion-panel-header>
-      <div *ngIf="!tieneAdicionales">
-        <span style="text-align: center; font-weight: 600; padding: 6px; font-size: 15px;"> El modelo no posee datos
-          adicionales</span>
-      </div>
-      <div>
-        Contenido del desplegable
-      </div>
-    </mat-expansion-panel>
-  </div>
-  <!-- FIN DATOS ADICIONALES -->
+ <mat-expansion-panel >
+    <mat-expansion-panel-header >
+      <span>Titulo de Desplegable</span>
+    </mat-expansion-panel-header>
+    <ng-content select="[body]"></ng-content>
+    <div>
+      Contenido del desplegable
+    </div>
+  </mat-expansion-panel>
+  
+
